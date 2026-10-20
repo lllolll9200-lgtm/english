@@ -1,0 +1,1095 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Мій англійський</title>
+<meta name="description" content="Щоденний трекер вивчення англійської мови">
+<meta name="theme-color" content="#f5f4f0">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Англійська">
+<script>
+  // Застосовуємо збережену тему до відмальовки, щоб не було «спалаху»
+  try { var t = (JSON.parse(localStorage.getItem('engTracker.v1') || '{}').settings || {}).theme; if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+<style>
+:root{
+  --bg:#f5f4f0; --surface:#ffffff; --surface-2:#f0eee9; --text:#24262d; --muted:#737785; --line:#e7e4dd;
+  --primary:#5b7cfa; --primary-soft:#e8edff; --ok:#2fa57a; --ok-soft:#e1f5ec; --warn:#d9772e; --warn-soft:#fdeedd; --danger:#d9534f;
+  --h0:#e9e6df; --h1:#c6e9d6; --h2:#8fd3b0; --h3:#4fb487; --h4:#2a8a62;
+  --shadow:0 1px 2px rgba(20,20,40,.04),0 4px 16px rgba(20,20,40,.06);
+  --radius:18px; color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#14161b; --surface:#1d2027; --surface-2:#262a33; --text:#e9eaef; --muted:#9a9fae; --line:#2d313b;
+    --primary:#7d97ff; --primary-soft:#252c48; --ok:#45c493; --ok-soft:#1b372c; --warn:#f0a060; --warn-soft:#3a2b1d; --danger:#ef6b67;
+    --h0:#252932; --h1:#1f4a38; --h2:#25704f; --h3:#33a06f; --h4:#55d197;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.22); color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#14161b; --surface:#1d2027; --surface-2:#262a33; --text:#e9eaef; --muted:#9a9fae; --line:#2d313b;
+  --primary:#7d97ff; --primary-soft:#252c48; --ok:#45c493; --ok-soft:#1b372c; --warn:#f0a060; --warn-soft:#3a2b1d; --danger:#ef6b67;
+  --h0:#252932; --h1:#1f4a38; --h2:#25704f; --h3:#33a06f; --h4:#55d197;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.22); color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased; min-height:100vh;
+  padding-bottom:calc(84px + env(safe-area-inset-bottom));
+  -webkit-tap-highlight-color:transparent;
+  transition:background .3s,color .3s;
+}
+body.no-scroll{overflow:hidden}
+button{font:inherit;color:inherit}
+svg{display:block}
+
+/* ---------- Шапка ---------- */
+.app-header{
+  position:sticky; top:0; z-index:20; display:flex; align-items:center; gap:12px;
+  padding:calc(10px + env(safe-area-inset-top)) 16px 10px;
+  background:var(--bg); background:color-mix(in srgb,var(--bg) 88%,transparent);
+  -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px);
+}
+.brand{display:flex;align-items:center;gap:10px;font-weight:750;font-size:1.05rem;margin-right:auto}
+.logo{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--ok));color:#fff;display:grid;place-items:center;font-size:.85rem;font-weight:800;letter-spacing:-.02em}
+.icon-btn{width:44px;height:44px;border-radius:14px;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;cursor:pointer;transition:transform .1s}
+.icon-btn:active{transform:scale(.94)}
+.icon-btn svg{width:22px;height:22px}
+
+/* ---------- Навігація ---------- */
+.tabbar{
+  position:fixed; left:0; right:0; bottom:0; z-index:30; display:grid; grid-template-columns:repeat(4,1fr);
+  background:var(--surface); border-top:1px solid var(--line);
+  padding:6px 6px calc(6px + env(safe-area-inset-bottom));
+}
+.tab{border:0;background:none;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:3px;font-size:.72rem;font-weight:650;padding:4px 0;cursor:pointer;min-height:56px}
+.tab-ic{width:52px;height:30px;border-radius:99px;display:grid;place-items:center;transition:background .25s}
+.tab svg{width:22px;height:22px}
+.tab[aria-current="page"]{color:var(--primary)}
+.tab[aria-current="page"] .tab-ic{background:var(--primary-soft)}
+
+main{max-width:720px;margin:0 auto;padding:4px 16px 24px}
+.view{display:none}
+.view.active{display:block;animation:fade .3s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+h1{font-size:1.6rem;line-height:1.2;margin:6px 0 16px;letter-spacing:-.015em}
+h2{font-size:1.08rem;margin:0 0 12px}
+.muted{color:var(--muted)}
+.small{font-size:.86rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;margin-bottom:14px}
+.eyebrow{color:var(--muted);font-size:.9rem;font-weight:600;margin-top:6px}
+
+/* ---------- Кнопки й поля ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 20px;border-radius:14px;border:0;font-weight:650;cursor:pointer;transition:transform .1s,filter .2s;text-decoration:none}
+.btn:active{transform:scale(.97)}
+.btn svg{width:20px;height:20px}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-ghost{background:var(--surface-2);color:var(--text)}
+.btn-block{width:100%}
+.btn-big{min-height:58px;font-size:1.05rem;border-radius:18px}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+.row > .btn{flex:1}
+
+.field{display:block;margin-bottom:12px;font-size:.9rem;font-weight:600}
+.field span.muted{font-weight:400}
+input,textarea{
+  display:block; width:100%; margin-top:6px; font:inherit; font-size:16px; font-weight:400;
+  padding:12px 14px; border:1px solid var(--line); border-radius:12px; background:var(--bg); color:var(--text);
+  transition:border-color .2s,box-shadow .2s;
+}
+textarea{resize:vertical;min-height:96px}
+input:focus,textarea:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px var(--primary-soft)}
+:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
+
+/* ---------- Сьогодні ---------- */
+.streak{display:flex;align-items:center;gap:14px}
+.flame{font-size:2.6rem;line-height:1;transition:filter .4s,opacity .4s}
+.flame.on{animation:flicker 2.6s ease-in-out infinite}
+.flame.off{filter:grayscale(1);opacity:.35}
+@keyframes flicker{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(1.06) rotate(-2deg)}}
+.streak-num{font-size:1.5rem;font-weight:800;line-height:1.15}
+
+.progress-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;font-size:.92rem}
+.bar{height:10px;background:var(--surface-2);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--primary),var(--ok));border-radius:inherit;transition:width .6s cubic-bezier(.2,.8,.2,1)}
+
+.task{
+  width:100%; display:flex; align-items:center; gap:14px; text-align:left; padding:14px 16px; min-height:76px;
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); margin-bottom:10px;
+  cursor:pointer; box-shadow:var(--shadow); transition:background .3s,border-color .3s,transform .12s;
+}
+.task:active{transform:scale(.985)}
+.check{flex:none;width:32px;height:32px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;transition:background .3s,border-color .3s}
+.check svg{width:18px;height:18px;stroke:#fff;stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:24;stroke-dashoffset:24;transition:stroke-dashoffset .35s .05s}
+.task-body{flex:1;min-width:0}
+.task-title{display:block;font-weight:650;transition:opacity .3s}
+.task-meta{display:block;font-size:.84rem;color:var(--muted)}
+.tag{flex:none;font-size:.7rem;font-weight:700;padding:3px 8px;border-radius:99px;background:var(--surface-2);color:var(--muted)}
+.task.done{background:var(--ok-soft);border-color:transparent}
+.task.done .check{background:var(--ok);border-color:var(--ok)}
+.task.done .check svg{stroke-dashoffset:0}
+.task.done .task-title{opacity:.7}
+.task.pop .check{animation:pop .4s}
+@keyframes pop{0%{transform:scale(.6)}60%{transform:scale(1.18)}100%{transform:scale(1)}}
+
+.celebrate{position:relative;text-align:center;padding:20px 16px;border-radius:var(--radius);background:linear-gradient(135deg,var(--primary-soft),var(--ok-soft));margin-top:4px}
+.celebrate .big{font-size:2.2rem}
+.celebrate b{display:block;font-size:1.1rem;margin:4px 0 2px}
+.celebrate.anim{animation:rise .55s cubic-bezier(.2,.8,.2,1)}
+@keyframes rise{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
+.burst{position:absolute;left:50%;top:40%;pointer-events:none}
+.burst span{position:absolute;font-size:1.2rem;animation:fly 1s ease-out forwards}
+@keyframes fly{from{transform:translate(0,0) scale(.4);opacity:1}to{transform:translate(var(--x),var(--y)) scale(1);opacity:0}}
+
+/* ---------- Слова ---------- */
+.mini-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mini{margin-bottom:12px}
+.mini b{display:block;font-size:1.9rem;line-height:1.1;font-weight:800}
+.mini span{font-size:.85rem;color:var(--muted)}
+.mini.accent b{color:var(--primary)}
+.review-cta{margin-bottom:14px;background:linear-gradient(135deg,var(--primary),#7a68f0);color:#fff;box-shadow:0 6px 18px rgba(91,124,250,.3)}
+
+details.card summary{cursor:pointer;font-weight:700;list-style:none;display:flex;align-items:center;justify-content:space-between;min-height:28px}
+details.card summary::-webkit-details-marker{display:none}
+details.card summary::after{content:"+";font-size:1.4rem;font-weight:400;color:var(--muted);transition:transform .25s}
+details[open].card summary::after{transform:rotate(45deg)}
+details.card[open] summary{margin-bottom:12px}
+
+.search{position:relative;margin-bottom:12px}
+.search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:var(--muted);margin-top:3px}
+.search input{padding-left:42px;background:var(--surface)}
+
+.word{display:flex;align-items:flex-start;gap:12px;padding:12px 12px 12px 14px;margin-bottom:10px;animation:fade .3s ease}
+.word-main{flex:1;min-width:0}
+.word-en{font-weight:750;font-size:1.08rem;word-break:break-word}
+.word-uk{color:var(--text);opacity:.85}
+.word-ex{font-size:.88rem;color:var(--muted);font-style:italic;margin-top:4px;word-break:break-word}
+.badge{display:inline-block;vertical-align:middle;font-size:.68rem;font-weight:700;padding:2px 7px;border-radius:99px;background:var(--ok-soft);color:var(--ok);margin-left:6px;font-style:normal}
+.speak{flex:none;width:44px;height:44px;border-radius:12px;border:0;background:var(--primary-soft);color:var(--primary);display:grid;place-items:center;cursor:pointer;transition:transform .1s}
+.speak:active{transform:scale(.92)}
+.speak svg{width:22px;height:22px}
+.del{flex:none;width:40px;height:40px;border:0;background:none;color:var(--muted);border-radius:10px;display:grid;place-items:center;cursor:pointer}
+.del:hover{color:var(--danger);background:var(--surface-2)}
+.del svg{width:19px;height:19px}
+.empty{text-align:center;color:var(--muted);padding:28px 16px}
+.empty .big{font-size:2rem;margin-bottom:6px}
+
+/* ---------- Швидке повторення ---------- */
+.review{
+  position:fixed; inset:0; z-index:50; background:var(--bg); display:flex; flex-direction:column;
+  padding:calc(12px + env(safe-area-inset-top)) 16px calc(16px + env(safe-area-inset-bottom));
+  animation:fade .25s ease;
+}
+.review-top{display:flex;align-items:center;gap:12px;max-width:520px;width:100%;margin:0 auto}
+.review-top .bar{flex:1}
+.rev-count{font-weight:700;font-size:.9rem;min-width:48px;text-align:right}
+.review-stage{flex:1;display:grid;place-items:center;perspective:1200px;padding:16px 0}
+.flash{position:relative;width:100%;max-width:420px;height:min(58vh,440px);cursor:pointer;-webkit-user-select:none;user-select:none}
+.flash.enter{animation:cardIn .32s cubic-bezier(.2,.8,.2,1)}
+@keyframes cardIn{from{opacity:0;transform:translateX(30px) scale(.97)}to{opacity:1;transform:none}}
+.flash-inner{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.3,.7,.3,1)}
+.flash.flipped .flash-inner{transform:rotateY(180deg)}
+.flash.no-anim .flash-inner{transition:none}
+.face{
+  position:absolute; inset:0; -webkit-backface-visibility:hidden; backface-visibility:hidden;
+  border-radius:26px; background:var(--surface); border:1px solid var(--line); box-shadow:var(--shadow);
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; padding:24px; text-align:center;
+}
+.face.back{transform:rotateY(180deg);background:linear-gradient(160deg,var(--surface) 30%,var(--primary-soft))}
+.flash-word{font-size:clamp(1.8rem,8vw,2.6rem);font-weight:800;letter-spacing:-.01em;word-break:break-word}
+.flash-trans{font-size:clamp(1.5rem,6.5vw,2.1rem);font-weight:750;word-break:break-word}
+.flash-small{color:var(--muted);font-weight:650}
+.flash-ex{color:var(--muted);font-style:italic;max-width:32ch}
+.hint{position:absolute;bottom:20px;left:0;right:0;font-size:.82rem;color:var(--muted)}
+.review-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:520px;width:100%;margin:0 auto}
+.review-actions .btn{min-height:62px;font-size:1.02rem;border-radius:18px}
+.btn-again{background:var(--warn-soft);color:var(--warn)}
+.btn-know{background:var(--ok);color:#fff}
+.review-done{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8px;max-width:420px;margin:0 auto;width:100%;animation:rise .4s ease}
+.review-done .big{font-size:3.2rem}
+.review-done .row{width:100%;margin-top:16px}
+
+/* ---------- Щоденник ---------- */
+.entry{animation:fade .3s ease}
+.entry-head{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.entry-date{font-weight:700;font-size:.9rem;color:var(--muted);margin-right:auto;text-transform:capitalize}
+.entry-text{white-space:pre-wrap;word-break:break-word}
+.entry-fix{margin-top:10px;padding:10px 12px;border-radius:12px;background:var(--ok-soft);white-space:pre-wrap;word-break:break-word}
+.entry-fix .lbl{display:block;font-size:.75rem;font-weight:700;color:var(--ok);margin-bottom:2px;text-transform:uppercase;letter-spacing:.04em}
+.entry-nofix{margin-top:8px;font-size:.84rem;color:var(--muted)}
+.mini-btn{border:0;background:var(--surface-2);color:var(--text);border-radius:10px;height:36px;padding:0 12px;font-size:.84rem;font-weight:650;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.mini-btn svg{width:16px;height:16px}
+
+/* ---------- Статистика ---------- */
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.tile{margin:0}
+.tile .ic{font-size:1.3rem}
+.tile b{display:block;font-size:1.9rem;line-height:1.15;font-weight:800}
+.tile span{font-size:.84rem;color:var(--muted)}
+
+.hm-wrap{display:grid;grid-template-columns:auto 1fr;gap:4px 6px}
+.hm-months{grid-column:2;display:grid;gap:3px;font-size:.68rem;color:var(--muted);height:16px}
+.hm-months span{white-space:nowrap;overflow:visible}
+.hm-days{display:grid;grid-template-rows:repeat(7,1fr);gap:3px;font-size:.64rem;color:var(--muted)}
+.hm-days span{display:flex;align-items:center}
+.hm{display:grid;grid-template-rows:repeat(7,auto);grid-auto-flow:column;grid-auto-columns:1fr;gap:3px}
+.hm i{aspect-ratio:1;border-radius:3px;background:var(--h0);cursor:pointer}
+.hm i.l1{background:var(--h1)} .hm i.l2{background:var(--h2)} .hm i.l3{background:var(--h3)} .hm i.l4{background:var(--h4)}
+.hm i.f{visibility:hidden}
+.hm i.t{outline:2px solid var(--primary);outline-offset:1px}
+.hm-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:12px;font-size:.8rem;color:var(--muted);flex-wrap:wrap}
+.legend{display:flex;align-items:center;gap:3px}
+.legend i{width:12px;height:12px;border-radius:3px;display:inline-block}
+
+.chart{display:flex;align-items:flex-end;gap:6px;height:150px;margin-top:6px}
+.chart-col{flex:1;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px}
+.chart-v{font-size:.75rem;font-weight:700;color:var(--muted)}
+.chart-r{width:100%;max-width:34px;min-height:3px;background:var(--primary);opacity:.55;border-radius:8px 8px 3px 3px;transition:height .7s cubic-bezier(.2,.8,.2,1)}
+.chart-col.cur .chart-r{opacity:1}
+.chart-col.cur .chart-v{color:var(--primary)}
+.chart-labels{display:flex;gap:6px;margin-top:6px;border-top:1px solid var(--line);padding-top:6px}
+.chart-labels span{flex:1;text-align:center;font-size:.68rem;color:var(--muted)}
+
+.data-actions{display:grid;gap:10px}
+.note{font-size:.84rem;color:var(--muted);margin:10px 0 0}
+.note.warn{color:var(--warn);font-weight:600}
+
+/* ---------- Тост ---------- */
+.toast{
+  position:fixed; left:50%; bottom:calc(96px + env(safe-area-inset-bottom)); z-index:60;
+  transform:translate(-50%,20px); opacity:0; pointer-events:none;
+  background:var(--text); color:var(--bg); padding:12px 18px; border-radius:14px; font-weight:600; font-size:.92rem;
+  max-width:calc(100% - 32px); width:max-content; text-align:center; box-shadow:0 8px 24px rgba(0,0,0,.2);
+  transition:opacity .25s,transform .25s;
+}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* ---------- Комп'ютер ---------- */
+@media (min-width:760px){
+  body{padding-bottom:0}
+  .app-header{padding:14px 24px}
+  .tabbar{
+    position:fixed; top:12px; bottom:auto; left:50%; right:auto; transform:translateX(-50%);
+    display:flex; gap:4px; padding:4px; border:1px solid var(--line); border-radius:16px; z-index:40;
+  }
+  .tab{flex-direction:row;font-size:.9rem;min-height:40px;padding:0 6px 0 4px;gap:0}
+  .tab-ic{width:auto;height:40px;padding:0 10px 0 12px;border-radius:12px}
+  .tab .tab-label{margin-left:-4px;padding-right:10px}
+  .tab[aria-current="page"]{background:var(--primary-soft);border-radius:12px}
+  .tab[aria-current="page"] .tab-ic{background:none}
+  main{padding-top:16px}
+  .tiles{grid-template-columns:repeat(4,1fr)}
+  .toast{bottom:28px}
+  .data-actions{grid-template-columns:1fr 1fr}
+}
+@media (min-width:760px) and (max-width:900px){ .tab .tab-label{display:none} }
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+
+<header class="app-header">
+  <div class="brand"><div class="logo">En</div><span>Мій англійський</span></div>
+  <button class="icon-btn" id="themeBtn" type="button" aria-label="Змінити тему"></button>
+</header>
+
+<nav class="tabbar" aria-label="Розділи">
+  <button class="tab" data-go="today" type="button"><span class="tab-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></span><span class="tab-label">Сьогодні</span></button>
+  <button class="tab" data-go="words" type="button"><span class="tab-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg></span><span class="tab-label">Слова</span></button>
+  <button class="tab" data-go="journal" type="button"><span class="tab-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></span><span class="tab-label">Щоденник</span></button>
+  <button class="tab" data-go="stats" type="button"><span class="tab-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><span class="tab-label">Статистика</span></button>
+</nav>
+
+<main>
+  <!-- ===== Сьогодні ===== -->
+  <section class="view" id="view-today">
+    <div class="eyebrow" id="todayDate"></div>
+    <h1>План на сьогодні</h1>
+
+    <div class="card streak">
+      <div class="flame" id="flame">🔥</div>
+      <div>
+        <div class="streak-num" id="streakNum">0 днів</div>
+        <div class="muted small" id="streakHint"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="progress-top"><span>Прогрес дня</span><b id="progText">0 з 3</b></div>
+      <div class="bar"><i id="progBar"></i></div>
+    </div>
+
+    <div id="taskList"></div>
+    <div id="celebrate" class="celebrate" hidden></div>
+  </section>
+
+  <!-- ===== Слова ===== -->
+  <section class="view" id="view-words">
+    <h1>Мої слова</h1>
+    <div class="mini-row">
+      <div class="card mini accent"><b id="wTotal">0</b><span>слів вивчено</span></div>
+      <div class="card mini"><b id="wKnown">0</b><span>добре знаю</span></div>
+    </div>
+
+    <button class="btn btn-big btn-block review-cta" id="startReview" type="button">⚡ Швидке повторення</button>
+
+    <details class="card" id="addWordBox" open>
+      <summary>Додати слово</summary>
+      <form id="wordForm" autocomplete="off">
+        <label class="field">Англійське слово
+          <input id="wEn" required lang="en" autocapitalize="none" spellcheck="false" placeholder="наприклад, journey">
+        </label>
+        <label class="field">Переклад
+          <input id="wUk" required placeholder="подорож">
+        </label>
+        <label class="field">Приклад речення <span class="muted">(необов'язково)</span>
+          <input id="wEx" lang="en" placeholder="It was a long journey.">
+        </label>
+        <button class="btn btn-primary btn-block" type="submit">Додати слово</button>
+      </form>
+    </details>
+
+    <div class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" id="wordSearch" placeholder="Пошук слова або перекладу…" autocomplete="off">
+    </div>
+    <div id="wordList"></div>
+  </section>
+
+  <!-- ===== Щоденник ===== -->
+  <section class="view" id="view-journal">
+    <h1>Щоденник речень</h1>
+    <form class="card" id="jForm" autocomplete="off">
+      <h2 id="jFormTitle">Новий запис</h2>
+      <label class="field">Дата
+        <input type="date" id="jDate" required>
+      </label>
+      <label class="field">Мої речення англійською
+        <textarea id="jText" rows="4" lang="en" spellcheck="false" placeholder="Today I watched a video about…"></textarea>
+      </label>
+      <label class="field">Виправлений варіант <span class="muted">(від ШІ — можна додати пізніше)</span>
+        <textarea id="jFix" rows="4" lang="en" spellcheck="false" placeholder="Встав сюди виправлення"></textarea>
+      </label>
+      <div class="row">
+        <button class="btn btn-primary" type="submit">Зберегти</button>
+        <button class="btn btn-ghost" type="button" id="jCancel" hidden>Скасувати</button>
+      </div>
+    </form>
+    <div id="jList"></div>
+  </section>
+
+  <!-- ===== Статистика ===== -->
+  <section class="view" id="view-stats">
+    <h1>Статистика</h1>
+    <div class="tiles">
+      <div class="card tile"><div class="ic">🔥</div><b id="sCur">0</b><span>поточна серія</span></div>
+      <div class="card tile"><div class="ic">🏆</div><b id="sBest">0</b><span>найдовша серія</span></div>
+      <div class="card tile"><div class="ic">📅</div><b id="sDays">0</b><span>днів навчання</span></div>
+      <div class="card tile"><div class="ic">📚</div><b id="sWords">0</b><span>слів у словнику</span></div>
+    </div>
+
+    <div class="card">
+      <h2>Календар активності</h2>
+      <div id="heatmap"></div>
+      <div class="hm-foot">
+        <span id="hmCaption">Натисни на день, щоб побачити деталі</span>
+        <span class="legend">менше <i style="background:var(--h0)"></i><i style="background:var(--h1)"></i><i style="background:var(--h2)"></i><i style="background:var(--h3)"></i><i style="background:var(--h4)"></i> більше</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Нові слова по тижнях</h2>
+      <div class="muted small" id="chartSum"></div>
+      <div id="chart"></div>
+    </div>
+
+    <div class="card">
+      <h2>Резервна копія</h2>
+      <div class="data-actions">
+        <button class="btn btn-primary" id="exportBtn" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+          Експорт даних
+        </button>
+        <button class="btn btn-ghost" id="importBtn" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V9m0 0 4 4m-4-4-4 4M4 7V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2"/></svg>
+          Імпорт даних
+        </button>
+      </div>
+      <input type="file" id="importFile" accept="application/json,.json" hidden>
+      <p class="note" id="backupNote"></p>
+    </div>
+
+    <div class="card" id="installCard" hidden>
+      <h2>Застосунок на телефоні</h2>
+      <button class="btn btn-primary btn-block" id="installBtn" type="button">📲 Встановити на головний екран</button>
+    </div>
+  </section>
+</main>
+
+<!-- ===== Режим швидкого повторення ===== -->
+<div class="review" id="review" hidden role="dialog" aria-modal="true" aria-label="Швидке повторення">
+  <div class="review-top">
+    <button class="icon-btn" id="revClose" type="button" aria-label="Закрити">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <div class="bar"><i id="revBar"></i></div>
+    <span class="rev-count" id="revCount">0/0</span>
+  </div>
+
+  <div class="review-stage" id="revStage">
+    <div class="flash" id="flash" tabindex="0" role="button" aria-label="Перевернути картку">
+      <div class="flash-inner">
+        <div class="face front">
+          <div class="flash-word" id="fWord"></div>
+          <button class="speak" id="fSpeak" type="button" aria-label="Озвучити"></button>
+          <div class="hint">Натисни на картку, щоб побачити переклад</div>
+        </div>
+        <div class="face back">
+          <div class="flash-small" id="fWord2"></div>
+          <div class="flash-trans" id="fTrans"></div>
+          <div class="flash-ex" id="fEx"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="review-actions" id="revActions">
+    <button class="btn btn-again" id="revAgain" type="button">🔁 Ще повторити</button>
+    <button class="btn btn-know" id="revKnow" type="button">✓ Знаю</button>
+  </div>
+
+  <div class="review-done" id="revDone" hidden></div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(() => {
+'use strict';
+
+/* ================= Утиліти ================= */
+const KEY = 'engTracker.v1';
+const $ = s => document.querySelector(s);
+const pad = n => String(n).padStart(2, '0');
+const dkey = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+const parseKey = k => { const [y, m, d] = k.split('-').map(Number); return new Date(y, m - 1, d); };
+const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate() + n); return x; };
+const todayKey = () => dkey(new Date());
+const weekStart = d => { const x = new Date(d.getFullYear(), d.getMonth(), d.getDate()); x.setDate(x.getDate() - (x.getDay() + 6) % 7); return x; };
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
+const plural = (n, f) => { const a = Math.abs(n) % 100, b = a % 10; return a > 10 && a < 20 ? f[2] : b === 1 ? f[0] : b >= 2 && b <= 4 ? f[1] : f[2]; };
+const DAYS = ['день', 'дні', 'днів'];
+const WORDS = ['слово', 'слова', 'слів'];
+const fmtLong = k => parseKey(k).toLocaleDateString('uk-UA', { weekday: 'short', day: 'numeric', month: 'long' });
+
+const ICON = {
+  speaker: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>',
+  trash: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg>',
+  edit: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>',
+  check: '<svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>',
+  moon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>',
+  sun: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>'
+};
+
+const TASKS = [
+  { id: 'anki',  icon: '🧠', title: 'Anki: повторення слів', meta: '~10 хв' },
+  { id: 'write', icon: '✍️', title: 'Написати 3–5 речень', meta: '~5–10 хв' },
+  { id: 'video', icon: '🎬', title: 'Подивитися відео англійською', meta: '~10 хв' },
+  { id: 'ai',    icon: '💬', title: 'Розмова з ШІ', meta: '1–2 рази на тиждень', optional: true }
+];
+const REQUIRED = TASKS.filter(t => !t.optional);
+
+const CHEERS = [
+  ['🎉', 'Чудова робота!', 'Усі завдання на сьогодні виконано. Так тримати!'],
+  ['🌟', 'Ти молодець!', 'Ще один крок до вільної англійської.'],
+  ['💪', 'Excellent!', 'Маленькі щоденні кроки дають великий результат.'],
+  ['🚀', 'Well done!', 'Сьогоднішній план виконано повністю.'],
+  ['🏅', 'Great job!', 'Регулярність — твоя суперсила.']
+];
+
+/* ================= Дані ================= */
+const defaults = () => ({ version: 1, days: {}, words: [], journal: [], settings: {} });
+let S;
+function load() {
+  try { S = Object.assign(defaults(), JSON.parse(localStorage.getItem(KEY)) || {}); }
+  catch (e) { S = defaults(); }
+}
+function save() {
+  try { localStorage.setItem(KEY, JSON.stringify(S)); }
+  catch (e) { toast('Не вдалося зберегти дані 😕'); }
+}
+
+const doneCount = k => { const d = S.days[k]; return d ? TASKS.filter(t => d[t.id]).length : 0; };
+const isActive = k => doneCount(k) > 0;
+const allDone = k => REQUIRED.every(t => S.days[k] && S.days[k][t.id]);
+
+function currentStreak() {
+  let d = new Date();
+  if (!isActive(dkey(d))) d = addDays(d, -1); // сьогодні ще можна встигнути
+  let n = 0;
+  while (isActive(dkey(d))) { n++; d = addDays(d, -1); }
+  return n;
+}
+function longestStreak() {
+  const keys = Object.keys(S.days).filter(isActive).sort();
+  let best = 0, run = 0, prev = null;
+  for (const k of keys) {
+    run = prev && Math.round((parseKey(k) - parseKey(prev)) / 864e5) === 1 ? run + 1 : 1;
+    best = Math.max(best, run);
+    prev = k;
+  }
+  return best;
+}
+function aiThisWeek() {
+  const ws = weekStart(new Date());
+  let n = 0;
+  for (let i = 0; i < 7; i++) { const d = S.days[dkey(addDays(ws, i))]; if (d && d.ai) n++; }
+  return n;
+}
+
+/* ================= Тост ================= */
+let toastTimer;
+function toast(msg) {
+  const t = $('#toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 2600);
+}
+
+/* ================= Тема ================= */
+const effTheme = () => document.documentElement.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+function applyThemeUI() {
+  const t = effTheme();
+  $('#themeBtn').innerHTML = t === 'dark' ? ICON.sun : ICON.moon;
+  document.querySelector('meta[name="theme-color"]').content = t === 'dark' ? '#14161b' : '#f5f4f0';
+}
+$('#themeBtn').addEventListener('click', () => {
+  const next = effTheme() === 'dark' ? 'light' : 'dark';
+  document.documentElement.dataset.theme = next;
+  S.settings.theme = next;
+  save();
+  applyThemeUI();
+});
+matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change', applyThemeUI);
+
+/* ================= Навігація ================= */
+const VIEWS = ['today', 'words', 'journal', 'stats'];
+function go(v) {
+  if (!VIEWS.includes(v)) v = 'today';
+  document.querySelectorAll('.view').forEach(s => s.classList.toggle('active', s.id === 'view-' + v));
+  document.querySelectorAll('.tab').forEach(b => {
+    if (b.dataset.go === v) b.setAttribute('aria-current', 'page');
+    else b.removeAttribute('aria-current');
+  });
+  if (v === 'today') renderToday();
+  if (v === 'words') renderWords();
+  if (v === 'journal') renderJournal();
+  if (v === 'stats') renderStats();
+  window.scrollTo(0, 0);
+  if (location.hash !== '#' + v) history.replaceState(null, '', '#' + v);
+}
+document.querySelectorAll('.tab').forEach(b => b.addEventListener('click', () => go(b.dataset.go)));
+window.addEventListener('hashchange', () => go(location.hash.slice(1)));
+
+/* ================= Озвучення ================= */
+function speak(text) {
+  if (!('speechSynthesis' in window)) { toast('Браузер не підтримує озвучення'); return; }
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'en-US';
+  u.rate = 0.9;
+  const voices = speechSynthesis.getVoices();
+  const v = voices.find(v => /^en[-_]US/i.test(v.lang)) || voices.find(v => /^en/i.test(v.lang));
+  if (v) u.voice = v;
+  speechSynthesis.speak(u);
+}
+if ('speechSynthesis' in window) speechSynthesis.getVoices();
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-speak]');
+  if (b) { e.stopPropagation(); speak(b.dataset.speak); }
+});
+
+/* ================= Сьогодні ================= */
+function taskMeta(t) {
+  if (t.id !== 'ai') return t.meta;
+  const n = aiThisWeek();
+  return `${t.meta} · цього тижня: ${n}`;
+}
+function renderToday() {
+  $('#todayDate').textContent = cap(new Date().toLocaleDateString('uk-UA', { weekday: 'long', day: 'numeric', month: 'long' }));
+  const d = S.days[todayKey()] || {};
+  $('#taskList').innerHTML = TASKS.map(t => `
+    <button type="button" class="task${d[t.id] ? ' done' : ''}" data-task="${t.id}" aria-pressed="${!!d[t.id]}">
+      <span class="check">${ICON.check}</span>
+      <span class="task-body">
+        <span class="task-title">${t.icon} ${t.title}</span>
+        <span class="task-meta">${taskMeta(t)}</span>
+      </span>
+      ${t.optional ? '<span class="tag">необов\'язково</span>' : ''}
+    </button>`).join('');
+  renderTodayMeta(false);
+}
+function renderTodayMeta(animate) {
+  const k = todayKey();
+  const streak = currentStreak();
+  $('#streakNum').textContent = `${streak} ${plural(streak, DAYS)} поспіль`;
+  $('#flame').className = 'flame ' + (streak > 0 ? 'on' : 'off');
+  $('#streakHint').textContent = isActive(k)
+    ? 'Сьогоднішній день зараховано ✓'
+    : streak > 0 ? 'Виконай хоча б один пункт, щоб не перервати серію' : 'Виконай хоча б один пункт — і серія почнеться!';
+
+  const done = REQUIRED.filter(t => S.days[k] && S.days[k][t.id]).length;
+  const bonus = S.days[k] && S.days[k].ai ? ' + бонус 💬' : '';
+  $('#progText').textContent = `${done} з ${REQUIRED.length}${bonus}`;
+  $('#progBar').style.width = (done / REQUIRED.length * 100) + '%';
+
+  const box = $('#celebrate');
+  if (allDone(k)) {
+    const c = CHEERS[parseKey(k).getDate() % CHEERS.length];
+    box.innerHTML = `<div class="big">${c[0]}</div><b>${c[1]}</b><div class="muted small">${c[2]}</div>`;
+    box.hidden = false;
+    if (animate) {
+      box.classList.remove('anim'); void box.offsetWidth; box.classList.add('anim');
+      burst(box);
+    }
+  } else box.hidden = true;
+}
+function burst(el) {
+  const b = document.createElement('div');
+  b.className = 'burst';
+  const emo = ['✨', '🎉', '⭐', '💫'];
+  for (let i = 0; i < 14; i++) {
+    const s = document.createElement('span');
+    const a = (Math.PI * 2 * i) / 14, r = 70 + Math.random() * 50;
+    s.textContent = emo[i % emo.length];
+    s.style.setProperty('--x', Math.cos(a) * r + 'px');
+    s.style.setProperty('--y', Math.sin(a) * r + 'px');
+    b.appendChild(s);
+  }
+  el.appendChild(b);
+  setTimeout(() => b.remove(), 1100);
+}
+$('#taskList').addEventListener('click', e => {
+  const b = e.target.closest('.task');
+  if (!b) return;
+  const k = todayKey(), id = b.dataset.task;
+  const wasAll = allDone(k);
+  const d = S.days[k] || (S.days[k] = {});
+  d[id] = !d[id];
+  if (!TASKS.some(t => d[t.id])) delete S.days[k];
+  save();
+  b.classList.toggle('done', !!d[id]);
+  b.setAttribute('aria-pressed', !!d[id]);
+  if (d[id]) {
+    b.classList.remove('pop'); void b.offsetWidth; b.classList.add('pop');
+    if (navigator.vibrate) navigator.vibrate(12);
+  }
+  if (id === 'ai') b.querySelector('.task-meta').textContent = taskMeta(TASKS[3]);
+  renderTodayMeta(allDone(k) && !wasAll);
+});
+
+/* ================= Слова ================= */
+const KNOWN_LEVEL = 3; // стільки разів поспіль «Знаю» — і слово вважається добре вивченим
+function renderWords() {
+  $('#wTotal').textContent = S.words.length;
+  $('#wKnown').textContent = S.words.filter(w => (w.level || 0) >= KNOWN_LEVEL).length;
+  const q = $('#wordSearch').value.trim().toLowerCase();
+  const list = q ? S.words.filter(w => (w.en + ' ' + w.uk + ' ' + (w.ex || '')).toLowerCase().includes(q)) : S.words;
+  const box = $('#wordList');
+  if (!S.words.length) {
+    box.innerHTML = '<div class="empty"><div class="big">📖</div>Тут з\'являться твої слова.<br>Додай перше слово вище!</div>';
+    return;
+  }
+  if (!list.length) { box.innerHTML = '<div class="empty">Нічого не знайдено 🤷</div>'; return; }
+  box.innerHTML = list.map(w => `
+    <div class="card word">
+      <button class="speak" type="button" data-speak="${esc(w.en)}" aria-label="Озвучити ${esc(w.en)}">${ICON.speaker}</button>
+      <div class="word-main">
+        <div class="word-en">${esc(w.en)}${(w.level || 0) >= KNOWN_LEVEL ? '<span class="badge">знаю</span>' : ''}</div>
+        <div class="word-uk">${esc(w.uk)}</div>
+        ${w.ex ? `<div class="word-ex">${esc(w.ex)}</div>` : ''}
+      </div>
+      <button class="del" type="button" data-del="${w.id}" aria-label="Видалити">${ICON.trash}</button>
+    </div>`).join('');
+}
+$('#wordForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const en = $('#wEn').value.trim(), uk = $('#wUk').value.trim(), ex = $('#wEx').value.trim();
+  if (!en || !uk) { toast('Введи слово і переклад'); return; }
+  if (S.words.some(w => w.en.toLowerCase() === en.toLowerCase())) { toast('Це слово вже є у словнику'); return; }
+  S.words.unshift({ id: uid(), en, uk, ex, added: todayKey(), level: 0 });
+  save();
+  e.target.reset();
+  $('#wordSearch').value = '';
+  renderWords();
+  toast(`«${en}» додано ✓`);
+});
+$('#wordSearch').addEventListener('input', renderWords);
+$('#wordList').addEventListener('click', e => {
+  const b = e.target.closest('[data-del]');
+  if (!b) return;
+  const w = S.words.find(x => x.id === b.dataset.del);
+  if (w && confirm(`Видалити слово «${w.en}»?`)) {
+    S.words = S.words.filter(x => x !== w);
+    save();
+    renderWords();
+  }
+});
+
+/* ================= Швидке повторення ================= */
+const SESSION = 20;
+let R = null;
+function startReview() {
+  if (!S.words.length) { toast('Спочатку додай кілька слів'); return; }
+  const ids = S.words
+    .map(w => ({ w, r: Math.random() }))
+    .sort((a, b) => (a.w.level || 0) - (b.w.level || 0) || a.r - b.r) // спершу слабші слова
+    .slice(0, SESSION)
+    .map(x => x.w.id);
+  R = { queue: ids, total: ids.length, done: 0, again: new Set() };
+  $('#review').hidden = false;
+  $('#revDone').hidden = true;
+  $('#revStage').hidden = false;
+  $('#revActions').hidden = false;
+  document.body.classList.add('no-scroll');
+  $('#fSpeak').innerHTML = ICON.speaker;
+  showCard();
+}
+function showCard() {
+  $('#revBar').style.width = (R.done / R.total * 100) + '%';
+  $('#revCount').textContent = `${R.done}/${R.total}`;
+  if (!R.queue.length) return finishReview();
+  const w = S.words.find(x => x.id === R.queue[0]);
+  if (!w) { R.queue.shift(); R.total--; return showCard(); }
+  const f = $('#flash');
+  f.classList.add('no-anim');
+  f.classList.remove('flipped', 'enter');
+  void f.offsetWidth;
+  f.classList.remove('no-anim');
+  f.classList.add('enter');
+  $('#fWord').textContent = w.en;
+  $('#fWord2').textContent = w.en;
+  $('#fTrans').textContent = w.uk;
+  $('#fEx').textContent = w.ex || '';
+  $('#fSpeak').dataset.speak = w.en;
+}
+function flip() { $('#flash').classList.toggle('flipped'); }
+function answer(know) {
+  if (!R || !R.queue.length) return;
+  const id = R.queue.shift();
+  const w = S.words.find(x => x.id === id);
+  if (w) {
+    if (know) { w.level = Math.min((w.level || 0) + 1, 5); R.done++; }
+    else {
+      w.level = 0;
+      R.again.add(id);
+      R.queue.splice(Math.min(3, R.queue.length), 0, id); // покажемо знову за кілька карток
+    }
+    w.seen = todayKey();
+    save();
+  }
+  showCard();
+}
+function finishReview() {
+  $('#revStage').hidden = true;
+  $('#revActions').hidden = true;
+  const first = R.total - R.again.size;
+  const box = $('#revDone');
+  box.innerHTML = `
+    <div class="big">${R.again.size === 0 ? '🏆' : '👏'}</div>
+    <h2 style="font-size:1.4rem;margin:0">Повторення завершено!</h2>
+    <div class="muted">Знав з першого разу: <b>${first}</b> з ${R.total}</div>
+    ${R.again.size ? `<div class="muted">Потребували повторення: <b>${R.again.size}</b></div>` : ''}
+    <div class="row">
+      <button class="btn btn-ghost" type="button" id="revExit">Закрити</button>
+      <button class="btn btn-primary" type="button" id="revRestart">Ще раз</button>
+    </div>`;
+  box.hidden = false;
+  $('#revExit').onclick = closeReview;
+  $('#revRestart').onclick = startReview;
+}
+function closeReview() {
+  $('#review').hidden = true;
+  document.body.classList.remove('no-scroll');
+  if ('speechSynthesis' in window) speechSynthesis.cancel();
+  R = null;
+  renderWords();
+}
+$('#startReview').addEventListener('click', startReview);
+$('#flash').addEventListener('click', flip);
+$('#revKnow').addEventListener('click', () => answer(true));
+$('#revAgain').addEventListener('click', () => answer(false));
+$('#revClose').addEventListener('click', closeReview);
+document.addEventListener('keydown', e => {
+  if ($('#review').hidden) return;
+  if (e.key === 'Escape') closeReview();
+  else if (!$('#revDone').hidden) return;
+  else if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); flip(); }
+  else if (e.key === 'ArrowRight') answer(true);
+  else if (e.key === 'ArrowLeft') answer(false);
+});
+
+/* ================= Щоденник ================= */
+let editId = null;
+function resetJournalForm() {
+  editId = null;
+  $('#jForm').reset();
+  $('#jDate').value = todayKey();
+  $('#jFormTitle').textContent = 'Новий запис';
+  $('#jCancel').hidden = true;
+}
+function renderJournal() {
+  if (!editId && !$('#jDate').value) $('#jDate').value = todayKey();
+  const list = [...S.journal].sort((a, b) => b.date.localeCompare(a.date) || b.created - a.created);
+  const box = $('#jList');
+  if (!list.length) {
+    box.innerHTML = '<div class="empty"><div class="big">✍️</div>Напиши кілька речень англійською —<br>помилятися нормально!</div>';
+    return;
+  }
+  box.innerHTML = list.map(j => `
+    <div class="card entry">
+      <div class="entry-head">
+        <span class="entry-date">${esc(fmtLong(j.date))}</span>
+        <button class="mini-btn" type="button" data-speak="${esc(j.fix || j.text)}" aria-label="Озвучити">${ICON.speaker}</button>
+        <button class="mini-btn" type="button" data-edit="${j.id}">${ICON.edit} Змінити</button>
+        <button class="del" type="button" data-jdel="${j.id}" aria-label="Видалити">${ICON.trash}</button>
+      </div>
+      <div class="entry-text">${esc(j.text)}</div>
+      ${j.fix
+        ? `<div class="entry-fix"><span class="lbl">Виправлено</span>${esc(j.fix)}</div>`
+        : '<div class="entry-nofix">Виправлення ще немає — натисни «Змінити», щоб додати.</div>'}
+    </div>`).join('');
+}
+$('#jForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const text = $('#jText').value.trim(), fix = $('#jFix').value.trim(), date = $('#jDate').value || todayKey();
+  if (!text) { toast('Напиши хоча б одне речення'); return; }
+  let msg = 'Запис збережено ✓';
+  if (editId) {
+    const j = S.journal.find(x => x.id === editId);
+    if (j) Object.assign(j, { text, fix, date });
+    msg = 'Зміни збережено ✓';
+  } else {
+    S.journal.push({ id: uid(), date, text, fix, created: Date.now() });
+    if (date === todayKey()) {
+      const d = S.days[date] || (S.days[date] = {});
+      if (!d.write) { d.write = true; msg = 'Збережено · «Написати речення» відмічено ✓'; }
+    }
+  }
+  save();
+  resetJournalForm();
+  renderJournal();
+  toast(msg);
+});
+$('#jCancel').addEventListener('click', resetJournalForm);
+$('#jList').addEventListener('click', e => {
+  const ed = e.target.closest('[data-edit]');
+  const del = e.target.closest('[data-jdel]');
+  if (ed) {
+    const j = S.journal.find(x => x.id === ed.dataset.edit);
+    if (!j) return;
+    editId = j.id;
+    $('#jDate').value = j.date;
+    $('#jText').value = j.text;
+    $('#jFix').value = j.fix || '';
+    $('#jFormTitle').textContent = 'Редагування запису';
+    $('#jCancel').hidden = false;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(() => $(j.fix ? '#jText' : '#jFix').focus({ preventScroll: true }), 300);
+  } else if (del && confirm('Видалити цей запис?')) {
+    S.journal = S.journal.filter(x => x.id !== del.dataset.jdel);
+    if (editId === del.dataset.jdel) resetJournalForm();
+    save();
+    renderJournal();
+  }
+});
+
+/* ================= Статистика ================= */
+const MONTHS = ['січ', 'лют', 'бер', 'кві', 'тра', 'чер', 'лип', 'сер', 'вер', 'жов', 'лис', 'гру'];
+function renderStats() {
+  $('#sCur').textContent = currentStreak();
+  $('#sBest').textContent = longestStreak();
+  $('#sDays').textContent = Object.keys(S.days).filter(isActive).length;
+  $('#sWords').textContent = S.words.length;
+  renderHeatmap();
+  renderChart();
+  renderBackupNote();
+}
+function renderHeatmap() {
+  const weeks = window.innerWidth < 400 ? 17 : 22;
+  const start = addDays(weekStart(new Date()), -(weeks - 1) * 7);
+  const tk = todayKey(), now = new Date();
+  let cells = '', months = '';
+  let lastMonth = -1;
+  for (let w = 0; w < weeks; w++) {
+    const first = addDays(start, w * 7);
+    // підпис місяця над тижнем, у якому місяць починається
+    const m = addDays(first, 6).getMonth();
+    months += `<span>${m !== lastMonth && (w > 0 || first.getDate() <= 7) ? MONTHS[m] : ''}</span>`;
+    lastMonth = m;
+    for (let i = 0; i < 7; i++) {
+      const d = addDays(first, i), k = dkey(d), n = doneCount(k);
+      const future = d > now && k !== tk;
+      cells += `<i class="l${n}${future ? ' f' : ''}${k === tk ? ' t' : ''}" data-k="${k}" title="${esc(fmtLong(k))}: ${n} з ${TASKS.length}"></i>`;
+    }
+  }
+  $('#heatmap').innerHTML = `
+    <div class="hm-wrap">
+      <div class="hm-months" style="grid-template-columns:repeat(${weeks},1fr)">${months}</div>
+      <div class="hm-days"><span>Пн</span><span></span><span>Ср</span><span></span><span>Пт</span><span></span><span>Нд</span></div>
+      <div class="hm">${cells}</div>
+    </div>`;
+}
+$('#heatmap').addEventListener('click', e => {
+  const c = e.target.closest('i[data-k]');
+  if (!c) return;
+  const k = c.dataset.k, d = S.days[k];
+  const names = d ? TASKS.filter(t => d[t.id]).map(t => t.icon).join(' ') : '';
+  $('#hmCaption').textContent = `${cap(fmtLong(k))}: ${d ? `виконано ${doneCount(k)} ${names}` : 'без занять'}`;
+});
+function renderChart() {
+  const N = 8;
+  const cur = weekStart(new Date());
+  const weeks = Array.from({ length: N }, (_, i) => addDays(cur, -(N - 1 - i) * 7));
+  const counts = weeks.map(ws => {
+    const a = dkey(ws), b = dkey(addDays(ws, 7));
+    return S.words.filter(w => w.added >= a && w.added < b).length;
+  });
+  const max = Math.max(1, ...counts);
+  const sum = counts.reduce((a, b) => a + b, 0);
+  $('#chartSum').textContent = `За останні ${N} тижнів: ${sum} ${plural(sum, WORDS)}`;
+  $('#chart').innerHTML = `
+    <div class="chart">${counts.map((c, i) => `
+      <div class="chart-col${i === N - 1 ? ' cur' : ''}">
+        <span class="chart-v">${c}</span>
+        <div class="chart-r" style="height:0" data-h="${c / max * 100}"></div>
+      </div>`).join('')}
+    </div>
+    <div class="chart-labels">${weeks.map((w, i) => `<span>${i === N - 1 ? 'цей' : `${pad(w.getDate())}.${pad(w.getMonth() + 1)}`}</span>`).join('')}</div>`;
+  requestAnimationFrame(() => requestAnimationFrame(() =>
+    document.querySelectorAll('.chart-r').forEach(r => r.style.height = `calc(${r.dataset.h}% - 22px)`)));
+}
+
+/* ================= Резервна копія ================= */
+function renderBackupNote() {
+  const n = $('#backupNote'), last = S.settings.lastExport;
+  if (!last) {
+    n.textContent = 'Ти ще не робив резервну копію. Дані зберігаються лише в цьому браузері — збережи файл, щоб не втратити прогрес.';
+    n.className = 'note' + (S.words.length || Object.keys(S.days).length ? ' warn' : '');
+    return;
+  }
+  const ago = Math.round((parseKey(todayKey()) - parseKey(last)) / 864e5);
+  n.textContent = `Остання копія: ${fmtLong(last)}${ago > 0 ? ` (${ago} ${plural(ago, DAYS)} тому)` : ' (сьогодні)'}.` + (ago >= 7 ? ' Час зробити нову!' : '');
+  n.className = 'note' + (ago >= 7 ? ' warn' : '');
+}
+$('#exportBtn').addEventListener('click', async () => {
+  S.settings.lastExport = todayKey();
+  save();
+  const name = `angliyska-backup-${todayKey()}.json`;
+  const json = JSON.stringify(S, null, 2);
+  const blob = new Blob([json], { type: 'application/json' });
+  // На телефоні в режимі застосунку зручніше «Поділитися» (зберегти у Файли / надіслати собі)
+  const isApp = matchMedia('(display-mode: standalone)').matches || navigator.standalone;
+  if (isApp && navigator.canShare) {
+    const file = new File([blob], name, { type: 'application/json' });
+    if (navigator.canShare({ files: [file] })) {
+      try { await navigator.share({ files: [file], title: 'Резервна копія' }); renderBackupNote(); return; }
+      catch (e) { if (e.name === 'AbortError') return; }
+    }
+  }
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = name;
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+  renderBackupNote();
+  toast('Файл резервної копії збережено ✓');
+});
+$('#importBtn').addEventListener('click', () => $('#importFile').click());
+$('#importFile').addEventListener('change', async e => {
+  const file = e.target.files[0];
+  e.target.value = '';
+  if (!file) return;
+  try {
+    const obj = JSON.parse(await file.text());
+    if (!obj || typeof obj.days !== 'object' || !Array.isArray(obj.words)) throw new Error('bad');
+    const info = `${obj.words.length} ${plural(obj.words.length, WORDS)}, ${Object.keys(obj.days).length} ${plural(Object.keys(obj.days).length, DAYS)} активності`;
+    if (!confirm(`Відновити дані з файлу (${info})?\nПоточні дані буде замінено.`)) return;
+    const theme = S.settings.theme;
+    S = Object.assign(defaults(), obj);
+    S.settings = Object.assign({}, obj.settings, theme ? { theme } : {});
+    if (!Array.isArray(S.journal)) S.journal = [];
+    save();
+    renderAll();
+    toast('Дані відновлено ✓');
+  } catch (err) {
+    toast('Не вдалося прочитати файл. Це точно резервна копія?');
+  }
+});
+
+/* ================= PWA ================= */
+let installEvt = null;
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault();
+  installEvt = e;
+  $('#installCard').hidden = false;
+});
+$('#installBtn').addEventListener('click', async () => {
+  if (!installEvt) return;
+  installEvt.prompt();
+  await installEvt.userChoice;
+  installEvt = null;
+  $('#installCard').hidden = true;
+});
+window.addEventListener('appinstalled', () => { $('#installCard').hidden = true; toast('Застосунок встановлено 🎉'); });
+if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+}
+if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
+
+/* ================= Старт ================= */
+function renderAll() {
+  renderToday();
+  renderWords();
+  renderJournal();
+  renderStats();
+}
+let lastDay = todayKey();
+document.addEventListener('visibilitychange', () => {
+  // якщо застосунок був відкритий через північ — оновлюємо «сьогодні»
+  if (document.visibilityState === 'visible' && todayKey() !== lastDay) {
+    lastDay = todayKey();
+    resetJournalForm();
+    renderAll();
+  }
+});
+
+load();
+applyThemeUI();
+if (S.words.length > 3) $('#addWordBox').open = false;
+resetJournalForm();
+go(location.hash.slice(1) || 'today');
+})();
+</script>
+</body>
+</html>
