@@ -1,12 +1,21 @@
 {
- "version": 1,
+ "version": 2,
  "topics": {
   "daily": "Щоденне спілкування",
   "study": "Навчання та університет",
   "travel": "Подорожі",
   "shopping": "Покупки й кафе",
   "emotions": "Емоції та думки",
-  "work": "Робота й бізнес"
+  "work": "Робота й бізнес",
+  "phrasal": "Фразові дієслова",
+  "idioms": "Ідіоми"
+ },
+ "levels": {
+  "1": "Дуже прості",
+  "2": "Прості",
+  "3": "Середні",
+  "4": "Вище середнього",
+  "5": "Просунуті"
  },
  "phrases": [
   {
@@ -4024,6 +4033,1966 @@
    "example": "We built an MVP in two months.",
    "topic": "work",
    "level": 3
+  },
+  {
+   "id": 503,
+   "en": "I'm not much of a morning person.",
+   "uk": "Я не «жайворонок».",
+   "example": "Don't call me before ten. I'm not much of a morning person.",
+   "topic": "daily",
+   "level": 4
+  },
+  {
+   "id": 504,
+   "en": "I'm struggling with the present perfect.",
+   "uk": "Мені важко дається Present Perfect.",
+   "example": "I'm struggling with the present perfect. When do I use it?",
+   "topic": "study",
+   "level": 4
+  },
+  {
+   "id": 505,
+   "en": "I'd like to report a lost item.",
+   "uk": "Я хочу заявити про загублену річ.",
+   "example": "Excuse me, I'd like to report a lost item.",
+   "topic": "travel",
+   "level": 4
+  },
+  {
+   "id": 506,
+   "en": "Could I see something similar but cheaper?",
+   "uk": "Можна щось схоже, але дешевше?",
+   "example": "I like it, but could I see something similar but cheaper?",
+   "topic": "shopping",
+   "level": 4
+  },
+  {
+   "id": 507,
+   "en": "I'm a bit overwhelmed.",
+   "uk": "Я трохи перевантажений.",
+   "example": "New job, new city... I'm a bit overwhelmed.",
+   "topic": "emotions",
+   "level": 4
+  },
+  {
+   "id": 508,
+   "en": "Let's set up a meeting.",
+   "uk": "Давай організуємо зустріч.",
+   "example": "Let's set up a meeting with the client next week.",
+   "topic": "work",
+   "level": 4
+  },
+  {
+   "id": 509,
+   "en": "Give up",
+   "uk": "Здаватися, кидати",
+   "example": "Don't give up! You're doing great.",
+   "topic": "phrasal",
+   "level": 4
+  },
+  {
+   "id": 510,
+   "en": "Break the ice",
+   "uk": "Розтопити кригу (почати розмову)",
+   "example": "He told a joke to break the ice.",
+   "topic": "idioms",
+   "level": 4
+  },
+  {
+   "id": 511,
+   "en": "I've been meaning to call you.",
+   "uk": "Я давно збирався тобі подзвонити.",
+   "example": "Hey! I've been meaning to call you for weeks.",
+   "topic": "daily",
+   "level": 4
+  },
+  {
+   "id": 512,
+   "en": "Could you give me an example?",
+   "uk": "Можете навести приклад?",
+   "example": "I don't get this rule. Could you give me an example?",
+   "topic": "study",
+   "level": 4
+  },
+  {
+   "id": 513,
+   "en": "Our flight got cancelled.",
+   "uk": "Наш рейс скасували.",
+   "example": "Our flight got cancelled, so we're staying another night.",
+   "topic": "travel",
+   "level": 4
+  },
+  {
+   "id": 514,
+   "en": "What's the return policy?",
+   "uk": "Які умови повернення?",
+   "example": "What's the return policy for online orders?",
+   "topic": "shopping",
+   "level": 4
+  },
+  {
+   "id": 515,
+   "en": "I can't help thinking about it.",
+   "uk": "Не можу не думати про це.",
+   "example": "I can't help thinking about what she said.",
+   "topic": "emotions",
+   "level": 4
+  },
+  {
+   "id": 516,
+   "en": "I'm afraid I can't make it.",
+   "uk": "Боюся, я не зможу бути.",
+   "example": "I'm afraid I can't make it to the meeting today.",
+   "topic": "work",
+   "level": 4
+  },
+  {
+   "id": 517,
+   "en": "Find out",
+   "uk": "Дізнатися",
+   "example": "I found out the truth yesterday.",
+   "topic": "phrasal",
+   "level": 4
+  },
+  {
+   "id": 518,
+   "en": "Under the weather",
+   "uk": "Нездужати",
+   "example": "I'm feeling a bit under the weather today.",
+   "topic": "idioms",
+   "level": 4
+  },
+  {
+   "id": 519,
+   "en": "It's been ages since we last met.",
+   "uk": "Ми не бачилися цілу вічність.",
+   "example": "It's been ages since we last met. Let's grab a coffee.",
+   "topic": "daily",
+   "level": 4
+  },
+  {
+   "id": 520,
+   "en": "It sounds a bit unnatural.",
+   "uk": "Це звучить трохи неприродно.",
+   "example": "Your sentence is correct, but it sounds a bit unnatural.",
+   "topic": "study",
+   "level": 4
+  },
+  {
+   "id": 521,
+   "en": "Is there a direct flight?",
+   "uk": "Є прямий рейс?",
+   "example": "Is there a direct flight to Barcelona?",
+   "topic": "travel",
+   "level": 4
+  },
+  {
+   "id": 522,
+   "en": "I'd like to exchange this.",
+   "uk": "Я хотів би це обміняти.",
+   "example": "It's the wrong size. I'd like to exchange this.",
+   "topic": "shopping",
+   "level": 4
+  },
+  {
+   "id": 523,
+   "en": "It got on my nerves.",
+   "uk": "Це діяло мені на нерви.",
+   "example": "His constant complaining got on my nerves.",
+   "topic": "emotions",
+   "level": 4
+  },
+  {
+   "id": 524,
+   "en": "Could you clarify that?",
+   "uk": "Можете уточнити?",
+   "example": "Sorry, I'm a bit lost. Could you clarify that?",
+   "topic": "work",
+   "level": 4
+  },
+  {
+   "id": 525,
+   "en": "Look after",
+   "uk": "Доглядати, наглядати",
+   "example": "Can you look after my dog this weekend?",
+   "topic": "phrasal",
+   "level": 4
+  },
+  {
+   "id": 526,
+   "en": "Once in a blue moon",
+   "uk": "Дуже рідко",
+   "example": "I eat fast food once in a blue moon.",
+   "topic": "idioms",
+   "level": 4
+  },
+  {
+   "id": 527,
+   "en": "I'm not really into it.",
+   "uk": "Мене це не надто захоплює.",
+   "example": "Football? I'm not really into it.",
+   "topic": "daily",
+   "level": 4
+  },
+  {
+   "id": 528,
+   "en": "Is there a more natural way to say it?",
+   "uk": "Як сказати це природніше?",
+   "example": "\"He has a big experience.\" Is there a more natural way to say it?",
+   "topic": "study",
+   "level": 4
+  },
+  {
+   "id": 529,
+   "en": "How long is the layover?",
+   "uk": "Скільки триває пересадка?",
+   "example": "How long is the layover in Istanbul?",
+   "topic": "travel",
+   "level": 4
+  },
+  {
+   "id": 530,
+   "en": "It's not what I ordered.",
+   "uk": "Це не те, що я замовляв.",
+   "example": "Excuse me, it's not what I ordered.",
+   "topic": "shopping",
+   "level": 4
+  },
+  {
+   "id": 531,
+   "en": "I was blown away.",
+   "uk": "Я був вражений.",
+   "example": "I was blown away by the concert.",
+   "topic": "emotions",
+   "level": 4
+  },
+  {
+   "id": 532,
+   "en": "Let's go over the numbers.",
+   "uk": "Пройдімося по цифрах.",
+   "example": "Before the call, let's go over the numbers.",
+   "topic": "work",
+   "level": 4
+  },
+  {
+   "id": 533,
+   "en": "Look forward to",
+   "uk": "Чекати з нетерпінням",
+   "example": "I look forward to our meeting.",
+   "topic": "phrasal",
+   "level": 4
+  },
+  {
+   "id": 534,
+   "en": "Hit the sack",
+   "uk": "Лягти спати",
+   "example": "I'm exhausted. Time to hit the sack.",
+   "topic": "idioms",
+   "level": 4
+  },
+  {
+   "id": 535,
+   "en": "I'll take your word for it.",
+   "uk": "Повірю тобі на слово.",
+   "example": "You say the restaurant is great? I'll take your word for it.",
+   "topic": "daily",
+   "level": 4
+  },
+  {
+   "id": 536,
+   "en": "I'm trying to expand my vocabulary.",
+   "uk": "Я намагаюся розширити словниковий запас.",
+   "example": "I'm trying to expand my vocabulary by reading the news.",
+   "topic": "study",
+   "level": 4
+  },
+  {
+   "id": 537,
+   "en": "I'd like an aisle seat.",
+   "uk": "Я б хотів місце біля проходу.",
+   "example": "I'd like an aisle seat, if possible.",
+   "topic": "travel",
+   "level": 4
+  },
+  {
+   "id": 538,
+   "en": "Could we have a few more minutes?",
+   "uk": "Можна нам ще кілька хвилин?",
+   "example": "We're still deciding. Could we have a few more minutes?",
+   "topic": "shopping",
+   "level": 4
+  },
+  {
+   "id": 539,
+   "en": "I didn't see that coming.",
+   "uk": "Я такого не очікував.",
+   "example": "They broke up? I didn't see that coming.",
+   "topic": "emotions",
+   "level": 4
+  },
+  {
+   "id": 540,
+   "en": "I'll look into it.",
+   "uk": "Я з'ясую. / Розберуся.",
+   "example": "Thanks for reporting the bug. I'll look into it.",
+   "topic": "work",
+   "level": 4
+  },
+  {
+   "id": 541,
+   "en": "Put off",
+   "uk": "Відкладати",
+   "example": "Stop putting off your homework.",
+   "topic": "phrasal",
+   "level": 4
+  },
+  {
+   "id": 542,
+   "en": "Cost a fortune",
+   "uk": "Коштувати цілий статок",
+   "example": "Their new house cost a fortune.",
+   "topic": "idioms",
+   "level": 4
+  },
+  {
+   "id": 543,
+   "en": "I could use some help.",
+   "uk": "Мені б не завадила допомога.",
+   "example": "I could use some help with these boxes.",
+   "topic": "daily",
+   "level": 4
+  },
+  {
+   "id": 544,
+   "en": "I can understand more than I can say.",
+   "uk": "Я розумію більше, ніж можу сказати.",
+   "example": "It's frustrating: I can understand more than I can say.",
+   "topic": "study",
+   "level": 4
+  },
+  {
+   "id": 545,
+   "en": "Could you keep an eye on my bag?",
+   "uk": "Можете наглянути за моєю сумкою?",
+   "example": "Could you keep an eye on my bag for a minute?",
+   "topic": "travel",
+   "level": 4
+  },
+  {
+   "id": 546,
+   "en": "What's the dish of the day?",
+   "uk": "Яка страва дня?",
+   "example": "Excuse me, what's the dish of the day?",
+   "topic": "shopping",
+   "level": 4
+  },
+  {
+   "id": 547,
+   "en": "I'm keen on...",
+   "uk": "Я дуже хочу... / Мені до вподоби...",
+   "example": "I'm keen on learning Spanish too.",
+   "topic": "emotions",
+   "level": 4
+  },
+  {
+   "id": 548,
+   "en": "I'm on it.",
+   "uk": "Вже займаюся.",
+   "example": "\"Can you fix the login page?\" \"I'm on it.\"",
+   "topic": "work",
+   "level": 4
+  },
+  {
+   "id": 549,
+   "en": "Turn down",
+   "uk": "Відхиляти (пропозицію)",
+   "example": "She turned down the job offer.",
+   "topic": "phrasal",
+   "level": 4
+  },
+  {
+   "id": 550,
+   "en": "Get cold feet",
+   "uk": "Злякатися в останній момент",
+   "example": "He got cold feet before the wedding.",
+   "topic": "idioms",
+   "level": 4
+  },
+  {
+   "id": 551,
+   "en": "Let's get together sometime.",
+   "uk": "Давай якось зустрінемося.",
+   "example": "It was nice talking to you. Let's get together sometime.",
+   "topic": "daily",
+   "level": 4
+  },
+  {
+   "id": 552,
+   "en": "I need more speaking practice.",
+   "uk": "Мені потрібно більше розмовної практики.",
+   "example": "My grammar is OK, but I need more speaking practice.",
+   "topic": "study",
+   "level": 4
+  },
+  {
+   "id": 553,
+   "en": "The air conditioning doesn't work.",
+   "uk": "Кондиціонер не працює.",
+   "example": "Excuse me, the air conditioning in my room doesn't work.",
+   "topic": "travel",
+   "level": 4
+  },
+  {
+   "id": 554,
+   "en": "Does it come with a side?",
+   "uk": "Це подається з гарніром?",
+   "example": "The chicken looks good. Does it come with a side?",
+   "topic": "shopping",
+   "level": 4
+  },
+  {
+   "id": 555,
+   "en": "It's getting to me.",
+   "uk": "Мене це вже дістає.",
+   "example": "The constant noise is really getting to me.",
+   "topic": "emotions",
+   "level": 4
+  },
+  {
+   "id": 556,
+   "en": "Please find attached...",
+   "uk": "У вкладенні... (в листі)",
+   "example": "Please find attached the report for October.",
+   "topic": "work",
+   "level": 4
+  },
+  {
+   "id": 557,
+   "en": "Come up with",
+   "uk": "Придумати",
+   "example": "We need to come up with a new idea.",
+   "topic": "phrasal",
+   "level": 4
+  },
+  {
+   "id": 558,
+   "en": "Keep an eye on",
+   "uk": "Наглядати за",
+   "example": "Keep an eye on the soup, please.",
+   "topic": "idioms",
+   "level": 4
+  },
+  {
+   "id": 559,
+   "en": "I'm about to leave.",
+   "uk": "Я вже збираюся йти.",
+   "example": "Can I call you back? I'm about to leave.",
+   "topic": "daily",
+   "level": 4
+  },
+  {
+   "id": 560,
+   "en": "I tend to make the same mistakes.",
+   "uk": "Я часто роблю ті самі помилки.",
+   "example": "I tend to make the same mistakes with articles.",
+   "topic": "study",
+   "level": 4
+  },
+  {
+   "id": 561,
+   "en": "I'd like to make a complaint.",
+   "uk": "Я хочу поскаржитися.",
+   "example": "I'd like to make a complaint about the room.",
+   "topic": "travel",
+   "level": 4
+  },
+  {
+   "id": 562,
+   "en": "I'll pass on dessert.",
+   "uk": "Я, мабуть, без десерту.",
+   "example": "Everything was great, but I'll pass on dessert.",
+   "topic": "shopping",
+   "level": 4
+  },
+  {
+   "id": 563,
+   "en": "I feel left out.",
+   "uk": "Я почуваюся осторонь.",
+   "example": "Everyone went to the party without me. I feel left out.",
+   "topic": "emotions",
+   "level": 4
+  },
+  {
+   "id": 564,
+   "en": "Looking forward to hearing from you.",
+   "uk": "Чекаю на вашу відповідь. (в листі)",
+   "example": "Thank you for your time. Looking forward to hearing from you.",
+   "topic": "work",
+   "level": 4
+  },
+  {
+   "id": 565,
+   "en": "Run out of",
+   "uk": "Закінчуватися (про запаси)",
+   "example": "We've run out of milk.",
+   "topic": "phrasal",
+   "level": 4
+  },
+  {
+   "id": 566,
+   "en": "In the same boat",
+   "uk": "В однаковому становищі",
+   "example": "Don't worry, we're all in the same boat.",
+   "topic": "idioms",
+   "level": 4
+  },
+  {
+   "id": 567,
+   "en": "You can't go wrong with it.",
+   "uk": "З цим не прогадаєш.",
+   "example": "Get the classic burger. You can't go wrong with it.",
+   "topic": "daily",
+   "level": 4
+  },
+  {
+   "id": 568,
+   "en": "What's the most common mistake?",
+   "uk": "Яка найпоширеніша помилка?",
+   "example": "What's the most common mistake Ukrainians make in English?",
+   "topic": "study",
+   "level": 4
+  },
+  {
+   "id": 569,
+   "en": "Are there any good local spots?",
+   "uk": "Є гарні місця, куди ходять місцеві?",
+   "example": "Are there any good local spots for dinner?",
+   "topic": "travel",
+   "level": 4
+  },
+  {
+   "id": 570,
+   "en": "Can I order online?",
+   "uk": "Можна замовити онлайн?",
+   "example": "Can I order online and pick it up later?",
+   "topic": "shopping",
+   "level": 4
+  },
+  {
+   "id": 571,
+   "en": "I'm not a big fan of...",
+   "uk": "Я не великий шанувальник...",
+   "example": "I'm not a big fan of spicy food.",
+   "topic": "emotions",
+   "level": 4
+  },
+  {
+   "id": 572,
+   "en": "Just a quick reminder...",
+   "uk": "Просто нагадую...",
+   "example": "Just a quick reminder: the demo is at 3 pm.",
+   "topic": "work",
+   "level": 4
+  },
+  {
+   "id": 573,
+   "en": "Get along with",
+   "uk": "Ладнати з кимось",
+   "example": "I get along well with my colleagues.",
+   "topic": "phrasal",
+   "level": 4
+  },
+  {
+   "id": 574,
+   "en": "Hit the nail on the head",
+   "uk": "Влучити в точку",
+   "example": "You hit the nail on the head with that answer.",
+   "topic": "idioms",
+   "level": 4
+  },
+  {
+   "id": 575,
+   "en": "That reminds me...",
+   "uk": "До речі, це мені нагадало...",
+   "example": "That reminds me, I need to buy milk.",
+   "topic": "daily",
+   "level": 4
+  },
+  {
+   "id": 576,
+   "en": "I'm preparing for IELTS.",
+   "uk": "Я готуюся до IELTS.",
+   "example": "I'm preparing for IELTS. I need a score of 6.5.",
+   "topic": "study",
+   "level": 4
+  },
+  {
+   "id": 577,
+   "en": "Check out the sights",
+   "uk": "Оглянути пам'ятки",
+   "example": "We checked out the main sights on day one.",
+   "topic": "travel",
+   "level": 4
+  },
+  {
+   "id": 578,
+   "en": "Pick up an order",
+   "uk": "Забрати замовлення",
+   "example": "I'm here to pick up an order for Ivan.",
+   "topic": "shopping",
+   "level": 4
+  },
+  {
+   "id": 579,
+   "en": "I have to admit...",
+   "uk": "Мушу визнати...",
+   "example": "I have to admit, you were right.",
+   "topic": "emotions",
+   "level": 4
+  },
+  {
+   "id": 580,
+   "en": "Work-life balance",
+   "uk": "Баланс між роботою й особистим життям",
+   "example": "Remote work helps my work-life balance.",
+   "topic": "work",
+   "level": 4
+  },
+  {
+   "id": 581,
+   "en": "Figure out",
+   "uk": "Зрозуміти, розібратися",
+   "example": "I can't figure out how this works.",
+   "topic": "phrasal",
+   "level": 4
+  },
+  {
+   "id": 582,
+   "en": "On the go",
+   "uk": "На ходу",
+   "example": "I usually eat breakfast on the go.",
+   "topic": "idioms",
+   "level": 4
+  },
+  {
+   "id": 583,
+   "en": "I'm in two minds about it.",
+   "uk": "Я вагаюся.",
+   "example": "Should I go to the party? I'm in two minds about it.",
+   "topic": "daily",
+   "level": 4
+  },
+  {
+   "id": 584,
+   "en": "Turn in an assignment",
+   "uk": "Здати завдання",
+   "example": "Don't forget to turn in your assignment by Friday.",
+   "topic": "study",
+   "level": 4
+  },
+  {
+   "id": 585,
+   "en": "Get around",
+   "uk": "Пересуватися (містом)",
+   "example": "What's the best way to get around the city?",
+   "topic": "travel",
+   "level": 4
+  },
+  {
+   "id": 586,
+   "en": "Shop around",
+   "uk": "Порівнювати ціни в різних місцях",
+   "example": "Shop around before buying a new laptop.",
+   "topic": "shopping",
+   "level": 4
+  },
+  {
+   "id": 587,
+   "en": "What's bothering you?",
+   "uk": "Що тебе турбує?",
+   "example": "You look upset. What's bothering you?",
+   "topic": "emotions",
+   "level": 4
+  },
+  {
+   "id": 588,
+   "en": "Retention rate",
+   "uk": "Рівень утримання користувачів",
+   "example": "Our retention rate after 30 days is 40 percent.",
+   "topic": "work",
+   "level": 4
+  },
+  {
+   "id": 589,
+   "en": "Show up",
+   "uk": "З'являтися, приходити",
+   "example": "He didn't show up for the meeting.",
+   "topic": "phrasal",
+   "level": 4
+  },
+  {
+   "id": 590,
+   "en": "Ring a bell",
+   "uk": "Здаватися знайомим",
+   "example": "His name rings a bell.",
+   "topic": "idioms",
+   "level": 4
+  },
+  {
+   "id": 591,
+   "en": "It's not worth it.",
+   "uk": "Воно того не варте.",
+   "example": "Don't argue with him. It's not worth it.",
+   "topic": "daily",
+   "level": 4
+  },
+  {
+   "id": 592,
+   "en": "Do research on",
+   "uk": "Досліджувати щось",
+   "example": "I'm doing research on renewable energy.",
+   "topic": "study",
+   "level": 4
+  },
+  {
+   "id": 593,
+   "en": "Set off",
+   "uk": "Вирушати в дорогу",
+   "example": "We set off early in the morning.",
+   "topic": "travel",
+   "level": 4
+  },
+  {
+   "id": 594,
+   "en": "It's a bit pricey.",
+   "uk": "Трохи дорогувато.",
+   "example": "The food is great, but it's a bit pricey.",
+   "topic": "shopping",
+   "level": 4
+  },
+  {
+   "id": 595,
+   "en": "I lost my temper.",
+   "uk": "Я вийшов із себе.",
+   "example": "Sorry, I lost my temper yesterday.",
+   "topic": "emotions",
+   "level": 4
+  },
+  {
+   "id": 596,
+   "en": "Customer lifetime value (LTV)",
+   "uk": "Довічна цінність клієнта",
+   "example": "We need to increase customer lifetime value.",
+   "topic": "work",
+   "level": 4
+  },
+  {
+   "id": 597,
+   "en": "Set up",
+   "uk": "Налаштувати, організувати",
+   "example": "Can you help me set up my new phone?",
+   "topic": "phrasal",
+   "level": 4
+  },
+  {
+   "id": 598,
+   "en": "Spill the beans",
+   "uk": "Видати секрет",
+   "example": "Come on, spill the beans! What happened?",
+   "topic": "idioms",
+   "level": 4
+  },
+  {
+   "id": 599,
+   "en": "What have you been up to lately?",
+   "uk": "Чим ти займався останнім часом?",
+   "example": "Long time no see! What have you been up to lately?",
+   "topic": "daily",
+   "level": 4
+  },
+  {
+   "id": 600,
+   "en": "Get the hang of it",
+   "uk": "Набити руку, розібратися",
+   "example": "Tenses are hard at first, but you'll get the hang of it.",
+   "topic": "study",
+   "level": 4
+  },
+  {
+   "id": 601,
+   "en": "I've booked an Airbnb.",
+   "uk": "Я забронював житло на Airbnb.",
+   "example": "I've booked an Airbnb near the old town.",
+   "topic": "travel",
+   "level": 4
+  },
+  {
+   "id": 602,
+   "en": "Do you have it in stock?",
+   "uk": "У вас це є в наявності?",
+   "example": "I saw this model online. Do you have it in stock?",
+   "topic": "shopping",
+   "level": 4
+  },
+  {
+   "id": 603,
+   "en": "I'm dying to know!",
+   "uk": "Я помираю від цікавості!",
+   "example": "So, what happened next? I'm dying to know!",
+   "topic": "emotions",
+   "level": 4
+  },
+  {
+   "id": 604,
+   "en": "Landing page",
+   "uk": "Посадкова сторінка, лендинг",
+   "example": "The new landing page doubled our sign-ups.",
+   "topic": "work",
+   "level": 4
+  },
+  {
+   "id": 605,
+   "en": "Pick up",
+   "uk": "Забрати / підхопити",
+   "example": "I'll pick you up from the station.",
+   "topic": "phrasal",
+   "level": 4
+  },
+  {
+   "id": 606,
+   "en": "Out of the blue",
+   "uk": "Раптово, ні з того ні з сього",
+   "example": "She called me out of the blue.",
+   "topic": "idioms",
+   "level": 4
+  },
+  {
+   "id": 607,
+   "en": "I'll sleep on it.",
+   "uk": "Я подумаю до завтра.",
+   "example": "It's a big decision. I'll sleep on it.",
+   "topic": "daily",
+   "level": 4
+  },
+  {
+   "id": 608,
+   "en": "Keep up with",
+   "uk": "Встигати за",
+   "example": "It's hard to keep up with native speakers.",
+   "topic": "study",
+   "level": 4
+  },
+  {
+   "id": 609,
+   "en": "Travel insurance",
+   "uk": "Туристичне страхування",
+   "example": "Don't forget to buy travel insurance.",
+   "topic": "travel",
+   "level": 4
+  },
+  {
+   "id": 610,
+   "en": "Sold out",
+   "uk": "Розпродано",
+   "example": "Sorry, the tickets are sold out.",
+   "topic": "shopping",
+   "level": 4
+  },
+  {
+   "id": 611,
+   "en": "I'm torn.",
+   "uk": "Я розриваюся (між варіантами).",
+   "example": "Stay or leave? I'm torn.",
+   "topic": "emotions",
+   "level": 4
+  },
+  {
+   "id": 612,
+   "en": "A/B test",
+   "uk": "A/B-тест",
+   "example": "Let's run an A/B test on the pricing page.",
+   "topic": "work",
+   "level": 4
+  },
+  {
+   "id": 613,
+   "en": "Take off",
+   "uk": "Злітати / знімати (одяг)",
+   "example": "The plane takes off at 6 am.",
+   "topic": "phrasal",
+   "level": 4
+  },
+  {
+   "id": 614,
+   "en": "Get the ball rolling",
+   "uk": "Зрушити справу з місця",
+   "example": "Let's get the ball rolling on this project.",
+   "topic": "idioms",
+   "level": 4
+  },
+  {
+   "id": 615,
+   "en": "Don't get me wrong.",
+   "uk": "Не зрозумій мене неправильно.",
+   "example": "Don't get me wrong, I like him, but he's always late.",
+   "topic": "daily",
+   "level": 4
+  },
+  {
+   "id": 616,
+   "en": "Native speaker",
+   "uk": "Носій мови",
+   "example": "I want to practice with a native speaker.",
+   "topic": "study",
+   "level": 4
+  },
+  {
+   "id": 617,
+   "en": "Customs",
+   "uk": "Митниця",
+   "example": "We waited an hour at customs.",
+   "topic": "travel",
+   "level": 4
+  },
+  {
+   "id": 618,
+   "en": "Loyalty card",
+   "uk": "Карта постійного клієнта",
+   "example": "Do you have our loyalty card?",
+   "topic": "shopping",
+   "level": 4
+  },
+  {
+   "id": 619,
+   "en": "It's a matter of taste.",
+   "uk": "Це справа смаку.",
+   "example": "Is this movie good? It's a matter of taste.",
+   "topic": "emotions",
+   "level": 4
+  },
+  {
+   "id": 620,
+   "en": "Use case",
+   "uk": "Сценарій використання",
+   "example": "What's the main use case for our product?",
+   "topic": "work",
+   "level": 4
+  },
+  {
+   "id": 621,
+   "en": "Look up",
+   "uk": "Шукати (інформацію)",
+   "example": "Look up this word in the dictionary.",
+   "topic": "phrasal",
+   "level": 4
+  },
+  {
+   "id": 622,
+   "en": "Cut corners",
+   "uk": "Халтурити, економити на якості",
+   "example": "Don't cut corners on safety.",
+   "topic": "idioms",
+   "level": 4
+  },
+  {
+   "id": 623,
+   "en": "It's a long story.",
+   "uk": "Це довга історія.",
+   "example": "How did we meet? It's a long story.",
+   "topic": "daily",
+   "level": 4
+  },
+  {
+   "id": 624,
+   "en": "Hang out",
+   "uk": "Проводити час разом",
+   "example": "Do you want to hang out on Saturday?",
+   "topic": "phrasal",
+   "level": 4
+  },
+  {
+   "id": 625,
+   "en": "Work out",
+   "uk": "Тренуватися / вдаватися",
+   "example": "I work out three times a week.",
+   "topic": "phrasal",
+   "level": 4
+  },
+  {
+   "id": 626,
+   "en": "I'm swamped at the moment.",
+   "uk": "Я зараз завалений справами.",
+   "example": "Can we talk next week? I'm swamped at the moment.",
+   "topic": "daily",
+   "level": 5
+  },
+  {
+   "id": 627,
+   "en": "I'm not confident enough to speak yet.",
+   "uk": "Я ще недостатньо впевнений, щоб говорити.",
+   "example": "I understand a lot, but I'm not confident enough to speak yet.",
+   "topic": "study",
+   "level": 5
+  },
+  {
+   "id": 628,
+   "en": "I'm itching to travel again.",
+   "uk": "Мені страшенно кортить знову подорожувати.",
+   "example": "After a year at home, I'm itching to travel again.",
+   "topic": "travel",
+   "level": 5
+  },
+  {
+   "id": 629,
+   "en": "It's a bit overpriced.",
+   "uk": "Ціна завищена.",
+   "example": "Nice place, but the coffee is a bit overpriced.",
+   "topic": "shopping",
+   "level": 5
+  },
+  {
+   "id": 630,
+   "en": "I'm at my wits' end.",
+   "uk": "Я вже не знаю, що робити.",
+   "example": "The baby won't stop crying. I'm at my wits' end.",
+   "topic": "emotions",
+   "level": 5
+  },
+  {
+   "id": 631,
+   "en": "It's not in our budget.",
+   "uk": "Це не вкладається в наш бюджет.",
+   "example": "It's a great tool, but it's not in our budget this year.",
+   "topic": "work",
+   "level": 5
+  },
+  {
+   "id": 632,
+   "en": "Put up with",
+   "uk": "Терпіти, миритися",
+   "example": "I can't put up with this noise anymore.",
+   "topic": "phrasal",
+   "level": 5
+  },
+  {
+   "id": 633,
+   "en": "Bite off more than you can chew",
+   "uk": "Взятися за непосильне",
+   "example": "Three courses at once? I bit off more than I could chew.",
+   "topic": "idioms",
+   "level": 5
+  },
+  {
+   "id": 634,
+   "en": "It's not that I don't want to...",
+   "uk": "Не те щоб я не хотів...",
+   "example": "It's not that I don't want to come, I'm just exhausted.",
+   "topic": "daily",
+   "level": 5
+  },
+  {
+   "id": 635,
+   "en": "I've hit a plateau.",
+   "uk": "Я застряг на одному рівні.",
+   "example": "I've been studying for a year, but I've hit a plateau.",
+   "topic": "study",
+   "level": 5
+  },
+  {
+   "id": 636,
+   "en": "It was a once-in-a-lifetime experience.",
+   "uk": "Таке буває раз у житті.",
+   "example": "Seeing the northern lights was a once-in-a-lifetime experience.",
+   "topic": "travel",
+   "level": 5
+  },
+  {
+   "id": 637,
+   "en": "I'm going to splurge on this.",
+   "uk": "Я шикану й куплю це.",
+   "example": "It's my birthday, so I'm going to splurge on this dress.",
+   "topic": "shopping",
+   "level": 5
+  },
+  {
+   "id": 638,
+   "en": "It's a mixed blessing.",
+   "uk": "Це і добре, і погано водночас.",
+   "example": "Working from home is a mixed blessing.",
+   "topic": "emotions",
+   "level": 5
+  },
+  {
+   "id": 639,
+   "en": "We need to prioritize.",
+   "uk": "Нам треба розставити пріоритети.",
+   "example": "We can't do everything. We need to prioritize.",
+   "topic": "work",
+   "level": 5
+  },
+  {
+   "id": 640,
+   "en": "Get over",
+   "uk": "Оговтатися, пережити",
+   "example": "It took me a month to get over the flu.",
+   "topic": "phrasal",
+   "level": 5
+  },
+  {
+   "id": 641,
+   "en": "The ball is in your court",
+   "uk": "Тепер слово за тобою",
+   "example": "I've made my offer. The ball is in your court.",
+   "topic": "idioms",
+   "level": 5
+  },
+  {
+   "id": 642,
+   "en": "I wouldn't go that far.",
+   "uk": "Я б так не сказав. / Це вже перебільшення.",
+   "example": "\"He's a genius!\" \"Well, I wouldn't go that far.\"",
+   "topic": "daily",
+   "level": 5
+  },
+  {
+   "id": 643,
+   "en": "Learning curve",
+   "uk": "Складність освоєння",
+   "example": "Programming has a steep learning curve.",
+   "topic": "study",
+   "level": 5
+  },
+  {
+   "id": 644,
+   "en": "Tourist trap",
+   "uk": "Пастка для туристів (дорого й нецікаво)",
+   "example": "That restaurant is a tourist trap. Let's find another one.",
+   "topic": "travel",
+   "level": 5
+  },
+  {
+   "id": 645,
+   "en": "It costs an arm and a leg.",
+   "uk": "Коштує шалених грошей.",
+   "example": "I love that watch, but it costs an arm and a leg.",
+   "topic": "shopping",
+   "level": 5
+  },
+  {
+   "id": 646,
+   "en": "I have a gut feeling...",
+   "uk": "У мене є передчуття...",
+   "example": "I have a gut feeling that something is wrong.",
+   "topic": "emotions",
+   "level": 5
+  },
+  {
+   "id": 647,
+   "en": "Let's loop in the design team.",
+   "uk": "Давай залучимо команду дизайну.",
+   "example": "This affects the UI. Let's loop in the design team.",
+   "topic": "work",
+   "level": 5
+  },
+  {
+   "id": 648,
+   "en": "Bring up",
+   "uk": "Підняти (тему)",
+   "example": "Don't bring up politics at dinner.",
+   "topic": "phrasal",
+   "level": 5
+  },
+  {
+   "id": 649,
+   "en": "Beat around the bush",
+   "uk": "Ходити довкола та навколо",
+   "example": "Stop beating around the bush and tell me.",
+   "topic": "idioms",
+   "level": 5
+  },
+  {
+   "id": 650,
+   "en": "I'd rather not talk about it.",
+   "uk": "Я б волів про це не говорити.",
+   "example": "It was a tough year. I'd rather not talk about it.",
+   "topic": "daily",
+   "level": 5
+  },
+  {
+   "id": 651,
+   "en": "Thesis",
+   "uk": "Дипломна робота",
+   "example": "I'm writing my thesis on machine learning.",
+   "topic": "study",
+   "level": 5
+  },
+  {
+   "id": 652,
+   "en": "Hidden gem",
+   "uk": "Маловідоме чудове місце",
+   "example": "This little café is a real hidden gem.",
+   "topic": "travel",
+   "level": 5
+  },
+  {
+   "id": 653,
+   "en": "It's a steal!",
+   "uk": "Це майже задарма!",
+   "example": "Only ten euros for this jacket? It's a steal!",
+   "topic": "shopping",
+   "level": 5
+  },
+  {
+   "id": 654,
+   "en": "It's bittersweet.",
+   "uk": "Це радість із присмаком смутку.",
+   "example": "Graduating was bittersweet. I'll miss my friends.",
+   "topic": "emotions",
+   "level": 5
+  },
+  {
+   "id": 655,
+   "en": "It's a no-brainer.",
+   "uk": "Тут і думати нічого.",
+   "example": "Free hosting for a year? It's a no-brainer.",
+   "topic": "work",
+   "level": 5
+  },
+  {
+   "id": 656,
+   "en": "Carry on",
+   "uk": "Продовжувати",
+   "example": "Sorry for interrupting. Please carry on.",
+   "topic": "phrasal",
+   "level": 5
+  },
+  {
+   "id": 657,
+   "en": "Let the cat out of the bag",
+   "uk": "Проговоритися",
+   "example": "Who let the cat out of the bag about the party?",
+   "topic": "idioms",
+   "level": 5
+  },
+  {
+   "id": 658,
+   "en": "Come to think of it...",
+   "uk": "Якщо подумати...",
+   "example": "Come to think of it, I haven't seen him for a month.",
+   "topic": "daily",
+   "level": 5
+  },
+  {
+   "id": 659,
+   "en": "Peer review",
+   "uk": "Рецензування колегами",
+   "example": "Our essays go through peer review first.",
+   "topic": "study",
+   "level": 5
+  },
+  {
+   "id": 660,
+   "en": "Wanderlust",
+   "uk": "Жага до подорожей",
+   "example": "My wanderlust started after my first trip to Italy.",
+   "topic": "travel",
+   "level": 5
+  },
+  {
+   "id": 661,
+   "en": "Impulse buy",
+   "uk": "Спонтанна покупка",
+   "example": "These shoes were an impulse buy.",
+   "topic": "shopping",
+   "level": 5
+  },
+  {
+   "id": 662,
+   "en": "Get something off my chest",
+   "uk": "Зняти камінь із душі",
+   "example": "I need to get something off my chest.",
+   "topic": "emotions",
+   "level": 5
+  },
+  {
+   "id": 663,
+   "en": "We're understaffed.",
+   "uk": "Нам бракує людей.",
+   "example": "We're understaffed, so everyone works late.",
+   "topic": "work",
+   "level": 5
+  },
+  {
+   "id": 664,
+   "en": "Call off",
+   "uk": "Скасувати",
+   "example": "They called off the meeting.",
+   "topic": "phrasal",
+   "level": 5
+  },
+  {
+   "id": 665,
+   "en": "Burn the midnight oil",
+   "uk": "Працювати допізна",
+   "example": "We burned the midnight oil to finish the project.",
+   "topic": "idioms",
+   "level": 5
+  },
+  {
+   "id": 666,
+   "en": "If I were you, I'd...",
+   "uk": "На твоєму місці я б...",
+   "example": "If I were you, I'd take the job.",
+   "topic": "daily",
+   "level": 5
+  },
+  {
+   "id": 667,
+   "en": "Grasp a concept",
+   "uk": "Збагнути суть",
+   "example": "It took me a while to grasp the concept of tenses.",
+   "topic": "study",
+   "level": 5
+  },
+  {
+   "id": 668,
+   "en": "Soak up the atmosphere",
+   "uk": "Пройнятися атмосферою",
+   "example": "We sat in the square and soaked up the atmosphere.",
+   "topic": "travel",
+   "level": 5
+  },
+  {
+   "id": 669,
+   "en": "Treat yourself",
+   "uk": "Побалувати себе",
+   "example": "You worked hard this week. Treat yourself!",
+   "topic": "shopping",
+   "level": 5
+  },
+  {
+   "id": 670,
+   "en": "I'm on the fence.",
+   "uk": "Я ще не визначився.",
+   "example": "Should I buy it? I'm still on the fence.",
+   "topic": "emotions",
+   "level": 5
+  },
+  {
+   "id": 671,
+   "en": "Low-hanging fruit",
+   "uk": "Найлегші швидкі перемоги",
+   "example": "Let's start with the low-hanging fruit: fix the sign-up form.",
+   "topic": "work",
+   "level": 5
+  },
+  {
+   "id": 672,
+   "en": "Break down",
+   "uk": "Зламатися (про техніку)",
+   "example": "Our car broke down on the highway.",
+   "topic": "phrasal",
+   "level": 5
+  },
+  {
+   "id": 673,
+   "en": "Pull someone's leg",
+   "uk": "Розігрувати когось",
+   "example": "Relax, I'm just pulling your leg.",
+   "topic": "idioms",
+   "level": 5
+  },
+  {
+   "id": 674,
+   "en": "I'm having a hard time with it.",
+   "uk": "Мені з цим важко.",
+   "example": "The new schedule? I'm having a hard time with it.",
+   "topic": "daily",
+   "level": 5
+  },
+  {
+   "id": 675,
+   "en": "Rule of thumb",
+   "uk": "Загальне практичне правило",
+   "example": "As a rule of thumb, use \"the\" when both people know the thing.",
+   "topic": "study",
+   "level": 5
+  },
+  {
+   "id": 676,
+   "en": "I got a bit sidetracked.",
+   "uk": "Я трохи відволікся (від плану).",
+   "example": "I wanted to visit the museum, but I got a bit sidetracked.",
+   "topic": "travel",
+   "level": 5
+  },
+  {
+   "id": 677,
+   "en": "I'm cutting back on spending.",
+   "uk": "Я скорочую витрати.",
+   "example": "No more eating out. I'm cutting back on spending.",
+   "topic": "shopping",
+   "level": 5
+  },
+  {
+   "id": 678,
+   "en": "It rubbed me the wrong way.",
+   "uk": "Це мене зачепило.",
+   "example": "His comment rubbed me the wrong way.",
+   "topic": "emotions",
+   "level": 5
+  },
+  {
+   "id": 679,
+   "en": "Moving forward...",
+   "uk": "Надалі... / Відтепер...",
+   "example": "Moving forward, all reports will be online.",
+   "topic": "work",
+   "level": 5
+  },
+  {
+   "id": 680,
+   "en": "Back up",
+   "uk": "Підтримати / зробити резервну копію",
+   "example": "Always back up your files.",
+   "topic": "phrasal",
+   "level": 5
+  },
+  {
+   "id": 681,
+   "en": "Kill two birds with one stone",
+   "uk": "Вбити двох зайців",
+   "example": "I walk to work, so I kill two birds with one stone.",
+   "topic": "idioms",
+   "level": 5
+  },
+  {
+   "id": 682,
+   "en": "You've got a point there.",
+   "uk": "Тут ти маєш рацію.",
+   "example": "You've got a point there. Maybe we should wait.",
+   "topic": "daily",
+   "level": 5
+  },
+  {
+   "id": 683,
+   "en": "Fall through the cracks",
+   "uk": "Залишитися поза увагою",
+   "example": "Some students fall through the cracks in big classes.",
+   "topic": "study",
+   "level": 5
+  },
+  {
+   "id": 684,
+   "en": "The flight was overbooked.",
+   "uk": "На рейс продали забагато квитків.",
+   "example": "The flight was overbooked, so they offered us a voucher.",
+   "topic": "travel",
+   "level": 5
+  },
+  {
+   "id": 685,
+   "en": "Haggle",
+   "uk": "Торгуватися",
+   "example": "At the market, you can haggle over the price.",
+   "topic": "shopping",
+   "level": 5
+  },
+  {
+   "id": 686,
+   "en": "I couldn't agree more.",
+   "uk": "Цілком і повністю згоден.",
+   "example": "\"We need more sleep.\" \"I couldn't agree more.\"",
+   "topic": "emotions",
+   "level": 5
+  },
+  {
+   "id": 687,
+   "en": "Ballpark figure",
+   "uk": "Приблизна цифра",
+   "example": "Can you give me a ballpark figure for the project?",
+   "topic": "work",
+   "level": 5
+  },
+  {
+   "id": 688,
+   "en": "Wrap up",
+   "uk": "Завершувати",
+   "example": "Let's wrap up the meeting.",
+   "topic": "phrasal",
+   "level": 5
+  },
+  {
+   "id": 689,
+   "en": "Miss the boat",
+   "uk": "Упустити шанс",
+   "example": "Prices went up. We missed the boat.",
+   "topic": "idioms",
+   "level": 5
+  },
+  {
+   "id": 690,
+   "en": "It goes without saying.",
+   "uk": "Само собою зрозуміло.",
+   "example": "It goes without saying that you're welcome to stay.",
+   "topic": "daily",
+   "level": 5
+  },
+  {
+   "id": 691,
+   "en": "Pick up a language",
+   "uk": "Підхопити мову (вивчити природно)",
+   "example": "Kids pick up languages much faster than adults.",
+   "topic": "study",
+   "level": 5
+  },
+  {
+   "id": 692,
+   "en": "Can we get an upgrade?",
+   "uk": "Можна покращити нам клас / номер?",
+   "example": "It's our honeymoon. Can we get an upgrade?",
+   "topic": "travel",
+   "level": 5
+  },
+  {
+   "id": 693,
+   "en": "Bang for your buck",
+   "uk": "Максимум за свої гроші",
+   "example": "This phone gives you the most bang for your buck.",
+   "topic": "shopping",
+   "level": 5
+  },
+  {
+   "id": 694,
+   "en": "I beg to differ.",
+   "uk": "Дозволю собі не погодитися.",
+   "example": "You think it's easy? I beg to differ.",
+   "topic": "emotions",
+   "level": 5
+  },
+  {
+   "id": 695,
+   "en": "Go-to-market strategy",
+   "uk": "Стратегія виходу на ринок",
+   "example": "We need a clear go-to-market strategy.",
+   "topic": "work",
+   "level": 5
+  },
+  {
+   "id": 696,
+   "en": "Turn out",
+   "uk": "Виявитися",
+   "example": "It turned out that he was right.",
+   "topic": "phrasal",
+   "level": 5
+  },
+  {
+   "id": 697,
+   "en": "Go the extra mile",
+   "uk": "Докласти додаткових зусиль",
+   "example": "She always goes the extra mile for her clients.",
+   "topic": "idioms",
+   "level": 5
+  },
+  {
+   "id": 698,
+   "en": "I didn't mean to offend you.",
+   "uk": "Я не хотів тебе образити.",
+   "example": "Sorry, I didn't mean to offend you.",
+   "topic": "daily",
+   "level": 5
+  },
+  {
+   "id": 699,
+   "en": "I'm way out of my depth.",
+   "uk": "Мені це зовсім не по зубах.",
+   "example": "Advanced physics? I'm way out of my depth.",
+   "topic": "study",
+   "level": 5
+  },
+  {
+   "id": 700,
+   "en": "Breathtaking view",
+   "uk": "Захопливий краєвид",
+   "example": "The hotel has a breathtaking view of the mountains.",
+   "topic": "travel",
+   "level": 5
+  },
+  {
+   "id": 701,
+   "en": "Compliments of the chef",
+   "uk": "Комплімент від шефа",
+   "example": "This appetizer is compliments of the chef.",
+   "topic": "shopping",
+   "level": 5
+  },
+  {
+   "id": 702,
+   "en": "Let's agree to disagree.",
+   "uk": "Залишимося кожен при своїй думці.",
+   "example": "We'll never agree on this. Let's agree to disagree.",
+   "topic": "emotions",
+   "level": 5
+  },
+  {
+   "id": 703,
+   "en": "Runway",
+   "uk": "Скільки місяців стартап проживе на наявні гроші",
+   "example": "We have twelve months of runway.",
+   "topic": "work",
+   "level": 5
+  },
+  {
+   "id": 704,
+   "en": "Point out",
+   "uk": "Звернути увагу, вказати",
+   "example": "She pointed out a mistake in my report.",
+   "topic": "phrasal",
+   "level": 5
+  },
+  {
+   "id": 705,
+   "en": "A blessing in disguise",
+   "uk": "Нещастя, що обернулося на краще",
+   "example": "Losing that job was a blessing in disguise.",
+   "topic": "idioms",
+   "level": 5
+  },
+  {
+   "id": 706,
+   "en": "Let's not get ahead of ourselves.",
+   "uk": "Не будемо забігати наперед.",
+   "example": "We haven't even met them yet. Let's not get ahead of ourselves.",
+   "topic": "daily",
+   "level": 5
+  },
+  {
+   "id": 707,
+   "en": "Hit the books",
+   "uk": "Засісти за книжки",
+   "example": "Exams are next week. Time to hit the books.",
+   "topic": "study",
+   "level": 5
+  },
+  {
+   "id": 708,
+   "en": "Itinerary",
+   "uk": "Маршрут, план поїздки",
+   "example": "I've sent you our itinerary for the trip.",
+   "topic": "travel",
+   "level": 5
+  },
+  {
+   "id": 709,
+   "en": "Could I get a box for this?",
+   "uk": "Можна коробку, щоб забрати з собою?",
+   "example": "I can't finish it. Could I get a box for this?",
+   "topic": "shopping",
+   "level": 5
+  },
+  {
+   "id": 710,
+   "en": "To put it mildly...",
+   "uk": "М'яко кажучи...",
+   "example": "The meeting was, to put it mildly, a disaster.",
+   "topic": "emotions",
+   "level": 5
+  },
+  {
+   "id": 711,
+   "en": "Unit economics",
+   "uk": "Юніт-економіка",
+   "example": "Our unit economics don't work yet: each customer costs more than they pay.",
+   "topic": "work",
+   "level": 5
+  },
+  {
+   "id": 712,
+   "en": "Sort out",
+   "uk": "Владнати, розібратися",
+   "example": "Don't worry, we'll sort it out.",
+   "topic": "phrasal",
+   "level": 5
+  },
+  {
+   "id": 713,
+   "en": "Every cloud has a silver lining",
+   "uk": "Немає лиха без добра",
+   "example": "The trip was cancelled, but every cloud has a silver lining: I saved money.",
+   "topic": "idioms",
+   "level": 5
+  },
+  {
+   "id": 714,
+   "en": "Whatever works for you.",
+   "uk": "Як тобі зручніше.",
+   "example": "Monday or Tuesday? Whatever works for you.",
+   "topic": "daily",
+   "level": 5
+  },
+  {
+   "id": 715,
+   "en": "Make headway",
+   "uk": "Просуватися вперед",
+   "example": "I'm finally making headway with my essay.",
+   "topic": "study",
+   "level": 5
+  },
+  {
+   "id": 716,
+   "en": "Stopover",
+   "uk": "Зупинка в дорозі (з ночівлею)",
+   "example": "We have a two-day stopover in Dubai.",
+   "topic": "travel",
+   "level": 5
+  },
+  {
+   "id": 717,
+   "en": "Dietary restrictions",
+   "uk": "Обмеження в харчуванні",
+   "example": "Do you have any dietary restrictions?",
+   "topic": "shopping",
+   "level": 5
+  },
+  {
+   "id": 718,
+   "en": "It's not the end of the world.",
+   "uk": "Це не кінець світу.",
+   "example": "You failed one test. It's not the end of the world.",
+   "topic": "emotions",
+   "level": 5
+  },
+  {
+   "id": 719,
+   "en": "Cash flow",
+   "uk": "Грошовий потік",
+   "example": "Late payments hurt our cash flow.",
+   "topic": "work",
+   "level": 5
+  },
+  {
+   "id": 720,
+   "en": "Catch up on",
+   "uk": "Надолужити",
+   "example": "I need to catch up on sleep this weekend.",
+   "topic": "phrasal",
+   "level": 5
+  },
+  {
+   "id": 721,
+   "en": "Through thick and thin",
+   "uk": "І в горі, і в радості",
+   "example": "We've been friends through thick and thin.",
+   "topic": "idioms",
+   "level": 5
+  },
+  {
+   "id": 722,
+   "en": "I'll leave it up to you.",
+   "uk": "Залишаю це на твій розсуд.",
+   "example": "You know the city better. I'll leave it up to you.",
+   "topic": "daily",
+   "level": 5
+  },
+  {
+   "id": 723,
+   "en": "In a nutshell",
+   "uk": "Якщо коротко",
+   "example": "In a nutshell, the article says that sleep helps memory.",
+   "topic": "study",
+   "level": 5
+  },
+  {
+   "id": 724,
+   "en": "Accommodation",
+   "uk": "Житло (під час подорожі)",
+   "example": "Accommodation in Paris is very expensive.",
+   "topic": "travel",
+   "level": 5
+  },
+  {
+   "id": 725,
+   "en": "Grocery run",
+   "uk": "Швидкий похід за продуктами",
+   "example": "I'm doing a quick grocery run. Need anything?",
+   "topic": "shopping",
+   "level": 5
+  },
+  {
+   "id": 726,
+   "en": "I'm walking on air.",
+   "uk": "Я на сьомому небі.",
+   "example": "She said yes! I'm walking on air.",
+   "topic": "emotions",
+   "level": 5
+  },
+  {
+   "id": 727,
+   "en": "Headcount",
+   "uk": "Кількість працівників",
+   "example": "We plan to double our headcount next year.",
+   "topic": "work",
+   "level": 5
+  },
+  {
+   "id": 728,
+   "en": "Come across",
+   "uk": "Випадково натрапити",
+   "example": "I came across an interesting article.",
+   "topic": "phrasal",
+   "level": 5
+  },
+  {
+   "id": 729,
+   "en": "Jump on the bandwagon",
+   "uk": "Приєднатися до модної течії",
+   "example": "Everyone is jumping on the AI bandwagon.",
+   "topic": "idioms",
+   "level": 5
+  },
+  {
+   "id": 730,
+   "en": "Just to be on the safe side...",
+   "uk": "Про всяк випадок...",
+   "example": "Just to be on the safe side, take an umbrella.",
+   "topic": "daily",
+   "level": 5
+  },
+  {
+   "id": 731,
+   "en": "Draw a conclusion",
+   "uk": "Зробити висновок",
+   "example": "What conclusion can we draw from this data?",
+   "topic": "study",
+   "level": 5
+  },
+  {
+   "id": 732,
+   "en": "Catch a flight",
+   "uk": "Встигнути на рейс",
+   "example": "We have to leave now to catch our flight.",
+   "topic": "travel",
+   "level": 5
+  },
+  {
+   "id": 733,
+   "en": "Pay up front",
+   "uk": "Платити наперед",
+   "example": "You have to pay up front for this course.",
+   "topic": "shopping",
+   "level": 5
+  },
+  {
+   "id": 734,
+   "en": "Take it with a grain of salt",
+   "uk": "Сприймати зі скептицизмом",
+   "example": "He exaggerates. Take his advice with a grain of salt.",
+   "topic": "emotions",
+   "level": 5
+  },
+  {
+   "id": 735,
+   "en": "Scope creep",
+   "uk": "Розростання обсягу проєкту",
+   "example": "The project is late because of scope creep.",
+   "topic": "work",
+   "level": 5
+  },
+  {
+   "id": 736,
+   "en": "Go through",
+   "uk": "Переживати (важкий період) / переглядати",
+   "example": "She's going through a hard time.",
+   "topic": "phrasal",
+   "level": 5
+  },
+  {
+   "id": 737,
+   "en": "When pigs fly",
+   "uk": "Коли рак на горі свисне",
+   "example": "He'll clean his room when pigs fly.",
+   "topic": "idioms",
+   "level": 5
+  },
+  {
+   "id": 738,
+   "en": "Elaborate on",
+   "uk": "Детальніше розповісти про",
+   "example": "Could you elaborate on your second point?",
+   "topic": "study",
+   "level": 5
+  },
+  {
+   "id": 739,
+   "en": "Bucket list",
+   "uk": "Список мрій «зробити до кінця життя»",
+   "example": "Visiting Japan is on my bucket list.",
+   "topic": "travel",
+   "level": 5
+  },
+  {
+   "id": 740,
+   "en": "Hidden fees",
+   "uk": "Приховані платежі",
+   "example": "Read carefully, there might be hidden fees.",
+   "topic": "shopping",
+   "level": 5
+  },
+  {
+   "id": 741,
+   "en": "I'm burnt out.",
+   "uk": "Я вигорів.",
+   "example": "I've worked without a break for months. I'm burnt out.",
+   "topic": "emotions",
+   "level": 5
+  },
+  {
+   "id": 742,
+   "en": "Get buy-in",
+   "uk": "Отримати підтримку / згоду",
+   "example": "We need to get buy-in from management first.",
+   "topic": "work",
+   "level": 5
+  },
+  {
+   "id": 743,
+   "en": "Get away with",
+   "uk": "Уникнути покарання",
+   "example": "He always gets away with being late.",
+   "topic": "phrasal",
+   "level": 5
+  },
+  {
+   "id": 744,
+   "en": "Bark up the wrong tree",
+   "uk": "Шукати не там",
+   "example": "If you think I took it, you're barking up the wrong tree.",
+   "topic": "idioms",
+   "level": 5
+  },
+  {
+   "id": 745,
+   "en": "Run into",
+   "uk": "Випадково зустріти",
+   "example": "I ran into my old teacher at the mall.",
+   "topic": "phrasal",
+   "level": 5
+  },
+  {
+   "id": 746,
+   "en": "The elephant in the room",
+   "uk": "Очевидна проблема, про яку мовчать",
+   "example": "Let's talk about the elephant in the room: the budget.",
+   "topic": "idioms",
+   "level": 5
+  },
+  {
+   "id": 747,
+   "en": "Make up for",
+   "uk": "Компенсувати",
+   "example": "I'll make up for lost time.",
+   "topic": "phrasal",
+   "level": 5
   }
  ]
 }

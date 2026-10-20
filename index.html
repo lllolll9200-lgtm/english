@@ -169,6 +169,17 @@ input:focus,textarea:focus{outline:none;border-color:var(--primary);box-shadow:0
 .phrase-ex{display:block;width:100%;text-align:left;border:0;background:none;padding:0;margin-bottom:10px;font-size:.9rem;color:var(--muted);font-style:italic;cursor:pointer}
 .phrase-ex::before{content:"🔊 ";font-style:normal;font-size:.8rem}
 .mini-btn:disabled{opacity:.65;cursor:default}
+.phrase-actions{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.mini-btn.known{background:var(--ok-soft);color:var(--ok)}
+#phraseMore{margin-top:4px;min-height:46px}
+.phr-settings{margin:10px 0 2px;border:1px solid var(--line);border-radius:14px;padding:10px 12px}
+.phr-settings summary{cursor:pointer;font-weight:650;font-size:.92rem;list-style:none}
+.phr-settings summary::-webkit-details-marker{display:none}
+.phr-settings[open] summary{margin-bottom:6px}
+.set-label{font-size:.8rem;font-weight:700;color:var(--muted);margin:10px 0 6px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:99px;padding:7px 12px;font-size:.84rem;font-weight:600;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.chip.on{background:var(--primary-soft);border-color:var(--primary);color:var(--primary)}
 .burst span{position:absolute;font-size:1.2rem;animation:fly 1s ease-out forwards}
 @keyframes fly{from{transform:translate(0,0) scale(.4);opacity:1}to{transform:translate(var(--x),var(--y)) scale(1);opacity:0}}
 
@@ -364,7 +375,15 @@ details.card[open] summary{margin-bottom:12px}
         </div>
       </div>
       <div class="muted small" id="phraseMeta"></div>
+      <details class="phr-settings" id="phrSettings">
+        <summary>⚙️ Що вчити</summary>
+        <div class="set-label">Рівень складності</div>
+        <div class="chips" id="lvlChips"></div>
+        <div class="set-label">Теми</div>
+        <div class="chips" id="topicChips"></div>
+      </details>
       <div id="phraseBox"></div>
+      <button class="btn btn-ghost btn-block" id="phraseMore" type="button" hidden>🔄 Інші фрази</button>
     </div>
   </section>
 
@@ -469,7 +488,7 @@ details.card[open] summary{margin-bottom:12px}
       <button class="btn btn-primary btn-block" id="installBtn" type="button">📲 Встановити на головний екран</button>
     </div>
 
-    <p class="muted small" style="text-align:center">Версія 3 · з фразами дня</p>
+    <p class="muted small" style="text-align:center">Версія 4 · 747 фраз, вибір рівня й теми</p>
   </section>
 </main>
 
@@ -743,63 +762,135 @@ $('#taskList').addEventListener('click', e => {
 let PH = null; // null — ще вантажиться, false — недоступно, інакше { topics, phrases }
 async function loadPhrases() {
   try {
-    const r = await fetch('phrases.json');
+    const r = await fetch('phrases.json?v=4'); // номер версії — щоб не взяти стару базу з кешу
     if (!r.ok) throw new Error(r.status);
     PH = await r.json();
   } catch (e) { PH = false; }
   renderPhrases();
 }
-function todayPhrases() {
-  const k = todayKey(), P = S.phr, n = PH.phrases.length;
-  if (!P.plan[k]) {
-    // беремо наступні фрази по черзі; коли база закінчиться — починаємо спочатку
-    P.plan[k] = Array.from({ length: P.perDay }, (_, i) => PH.phrases[(P.next + i) % n].id);
-    P.next = (P.next + P.perDay) % n;
-    save();
+// S.phr: perDay, levels/topics — фільтри, known — «вже знаю», shown — вже показані, plan — фрази по днях
+function phrState() {
+  const P = S.phr;
+  if (!P.levels) {
+    // перший запуск з фільтрами: за замовчуванням складніші рівні
+    P.levels = [3, 4, 5];
+    P.known = P.known || [];
+    P.shown = Object.values(P.plan || {}).flat().filter(id => !(P.plan[todayKey()] || []).includes(id));
+    if (P.plan) delete P.plan[todayKey()];
   }
-  return P.plan[k].map(id => PH.phrases.find(p => p.id === id)).filter(Boolean);
+  P.plan = P.plan || {};
+  P.known = P.known || [];
+  P.shown = P.shown || [];
+  if (!P.topics) P.topics = Object.keys(PH.topics);
+  return P;
+}
+const matches = (P, p) => P.levels.includes(p.level) && P.topics.includes(p.topic);
+function nextCandidates(P, exclude = []) {
+  const skip = new Set([...P.known, ...P.shown, ...exclude]);
+  let list = PH.phrases.filter(p => matches(P, p) && !skip.has(p.id));
+  if (!list.length) {
+    // усі фрази за фільтром уже показані — починаємо їх коло заново (крім «вже знаю»)
+    const pool = new Set(PH.phrases.filter(p => matches(P, p)).map(p => p.id));
+    P.shown = P.shown.filter(id => !pool.has(id) || exclude.includes(id));
+    const skip2 = new Set([...P.known, ...exclude]);
+    list = PH.phrases.filter(p => matches(P, p) && !skip2.has(p.id));
+  }
+  return list;
+}
+function buildPlan(P) {
+  const ids = nextCandidates(P).slice(0, P.perDay).map(p => p.id);
+  P.plan[todayKey()] = ids;
+  P.shown.push(...ids);
+  save();
+}
+function rebuildToday(keepShown) {
+  const P = phrState(), k = todayKey();
+  if (!keepShown && P.plan[k]) P.shown = P.shown.filter(id => !P.plan[k].includes(id));
+  delete P.plan[k];
+  buildPlan(P);
+  renderPhrases();
+}
+function renderPhraseSettings(P) {
+  $('#lvlChips').innerHTML = Object.entries(PH.levels || {}).map(([l, name]) =>
+    `<button type="button" class="chip${P.levels.includes(+l) ? ' on' : ''}" data-lvl="${l}">${l} · ${esc(name)}</button>`).join('');
+  $('#topicChips').innerHTML = Object.entries(PH.topics).map(([t, name]) =>
+    `<button type="button" class="chip${P.topics.includes(t) ? ' on' : ''}" data-topic="${t}">${esc(name)}</button>`).join('');
 }
 function renderPhrases() {
   document.querySelectorAll('#perDay button').forEach(b => b.classList.toggle('on', +b.dataset.n === S.phr.perDay));
   const box = $('#phraseBox'), meta = $('#phraseMeta');
+  $('#phrSettings').hidden = !PH;
+  $('#phraseMore').hidden = !PH;
   if (PH === null) { meta.textContent = 'Завантаження фраз…'; box.innerHTML = ''; return; }
   if (!PH) { meta.textContent = 'Фрази доступні в онлайн-версії сайту (не з файлу на комп\'ютері).'; box.innerHTML = ''; return; }
-  const list = todayPhrases();
-  meta.textContent = `Фраза ${list[0].id}${list.length > 1 ? '–' + list[list.length - 1].id : ''} з ${PH.phrases.length}`;
+  const P = phrState();
+  if (!P.plan[todayKey()]) buildPlan(P);
+  renderPhraseSettings(P);
+  const list = P.plan[todayKey()].map(id => PH.phrases.find(p => p.id === id)).filter(Boolean);
+  const left = PH.phrases.filter(p => matches(P, p) && !P.known.includes(p.id)).length;
+  meta.textContent = `За фільтром ще вчити: ${left} · вже знаю: ${P.known.length}`;
+  if (!list.length) {
+    box.innerHTML = '<div class="empty">За цими фільтрами фраз немає 🤷<br>Обери інші рівні чи теми.</div>';
+    return;
+  }
+  const maxLvl = Math.max(...Object.keys(PH.levels || { 3: 1 }).map(Number));
   box.innerHTML = list.map(p => {
     const inWords = S.words.some(w => w.en.toLowerCase() === p.en.toLowerCase());
     return `
     <div class="phrase">
-      <div class="phrase-top"><span class="tag">${esc(PH.topics[p.topic] || p.topic)}</span><span class="lvl" title="Рівень ${p.level}">${'●'.repeat(p.level)}${'○'.repeat(3 - p.level)}</span></div>
+      <div class="phrase-top"><span class="tag">${esc(PH.topics[p.topic] || p.topic)}</span><span class="lvl" title="Рівень ${p.level}">${'●'.repeat(p.level)}${'○'.repeat(maxLvl - p.level)}</span></div>
       <div class="phrase-en"><span>${esc(p.en)}</span><button class="speak sm" type="button" data-speak="${esc(p.en)}" aria-label="Озвучити">${ICON.speaker}</button></div>
       <div class="phrase-uk">${esc(p.uk)}</div>
       <button class="phrase-ex" type="button" data-speak="${esc(p.example)}">${esc(p.example)}</button>
-      <button class="mini-btn" type="button" data-addphrase="${p.id}"${inWords ? ' disabled' : ''}>${inWords ? '✓ У моїх словах' : '＋ Додати в мої слова'}</button>
+      <div class="phrase-actions">
+        <button class="mini-btn" type="button" data-addphrase="${p.id}"${inWords ? ' disabled' : ''}>${inWords ? '✓ У моїх словах' : '＋ У мої слова'}</button>
+        <button class="mini-btn known" type="button" data-known="${p.id}">✓ Вже знаю</button>
+      </div>
     </div>`;
   }).join('');
 }
 $('#phraseBox').addEventListener('click', e => {
-  const b = e.target.closest('[data-addphrase]');
-  if (!b || !PH) return;
-  const p = PH.phrases.find(x => x.id === +b.dataset.addphrase);
-  if (!p || S.words.some(w => w.en.toLowerCase() === p.en.toLowerCase())) return;
-  S.words.unshift({ id: uid(), en: p.en, uk: p.uk, ex: p.example, added: todayKey(), level: 0 });
-  save();
-  renderPhrases();
-  toast('Додано в «Мої слова» ✓');
+  if (!PH) return;
+  const add = e.target.closest('[data-addphrase]');
+  const kn = e.target.closest('[data-known]');
+  if (add) {
+    const p = PH.phrases.find(x => x.id === +add.dataset.addphrase);
+    if (!p || S.words.some(w => w.en.toLowerCase() === p.en.toLowerCase())) return;
+    S.words.unshift({ id: uid(), en: p.en, uk: p.uk, ex: p.example, added: todayKey(), level: 0 });
+    save();
+    renderPhrases();
+    toast('Додано в «Мої слова» ✓');
+  } else if (kn) {
+    // позначаємо як відоме і одразу підставляємо наступну фразу на це місце
+    const P = phrState(), id = +kn.dataset.known, plan = P.plan[todayKey()];
+    if (!P.known.includes(id)) P.known.push(id);
+    const next = nextCandidates(P, plan)[0];
+    const i = plan.indexOf(id);
+    if (next) { plan.splice(i, 1, next.id); P.shown.push(next.id); }
+    else plan.splice(i, 1);
+    save();
+    renderPhrases();
+    toast('Добре! Цю фразу більше не показуватиму');
+  }
 });
+$('#phraseMore').addEventListener('click', () => { rebuildToday(true); toast('Ось нові фрази 🔄'); });
 $('#perDay').addEventListener('click', e => {
   const b = e.target.closest('button[data-n]');
   if (!b || +b.dataset.n === S.phr.perDay) return;
-  const P = S.phr, k = todayKey();
-  if (PH && P.plan[k]) {
-    // перебудовуємо сьогоднішній план з тієї ж позиції
-    P.next = (P.next - P.plan[k].length + PH.phrases.length) % PH.phrases.length;
-    delete P.plan[k];
-  }
-  P.perDay = +b.dataset.n;
-  save();
-  renderPhrases();
+  S.phr.perDay = +b.dataset.n;
+  if (PH) rebuildToday(false); else { save(); renderPhrases(); }
+});
+$('#phrSettings').addEventListener('click', e => {
+  const c = e.target.closest('.chip');
+  if (!c || !PH) return;
+  const P = phrState();
+  const [arr, val] = c.dataset.lvl ? [P.levels, +c.dataset.lvl] : [P.topics, c.dataset.topic];
+  const i = arr.indexOf(val);
+  if (i >= 0) {
+    if (arr.length === 1) { toast('Залиш хоча б один варіант'); return; }
+    arr.splice(i, 1);
+  } else arr.push(val);
+  rebuildToday(false);
 });
 
 /* ================= Слова ================= */

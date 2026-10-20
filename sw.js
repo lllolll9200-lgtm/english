@@ -1,10 +1,10 @@
 // Service worker: зберігає файли застосунку, щоб він працював без інтернету.
 // Після змін у index.html збільш номер версії — і телефон підтягне оновлення.
-const CACHE = 'eng-tracker-v3';
+const CACHE = 'eng-tracker-v4';
 const ASSETS = [
   './',
   './index.html',
-  './phrases.json',
+  './phrases.json?v=4',
   './manifest.webmanifest',
   './icon-192.png',
   './icon-512.png',
