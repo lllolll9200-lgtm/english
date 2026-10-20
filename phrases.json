@@ -1,0 +1,4029 @@
+{
+ "version": 1,
+ "topics": {
+  "daily": "Щоденне спілкування",
+  "study": "Навчання та університет",
+  "travel": "Подорожі",
+  "shopping": "Покупки й кафе",
+  "emotions": "Емоції та думки",
+  "work": "Робота й бізнес"
+ },
+ "phrases": [
+  {
+   "id": 1,
+   "en": "Hi, how are you?",
+   "uk": "Привіт, як справи?",
+   "example": "Hi, how are you? I haven't seen you for ages.",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 2,
+   "en": "I'm a student.",
+   "uk": "Я студент.",
+   "example": "I'm a student at a university in Kyiv.",
+   "topic": "study",
+   "level": 1
+  },
+  {
+   "id": 3,
+   "en": "Where is the toilet?",
+   "uk": "Де туалет?",
+   "example": "Excuse me, where is the toilet?",
+   "topic": "travel",
+   "level": 1
+  },
+  {
+   "id": 4,
+   "en": "How much is it?",
+   "uk": "Скільки це коштує?",
+   "example": "I like this bag. How much is it?",
+   "topic": "shopping",
+   "level": 1
+  },
+  {
+   "id": 5,
+   "en": "I'm happy.",
+   "uk": "Я щасливий.",
+   "example": "I'm happy to see you!",
+   "topic": "emotions",
+   "level": 1
+  },
+  {
+   "id": 6,
+   "en": "I work in IT.",
+   "uk": "Я працюю в IT.",
+   "example": "I work in IT, I'm a developer.",
+   "topic": "work",
+   "level": 1
+  },
+  {
+   "id": 7,
+   "en": "I'm fine, thanks.",
+   "uk": "У мене все добре, дякую.",
+   "example": "I'm fine, thanks. And you?",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 8,
+   "en": "I have a class at nine.",
+   "uk": "У мене пара о дев'ятій.",
+   "example": "I have a class at nine tomorrow.",
+   "topic": "study",
+   "level": 1
+  },
+  {
+   "id": 9,
+   "en": "How much is a ticket?",
+   "uk": "Скільки коштує квиток?",
+   "example": "How much is a ticket to London?",
+   "topic": "travel",
+   "level": 1
+  },
+  {
+   "id": 10,
+   "en": "A coffee, please.",
+   "uk": "Каву, будь ласка.",
+   "example": "A coffee, please. With milk.",
+   "topic": "shopping",
+   "level": 1
+  },
+  {
+   "id": 11,
+   "en": "I'm sad.",
+   "uk": "Мені сумно.",
+   "example": "I'm sad because my friend left.",
+   "topic": "emotions",
+   "level": 1
+  },
+  {
+   "id": 12,
+   "en": "I have a meeting.",
+   "uk": "У мене зустріч.",
+   "example": "I can't talk now, I have a meeting.",
+   "topic": "work",
+   "level": 1
+  },
+  {
+   "id": 13,
+   "en": "Nice to meet you.",
+   "uk": "Приємно познайомитися.",
+   "example": "I'm Oleh. Nice to meet you.",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 14,
+   "en": "What's the homework?",
+   "uk": "Що задали додому?",
+   "example": "I missed the lesson. What's the homework?",
+   "topic": "study",
+   "level": 1
+  },
+  {
+   "id": 15,
+   "en": "One ticket, please.",
+   "uk": "Один квиток, будь ласка.",
+   "example": "One ticket to the city center, please.",
+   "topic": "travel",
+   "level": 1
+  },
+  {
+   "id": 16,
+   "en": "Can I pay by card?",
+   "uk": "Можна оплатити карткою?",
+   "example": "Can I pay by card or only cash?",
+   "topic": "shopping",
+   "level": 1
+  },
+  {
+   "id": 17,
+   "en": "I love it!",
+   "uk": "Мені дуже подобається!",
+   "example": "Thank you for the gift. I love it!",
+   "topic": "emotions",
+   "level": 1
+  },
+  {
+   "id": 18,
+   "en": "I'm at work.",
+   "uk": "Я на роботі.",
+   "example": "I'm at work until six.",
+   "topic": "work",
+   "level": 1
+  },
+  {
+   "id": 19,
+   "en": "Good morning!",
+   "uk": "Доброго ранку!",
+   "example": "Good morning! Did you sleep well?",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 20,
+   "en": "I have an exam tomorrow.",
+   "uk": "У мене завтра іспит.",
+   "example": "I can't go out. I have an exam tomorrow.",
+   "topic": "study",
+   "level": 1
+  },
+  {
+   "id": 21,
+   "en": "I'm lost.",
+   "uk": "Я заблукав.",
+   "example": "Excuse me, I'm lost. Where is the station?",
+   "topic": "travel",
+   "level": 1
+  },
+  {
+   "id": 22,
+   "en": "The bill, please.",
+   "uk": "Рахунок, будь ласка.",
+   "example": "Excuse me, the bill, please.",
+   "topic": "shopping",
+   "level": 1
+  },
+  {
+   "id": 23,
+   "en": "I like it.",
+   "uk": "Мені подобається.",
+   "example": "Nice song. I like it.",
+   "topic": "emotions",
+   "level": 1
+  },
+  {
+   "id": 24,
+   "en": "What's your job?",
+   "uk": "Ким ти працюєш?",
+   "example": "What's your job? Are you a designer?",
+   "topic": "work",
+   "level": 1
+  },
+  {
+   "id": 25,
+   "en": "See you later.",
+   "uk": "Побачимося пізніше.",
+   "example": "I have to go now. See you later!",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 26,
+   "en": "Can I borrow your pen?",
+   "uk": "Можна позичити твою ручку?",
+   "example": "Can I borrow your pen? Mine doesn't work.",
+   "topic": "study",
+   "level": 1
+  },
+  {
+   "id": 27,
+   "en": "Where is the bus stop?",
+   "uk": "Де автобусна зупинка?",
+   "example": "Where is the bus stop for the airport?",
+   "topic": "travel",
+   "level": 1
+  },
+  {
+   "id": 28,
+   "en": "I'd like a tea.",
+   "uk": "Я б хотів чаю.",
+   "example": "I'd like a tea with lemon.",
+   "topic": "shopping",
+   "level": 1
+  },
+  {
+   "id": 29,
+   "en": "I don't like it.",
+   "uk": "Мені не подобається.",
+   "example": "This tea is too sweet. I don't like it.",
+   "topic": "emotions",
+   "level": 1
+  },
+  {
+   "id": 30,
+   "en": "I work from home.",
+   "uk": "Я працюю з дому.",
+   "example": "I work from home on Fridays.",
+   "topic": "work",
+   "level": 1
+  },
+  {
+   "id": 31,
+   "en": "See you tomorrow.",
+   "uk": "До завтра.",
+   "example": "Good night, see you tomorrow!",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 32,
+   "en": "How do you say it in English?",
+   "uk": "Як це сказати англійською?",
+   "example": "How do you say \"кава\" in English?",
+   "topic": "study",
+   "level": 1
+  },
+  {
+   "id": 33,
+   "en": "Is it far?",
+   "uk": "Це далеко?",
+   "example": "The museum? Is it far from here?",
+   "topic": "travel",
+   "level": 1
+  },
+  {
+   "id": 34,
+   "en": "It's too expensive.",
+   "uk": "Це занадто дорого.",
+   "example": "Sorry, it's too expensive for me.",
+   "topic": "shopping",
+   "level": 1
+  },
+  {
+   "id": 35,
+   "en": "I'm bored.",
+   "uk": "Мені нудно.",
+   "example": "I'm bored. Let's do something.",
+   "topic": "emotions",
+   "level": 1
+  },
+  {
+   "id": 36,
+   "en": "My boss is nice.",
+   "uk": "Мій начальник приємний.",
+   "example": "My boss is nice and always helps me.",
+   "topic": "work",
+   "level": 1
+  },
+  {
+   "id": 37,
+   "en": "Have a nice day!",
+   "uk": "Гарного дня!",
+   "example": "Thanks for your help. Have a nice day!",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 38,
+   "en": "What does this word mean?",
+   "uk": "Що означає це слово?",
+   "example": "What does this word mean? I've never seen it.",
+   "topic": "study",
+   "level": 1
+  },
+  {
+   "id": 39,
+   "en": "Turn left.",
+   "uk": "Поверніть ліворуч.",
+   "example": "Turn left at the bank.",
+   "topic": "travel",
+   "level": 1
+  },
+  {
+   "id": 40,
+   "en": "Can I try it on?",
+   "uk": "Можна приміряти?",
+   "example": "I like this jacket. Can I try it on?",
+   "topic": "shopping",
+   "level": 1
+  },
+  {
+   "id": 41,
+   "en": "I'm scared.",
+   "uk": "Мені страшно.",
+   "example": "I'm scared of big dogs.",
+   "topic": "emotions",
+   "level": 1
+  },
+  {
+   "id": 42,
+   "en": "I'm on a break.",
+   "uk": "У мене перерва.",
+   "example": "I'm on a break. Let's get coffee.",
+   "topic": "work",
+   "level": 1
+  },
+  {
+   "id": 43,
+   "en": "Thank you so much.",
+   "uk": "Дуже дякую.",
+   "example": "Thank you so much for the gift!",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 44,
+   "en": "How do you spell it?",
+   "uk": "Як це пишеться?",
+   "example": "Your last name? How do you spell it?",
+   "topic": "study",
+   "level": 1
+  },
+  {
+   "id": 45,
+   "en": "Turn right.",
+   "uk": "Поверніть праворуч.",
+   "example": "Go straight and turn right.",
+   "topic": "travel",
+   "level": 1
+  },
+  {
+   "id": 46,
+   "en": "I'm just looking.",
+   "uk": "Я просто дивлюся.",
+   "example": "\"Can I help you?\" \"No, thanks, I'm just looking.\"",
+   "topic": "shopping",
+   "level": 1
+  },
+  {
+   "id": 47,
+   "en": "I'm angry.",
+   "uk": "Я злий.",
+   "example": "I'm angry because he lied to me.",
+   "topic": "emotions",
+   "level": 1
+  },
+  {
+   "id": 48,
+   "en": "Let's start.",
+   "uk": "Почнімо.",
+   "example": "Everyone is here. Let's start.",
+   "topic": "work",
+   "level": 1
+  },
+  {
+   "id": 49,
+   "en": "You're welcome.",
+   "uk": "Будь ласка. / Нема за що.",
+   "example": "\"Thanks for the coffee.\" \"You're welcome.\"",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 50,
+   "en": "How do you pronounce this word?",
+   "uk": "Як вимовляється це слово?",
+   "example": "How do you pronounce this word? Is it \"through\"?",
+   "topic": "study",
+   "level": 1
+  },
+  {
+   "id": 51,
+   "en": "Go straight.",
+   "uk": "Ідіть прямо.",
+   "example": "Go straight for two blocks.",
+   "topic": "travel",
+   "level": 1
+  },
+  {
+   "id": 52,
+   "en": "Here you are.",
+   "uk": "Ось, будь ласка. / Прошу.",
+   "example": "\"Can I see your ticket?\" \"Here you are.\"",
+   "topic": "shopping",
+   "level": 1
+  },
+  {
+   "id": 53,
+   "en": "I think so.",
+   "uk": "Думаю, так.",
+   "example": "\"Is it going to rain?\" \"I think so.\"",
+   "topic": "emotions",
+   "level": 1
+  },
+  {
+   "id": 54,
+   "en": "Any questions?",
+   "uk": "Є питання?",
+   "example": "That's all from me. Any questions?",
+   "topic": "work",
+   "level": 1
+  },
+  {
+   "id": 55,
+   "en": "No problem.",
+   "uk": "Без проблем.",
+   "example": "\"Can you help me?\" \"No problem.\"",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 56,
+   "en": "I'm learning English.",
+   "uk": "Я вчу англійську.",
+   "example": "I'm learning English every day.",
+   "topic": "study",
+   "level": 1
+  },
+  {
+   "id": 57,
+   "en": "I have a reservation.",
+   "uk": "У мене є бронювання.",
+   "example": "Hello, I have a reservation for two nights.",
+   "topic": "travel",
+   "level": 1
+  },
+  {
+   "id": 58,
+   "en": "Cash or card?",
+   "uk": "Готівкою чи карткою?",
+   "example": "\"Cash or card?\" \"Card, please.\"",
+   "topic": "shopping",
+   "level": 1
+  },
+  {
+   "id": 59,
+   "en": "I don't think so.",
+   "uk": "Не думаю.",
+   "example": "\"Is he coming?\" \"I don't think so.\"",
+   "topic": "emotions",
+   "level": 1
+  },
+  {
+   "id": 60,
+   "en": "Thanks for your help.",
+   "uk": "Дякую за допомогу.",
+   "example": "Thanks for your help with the report.",
+   "topic": "work",
+   "level": 1
+  },
+  {
+   "id": 61,
+   "en": "Excuse me.",
+   "uk": "Перепрошую.",
+   "example": "Excuse me, is this seat free?",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 62,
+   "en": "Can you speak slowly, please?",
+   "uk": "Можете говорити повільніше, будь ласка?",
+   "example": "Can you speak slowly, please? I'm a beginner.",
+   "topic": "study",
+   "level": 1
+  },
+  {
+   "id": 63,
+   "en": "Here is my passport.",
+   "uk": "Ось мій паспорт.",
+   "example": "Here is my passport and my ticket.",
+   "topic": "travel",
+   "level": 1
+  },
+  {
+   "id": 64,
+   "en": "I'll take it.",
+   "uk": "Я це візьму.",
+   "example": "I love this bag. I'll take it!",
+   "topic": "shopping",
+   "level": 1
+  },
+  {
+   "id": 65,
+   "en": "That's great!",
+   "uk": "Це чудово!",
+   "example": "You got the job? That's great!",
+   "topic": "emotions",
+   "level": 1
+  },
+  {
+   "id": 66,
+   "en": "I'm new here.",
+   "uk": "Я тут новенький.",
+   "example": "Hi, I'm new here. My name is Anna.",
+   "topic": "work",
+   "level": 1
+  },
+  {
+   "id": 67,
+   "en": "Sorry, I'm late.",
+   "uk": "Вибач, я запізнився.",
+   "example": "Sorry, I'm late. The bus was slow.",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 68,
+   "en": "I have a question.",
+   "uk": "У мене питання.",
+   "example": "Excuse me, I have a question.",
+   "topic": "study",
+   "level": 1
+  },
+  {
+   "id": 69,
+   "en": "Where are you going?",
+   "uk": "Куди ти їдеш?",
+   "example": "Where are you going this summer?",
+   "topic": "travel",
+   "level": 1
+  },
+  {
+   "id": 70,
+   "en": "Water, please.",
+   "uk": "Води, будь ласка.",
+   "example": "No juice for me. Water, please.",
+   "topic": "shopping",
+   "level": 1
+  },
+  {
+   "id": 71,
+   "en": "Really?",
+   "uk": "Справді?",
+   "example": "\"I won a prize.\" \"Really? Cool!\"",
+   "topic": "emotions",
+   "level": 1
+  },
+  {
+   "id": 72,
+   "en": "Send me an email.",
+   "uk": "Надішли мені лист.",
+   "example": "Send me an email with the details.",
+   "topic": "work",
+   "level": 1
+  },
+  {
+   "id": 73,
+   "en": "I don't know.",
+   "uk": "Я не знаю.",
+   "example": "I don't know where he is.",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 74,
+   "en": "I'm ready.",
+   "uk": "Я готовий.",
+   "example": "Let's start the test, I'm ready.",
+   "topic": "study",
+   "level": 1
+  },
+  {
+   "id": 75,
+   "en": "I'm here on vacation.",
+   "uk": "Я тут у відпустці.",
+   "example": "I'm here on vacation for a week.",
+   "topic": "travel",
+   "level": 1
+  },
+  {
+   "id": 76,
+   "en": "Do you have a menu in English?",
+   "uk": "У вас є меню англійською?",
+   "example": "Hi! Do you have a menu in English?",
+   "topic": "shopping",
+   "level": 1
+  },
+  {
+   "id": 77,
+   "en": "I agree.",
+   "uk": "Я згоден.",
+   "example": "I agree. It's a good idea.",
+   "topic": "emotions",
+   "level": 1
+  },
+  {
+   "id": 78,
+   "en": "Users",
+   "uk": "Користувачі",
+   "example": "Our app has a thousand users.",
+   "topic": "work",
+   "level": 1
+  },
+  {
+   "id": 79,
+   "en": "I don't understand.",
+   "uk": "Я не розумію.",
+   "example": "Sorry, I don't understand. Can you say it again?",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 80,
+   "en": "I passed the exam!",
+   "uk": "Я склав іспит!",
+   "example": "Great news: I passed the exam!",
+   "topic": "study",
+   "level": 1
+  },
+  {
+   "id": 81,
+   "en": "Can you help me?",
+   "uk": "Можете мені допомогти?",
+   "example": "Excuse me, can you help me?",
+   "topic": "travel",
+   "level": 1
+  },
+  {
+   "id": 82,
+   "en": "A table for two, please.",
+   "uk": "Столик на двох, будь ласка.",
+   "example": "Good evening. A table for two, please.",
+   "topic": "shopping",
+   "level": 1
+  },
+  {
+   "id": 83,
+   "en": "I'm so excited!",
+   "uk": "Я в передчутті! / Не можу дочекатися!",
+   "example": "We're going to the sea! I'm so excited!",
+   "topic": "emotions",
+   "level": 1
+  },
+  {
+   "id": 84,
+   "en": "Customers",
+   "uk": "Клієнти (ті, хто платить)",
+   "example": "Our customers love the new feature.",
+   "topic": "work",
+   "level": 1
+  },
+  {
+   "id": 85,
+   "en": "Can you repeat that, please?",
+   "uk": "Можете повторити, будь ласка?",
+   "example": "Can you repeat that, please? I didn't hear you.",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 86,
+   "en": "I failed the test.",
+   "uk": "Я завалив тест.",
+   "example": "I failed the test, but I'll try again.",
+   "topic": "study",
+   "level": 1
+  },
+  {
+   "id": 87,
+   "en": "What time does the train leave?",
+   "uk": "О котрій відправляється потяг?",
+   "example": "What time does the train leave for Lviv?",
+   "topic": "travel",
+   "level": 1
+  },
+  {
+   "id": 88,
+   "en": "It's delicious!",
+   "uk": "Дуже смачно!",
+   "example": "Try this soup. It's delicious!",
+   "topic": "shopping",
+   "level": 1
+  },
+  {
+   "id": 89,
+   "en": "I'm worried.",
+   "uk": "Я хвилююся.",
+   "example": "I'm worried about my exam.",
+   "topic": "emotions",
+   "level": 1
+  },
+  {
+   "id": 90,
+   "en": "Price",
+   "uk": "Ціна",
+   "example": "What's the price of the basic plan?",
+   "topic": "work",
+   "level": 1
+  },
+  {
+   "id": 91,
+   "en": "What's your name?",
+   "uk": "Як тебе звати?",
+   "example": "Hi! What's your name?",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 92,
+   "en": "The lesson starts at ten.",
+   "uk": "Урок починається о десятій.",
+   "example": "Hurry up! The lesson starts at ten.",
+   "topic": "study",
+   "level": 1
+  },
+  {
+   "id": 93,
+   "en": "Can I have a map?",
+   "uk": "Можна мапу?",
+   "example": "Can I have a map of the city?",
+   "topic": "travel",
+   "level": 1
+  },
+  {
+   "id": 94,
+   "en": "Where can I find milk?",
+   "uk": "Де знайти молоко?",
+   "example": "Excuse me, where can I find milk?",
+   "topic": "shopping",
+   "level": 1
+  },
+  {
+   "id": 95,
+   "en": "Cool!",
+   "uk": "Круто!",
+   "example": "\"I bought a new bike.\" \"Cool!\"",
+   "topic": "emotions",
+   "level": 1
+  },
+  {
+   "id": 96,
+   "en": "Team",
+   "uk": "Команда",
+   "example": "Our team has five people.",
+   "topic": "work",
+   "level": 1
+  },
+  {
+   "id": 97,
+   "en": "Where are you from?",
+   "uk": "Звідки ти?",
+   "example": "Where are you from? Are you from Poland?",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 98,
+   "en": "Where is the library?",
+   "uk": "Де бібліотека?",
+   "example": "Excuse me, where is the library?",
+   "topic": "study",
+   "level": 1
+  },
+  {
+   "id": 99,
+   "en": "Is there Wi-Fi here?",
+   "uk": "Тут є Wi-Fi?",
+   "example": "Is there Wi-Fi here? What's the password?",
+   "topic": "travel",
+   "level": 1
+  },
+  {
+   "id": 100,
+   "en": "Can I have a bag?",
+   "uk": "Можна пакет?",
+   "example": "Can I have a bag, please?",
+   "topic": "shopping",
+   "level": 1
+  },
+  {
+   "id": 101,
+   "en": "I miss you.",
+   "uk": "Я сумую за тобою.",
+   "example": "I miss you. Come back soon!",
+   "topic": "emotions",
+   "level": 1
+  },
+  {
+   "id": 102,
+   "en": "Good job!",
+   "uk": "Гарна робота!",
+   "example": "Good job on the presentation!",
+   "topic": "work",
+   "level": 1
+  },
+  {
+   "id": 103,
+   "en": "How old are you?",
+   "uk": "Скільки тобі років?",
+   "example": "How old are you? I'm twenty.",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 104,
+   "en": "Open your books.",
+   "uk": "Відкрийте книжки.",
+   "example": "Open your books at page twenty.",
+   "topic": "study",
+   "level": 1
+  },
+  {
+   "id": 105,
+   "en": "I need a taxi.",
+   "uk": "Мені потрібне таксі.",
+   "example": "I need a taxi to the airport.",
+   "topic": "travel",
+   "level": 1
+  },
+  {
+   "id": 106,
+   "en": "Where is the checkout?",
+   "uk": "Де каса?",
+   "example": "Excuse me, where is the checkout?",
+   "topic": "shopping",
+   "level": 1
+  },
+  {
+   "id": 107,
+   "en": "I'm OK.",
+   "uk": "Я в порядку.",
+   "example": "Don't worry, I'm OK.",
+   "topic": "emotions",
+   "level": 1
+  },
+  {
+   "id": 108,
+   "en": "I'm late for work.",
+   "uk": "Я запізнююся на роботу.",
+   "example": "Hurry! I'm late for work.",
+   "topic": "work",
+   "level": 1
+  },
+  {
+   "id": 109,
+   "en": "I'm tired.",
+   "uk": "Я втомився.",
+   "example": "I'm tired. I need to sleep.",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 110,
+   "en": "I forgot my notebook.",
+   "uk": "Я забув свій зошит.",
+   "example": "Oh no, I forgot my notebook at home.",
+   "topic": "study",
+   "level": 1
+  },
+  {
+   "id": 111,
+   "en": "Take me to this address, please.",
+   "uk": "Відвезіть мене за цією адресою, будь ласка.",
+   "example": "Take me to this address, please. It's my hotel.",
+   "topic": "travel",
+   "level": 1
+  },
+  {
+   "id": 112,
+   "en": "When do you close?",
+   "uk": "О котрій ви зачиняєтеся?",
+   "example": "When do you close today?",
+   "topic": "shopping",
+   "level": 1
+  },
+  {
+   "id": 113,
+   "en": "Wow!",
+   "uk": "Ого!",
+   "example": "Wow! Your English is great!",
+   "topic": "emotions",
+   "level": 1
+  },
+  {
+   "id": 114,
+   "en": "Office",
+   "uk": "Офіс",
+   "example": "Our office is in the city center.",
+   "topic": "work",
+   "level": 1
+  },
+  {
+   "id": 115,
+   "en": "I'm hungry.",
+   "uk": "Я голодний.",
+   "example": "I'm hungry. Let's eat something.",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 116,
+   "en": "May I come in?",
+   "uk": "Можна увійти?",
+   "example": "Sorry I'm late. May I come in?",
+   "topic": "study",
+   "level": 1
+  },
+  {
+   "id": 117,
+   "en": "Where is the exit?",
+   "uk": "Де вихід?",
+   "example": "Excuse me, where is the exit?",
+   "topic": "travel",
+   "level": 1
+  },
+  {
+   "id": 118,
+   "en": "I'm vegetarian.",
+   "uk": "Я вегетаріанець.",
+   "example": "I'm vegetarian. Do you have dishes without meat?",
+   "topic": "shopping",
+   "level": 1
+  },
+  {
+   "id": 119,
+   "en": "Oh no!",
+   "uk": "О ні!",
+   "example": "Oh no! I forgot my phone!",
+   "topic": "emotions",
+   "level": 1
+  },
+  {
+   "id": 120,
+   "en": "Salary",
+   "uk": "Зарплата",
+   "example": "The salary is good, and the team is friendly.",
+   "topic": "work",
+   "level": 1
+  },
+  {
+   "id": 121,
+   "en": "Let's go!",
+   "uk": "Ходімо! / Поїхали!",
+   "example": "Is everyone ready? Let's go!",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 122,
+   "en": "I know the answer.",
+   "uk": "Я знаю відповідь.",
+   "example": "I know the answer! It's \"B\".",
+   "topic": "study",
+   "level": 1
+  },
+  {
+   "id": 123,
+   "en": "Is it open?",
+   "uk": "Воно відчинене? / Працює?",
+   "example": "Is the museum open on Monday?",
+   "topic": "travel",
+   "level": 1
+  },
+  {
+   "id": 124,
+   "en": "Is there a supermarket near here?",
+   "uk": "Тут поблизу є супермаркет?",
+   "example": "Excuse me, is there a supermarket near here?",
+   "topic": "shopping",
+   "level": 1
+  },
+  {
+   "id": 125,
+   "en": "I'm sorry.",
+   "uk": "Мені шкода. / Вибач.",
+   "example": "I'm sorry. It was my mistake.",
+   "topic": "emotions",
+   "level": 1
+  },
+  {
+   "id": 126,
+   "en": "Colleague",
+   "uk": "Колега",
+   "example": "My colleague helped me with the task.",
+   "topic": "work",
+   "level": 1
+  },
+  {
+   "id": 127,
+   "en": "Wait a minute.",
+   "uk": "Зачекай хвилинку.",
+   "example": "Wait a minute, I need my keys.",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 128,
+   "en": "I don't remember.",
+   "uk": "Я не пам'ятаю.",
+   "example": "I don't remember this word.",
+   "topic": "study",
+   "level": 1
+  },
+  {
+   "id": 129,
+   "en": "Where is my seat?",
+   "uk": "Де моє місце?",
+   "example": "Excuse me, where is my seat? It's 14A.",
+   "topic": "travel",
+   "level": 1
+  },
+  {
+   "id": 130,
+   "en": "I hope so.",
+   "uk": "Сподіваюся.",
+   "example": "\"Will it be sunny tomorrow?\" \"I hope so.\"",
+   "topic": "emotions",
+   "level": 1
+  },
+  {
+   "id": 131,
+   "en": "App",
+   "uk": "Застосунок",
+   "example": "I use this app every day.",
+   "topic": "work",
+   "level": 1
+  },
+  {
+   "id": 132,
+   "en": "Of course.",
+   "uk": "Звісно.",
+   "example": "\"Can I sit here?\" \"Of course.\"",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 133,
+   "en": "Let's take a break.",
+   "uk": "Зробімо перерву.",
+   "example": "We studied for two hours. Let's take a break.",
+   "topic": "study",
+   "level": 1
+  },
+  {
+   "id": 134,
+   "en": "I'm from Ukraine.",
+   "uk": "Я з України.",
+   "example": "I'm from Ukraine, from Lviv.",
+   "topic": "travel",
+   "level": 1
+  },
+  {
+   "id": 135,
+   "en": "I have a lot of work.",
+   "uk": "У мене багато роботи.",
+   "example": "I have a lot of work this week.",
+   "topic": "work",
+   "level": 1
+  },
+  {
+   "id": 136,
+   "en": "Me too.",
+   "uk": "Я теж.",
+   "example": "\"I love pizza.\" \"Me too!\"",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 137,
+   "en": "Good luck!",
+   "uk": "Удачі!",
+   "example": "You have an exam tomorrow? Good luck!",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 138,
+   "en": "Take care.",
+   "uk": "Бережи себе.",
+   "example": "Bye, take care!",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 139,
+   "en": "What time is it?",
+   "uk": "Котра година?",
+   "example": "Excuse me, what time is it?",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 140,
+   "en": "Happy birthday!",
+   "uk": "З днем народження!",
+   "example": "Happy birthday! Here's a little gift.",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 141,
+   "en": "I'm busy right now.",
+   "uk": "Я зараз зайнятий.",
+   "example": "I'm busy right now. Can I call you later?",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 142,
+   "en": "I'm home.",
+   "uk": "Я вдома.",
+   "example": "Mom, I'm home!",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 143,
+   "en": "Come in!",
+   "uk": "Заходь! / Заходьте!",
+   "example": "The door is open. Come in!",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 144,
+   "en": "Sit down, please.",
+   "uk": "Сідайте, будь ласка.",
+   "example": "Sit down, please. Do you want some tea?",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 145,
+   "en": "What's this?",
+   "uk": "Що це?",
+   "example": "What's this? A new phone?",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 146,
+   "en": "I'm cold.",
+   "uk": "Мені холодно.",
+   "example": "I'm cold. Can you close the window?",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 147,
+   "en": "It's hot today.",
+   "uk": "Сьогодні спекотно.",
+   "example": "It's hot today. Let's go to the beach.",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 148,
+   "en": "It's raining.",
+   "uk": "Іде дощ.",
+   "example": "Take an umbrella, it's raining.",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 149,
+   "en": "Good night!",
+   "uk": "На добраніч!",
+   "example": "Good night! Sleep well.",
+   "topic": "daily",
+   "level": 1
+  },
+  {
+   "id": 150,
+   "en": "What's up?",
+   "uk": "Як ти? / Що нового?",
+   "example": "Hey, what's up? Anything new?",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 151,
+   "en": "I'm studying for the exam.",
+   "uk": "Я готуюся до іспиту.",
+   "example": "I'm studying for the exam all week.",
+   "topic": "study",
+   "level": 2
+  },
+  {
+   "id": 152,
+   "en": "How do I get to the station?",
+   "uk": "Як дістатися до вокзалу?",
+   "example": "Excuse me, how do I get to the station?",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 153,
+   "en": "Can I get a latte to go?",
+   "uk": "Можна лате з собою?",
+   "example": "Can I get a large latte to go?",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 154,
+   "en": "In my opinion...",
+   "uk": "На мою думку...",
+   "example": "In my opinion, this movie is too long.",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 155,
+   "en": "Let's schedule a call.",
+   "uk": "Давай призначимо дзвінок.",
+   "example": "Let's schedule a call for Tuesday.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 156,
+   "en": "How's it going?",
+   "uk": "Як воно? / Як справи?",
+   "example": "Hey Tom, how's it going?",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 157,
+   "en": "What's your major?",
+   "uk": "Яка в тебе спеціальність?",
+   "example": "What's your major? Is it computer science?",
+   "topic": "study",
+   "level": 2
+  },
+  {
+   "id": 158,
+   "en": "How long does it take?",
+   "uk": "Скільки часу це займає?",
+   "example": "How long does it take to get to the airport?",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 159,
+   "en": "For here or to go?",
+   "uk": "Тут чи з собою?",
+   "example": "\"For here or to go?\" \"To go, please.\"",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 160,
+   "en": "I feel great today.",
+   "uk": "Сьогодні я почуваюся чудово.",
+   "example": "I slept well and I feel great today.",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 161,
+   "en": "I'll send you the details.",
+   "uk": "Я надішлю тобі деталі.",
+   "example": "I'll send you the details after the meeting.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 162,
+   "en": "Not bad.",
+   "uk": "Непогано.",
+   "example": "\"How was your weekend?\" \"Not bad.\"",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 163,
+   "en": "I'm in my second year.",
+   "uk": "Я на другому курсі.",
+   "example": "I'm in my second year at university.",
+   "topic": "study",
+   "level": 2
+  },
+  {
+   "id": 164,
+   "en": "Is it within walking distance?",
+   "uk": "Туди можна дійти пішки?",
+   "example": "Is the beach within walking distance?",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 165,
+   "en": "I'm ready to order.",
+   "uk": "Я готовий замовити.",
+   "example": "Excuse me, I'm ready to order.",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 166,
+   "en": "I'm stressed out.",
+   "uk": "Я в стресі.",
+   "example": "I'm stressed out because of work.",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 167,
+   "en": "Can we reschedule?",
+   "uk": "Можемо перенести?",
+   "example": "Something came up. Can we reschedule?",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 168,
+   "en": "Long time no see!",
+   "uk": "Скільки літ, скільки зим!",
+   "example": "Long time no see! You look great.",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 169,
+   "en": "The deadline is on Friday.",
+   "uk": "Дедлайн у п'ятницю.",
+   "example": "Hurry up, the deadline is on Friday.",
+   "topic": "study",
+   "level": 2
+  },
+  {
+   "id": 170,
+   "en": "I'd like to check in.",
+   "uk": "Я хотів би заселитися.",
+   "example": "Hi, I'd like to check in. My name is Ivan.",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 171,
+   "en": "What do you recommend?",
+   "uk": "Що порадите?",
+   "example": "It's my first time here. What do you recommend?",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 172,
+   "en": "I'm proud of you.",
+   "uk": "Я пишаюся тобою.",
+   "example": "You did it! I'm proud of you.",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 173,
+   "en": "I'm working on it.",
+   "uk": "Я над цим працюю.",
+   "example": "The report? I'm working on it.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 174,
+   "en": "How have you been?",
+   "uk": "Як ти поживав увесь цей час?",
+   "example": "It's been a year! How have you been?",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 175,
+   "en": "I need to hand in my essay.",
+   "uk": "Мені треба здати есе.",
+   "example": "I need to hand in my essay by Monday.",
+   "topic": "study",
+   "level": 2
+  },
+  {
+   "id": 176,
+   "en": "What time is check-out?",
+   "uk": "О котрій виселення?",
+   "example": "What time is check-out tomorrow?",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 177,
+   "en": "Could I have the menu?",
+   "uk": "Можна меню?",
+   "example": "Could I have the menu, please?",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 178,
+   "en": "I can't wait!",
+   "uk": "Не можу дочекатися!",
+   "example": "Holidays start tomorrow. I can't wait!",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 179,
+   "en": "It's almost done.",
+   "uk": "Майже готово.",
+   "example": "Don't worry, it's almost done.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 180,
+   "en": "What do you do?",
+   "uk": "Чим ти займаєшся? (про роботу)",
+   "example": "So, what do you do? Are you a student?",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 181,
+   "en": "Can you explain it again?",
+   "uk": "Можете пояснити ще раз?",
+   "example": "Sorry, can you explain it again?",
+   "topic": "study",
+   "level": 2
+  },
+  {
+   "id": 182,
+   "en": "My flight is delayed.",
+   "uk": "Мій рейс затримується.",
+   "example": "My flight is delayed by two hours.",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 183,
+   "en": "I'm allergic to nuts.",
+   "uk": "У мене алергія на горіхи.",
+   "example": "I'm allergic to nuts. Are there any in this cake?",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 184,
+   "en": "What a surprise!",
+   "uk": "Оце сюрприз!",
+   "example": "You're here? What a surprise!",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 185,
+   "en": "Let me check.",
+   "uk": "Дай перевірю.",
+   "example": "Let me check my calendar.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 186,
+   "en": "I'm on my way.",
+   "uk": "Я вже в дорозі.",
+   "example": "I'm on my way, I'll be there in ten minutes.",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 187,
+   "en": "I didn't get it.",
+   "uk": "Я не зрозумів.",
+   "example": "I read the rule twice, but I didn't get it.",
+   "topic": "study",
+   "level": 2
+  },
+  {
+   "id": 188,
+   "en": "Where is gate 12?",
+   "uk": "Де вихід 12?",
+   "example": "Excuse me, where is gate 12?",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 189,
+   "en": "Still or sparkling?",
+   "uk": "Негазована чи газована?",
+   "example": "\"Still or sparkling?\" \"Sparkling, please.\"",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 190,
+   "en": "I'm sorry to hear that.",
+   "uk": "Мені шкода це чути.",
+   "example": "You're sick? I'm sorry to hear that.",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 191,
+   "en": "Who is responsible for this?",
+   "uk": "Хто за це відповідає?",
+   "example": "Who is responsible for this project?",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 192,
+   "en": "Never mind.",
+   "uk": "Не зважай. / Нічого страшного.",
+   "example": "Never mind, I found it.",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 193,
+   "en": "Let's study together.",
+   "uk": "Давай вчитися разом.",
+   "example": "Let's study together before the exam.",
+   "topic": "study",
+   "level": 2
+  },
+  {
+   "id": 194,
+   "en": "I missed my train.",
+   "uk": "Я спізнився на потяг.",
+   "example": "I missed my train. When is the next one?",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 195,
+   "en": "Keep the change.",
+   "uk": "Решти не треба.",
+   "example": "Here's twenty. Keep the change.",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 196,
+   "en": "That's too bad.",
+   "uk": "Шкода. / Як прикро.",
+   "example": "You can't come? That's too bad.",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 197,
+   "en": "I'll get back to you.",
+   "uk": "Я відповім тобі пізніше.",
+   "example": "Good question. I'll get back to you tomorrow.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 198,
+   "en": "It doesn't matter.",
+   "uk": "Це не має значення.",
+   "example": "It doesn't matter who starts first.",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 199,
+   "en": "I'm taking notes.",
+   "uk": "Я веду конспект.",
+   "example": "I'm taking notes during the lecture.",
+   "topic": "study",
+   "level": 2
+  },
+  {
+   "id": 200,
+   "en": "Window or aisle?",
+   "uk": "Біля вікна чи біля проходу?",
+   "example": "\"Window or aisle?\" \"Window, please.\"",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 201,
+   "en": "Is there a discount?",
+   "uk": "Є знижка?",
+   "example": "Is there a discount for students?",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 202,
+   "en": "I'm not sure about that.",
+   "uk": "Я в цьому не впевнений.",
+   "example": "A new phone every year? I'm not sure about that.",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 203,
+   "en": "Pricing",
+   "uk": "Ціноутворення / тарифи",
+   "example": "Our pricing is simple: ten dollars a month.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 204,
+   "en": "That's fine with me.",
+   "uk": "Мене це влаштовує.",
+   "example": "Friday at six? That's fine with me.",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 205,
+   "en": "I skipped the lecture.",
+   "uk": "Я пропустив лекцію.",
+   "example": "I skipped the lecture. Can I see your notes?",
+   "topic": "study",
+   "level": 2
+  },
+  {
+   "id": 206,
+   "en": "Round-trip ticket",
+   "uk": "Квиток туди й назад",
+   "example": "I'd like a round-trip ticket to Krakow.",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 207,
+   "en": "It's on sale.",
+   "uk": "Це зі знижкою.",
+   "example": "This jacket is on sale, only thirty dollars!",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 208,
+   "en": "I totally agree.",
+   "uk": "Цілком згоден.",
+   "example": "I totally agree with you.",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 209,
+   "en": "Subscription",
+   "uk": "Підписка",
+   "example": "The subscription renews every month.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 210,
+   "en": "Give me a call.",
+   "uk": "Подзвони мені.",
+   "example": "Give me a call when you're free.",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 211,
+   "en": "I got a good grade.",
+   "uk": "Я отримав гарну оцінку.",
+   "example": "I got a good grade in math!",
+   "topic": "study",
+   "level": 2
+  },
+  {
+   "id": 212,
+   "en": "One-way ticket",
+   "uk": "Квиток в один бік",
+   "example": "Just a one-way ticket, please.",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 213,
+   "en": "Can I get a receipt?",
+   "uk": "Можна чек?",
+   "example": "Can I get a receipt, please?",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 214,
+   "en": "I don't agree.",
+   "uk": "Я не згоден.",
+   "example": "Sorry, I don't agree. I think it's wrong.",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 215,
+   "en": "Free trial",
+   "uk": "Безкоштовний пробний період",
+   "example": "Try it with a 14-day free trial.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 216,
+   "en": "Text me when you get home.",
+   "uk": "Напиши, коли доберешся додому.",
+   "example": "It's late. Text me when you get home.",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 217,
+   "en": "The teacher is strict.",
+   "uk": "Викладач суворий.",
+   "example": "The teacher is strict but fair.",
+   "topic": "study",
+   "level": 2
+  },
+  {
+   "id": 218,
+   "en": "Do I need to change trains?",
+   "uk": "Мені потрібна пересадка?",
+   "example": "Do I need to change trains to get to Rome?",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 219,
+   "en": "Can I return it?",
+   "uk": "Можна це повернути?",
+   "example": "It's too small. Can I return it?",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 220,
+   "en": "I changed my mind.",
+   "uk": "Я передумав.",
+   "example": "I changed my mind. I'll stay home.",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 221,
+   "en": "Sign up",
+   "uk": "Зареєструватися",
+   "example": "Sign up with your email address.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 222,
+   "en": "I'll be right back.",
+   "uk": "Я зараз повернуся.",
+   "example": "I'll be right back, I need some water.",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 223,
+   "en": "I have a lot of homework.",
+   "uk": "У мене багато домашки.",
+   "example": "I can't play today. I have a lot of homework.",
+   "topic": "study",
+   "level": 2
+  },
+  {
+   "id": 224,
+   "en": "Is breakfast included?",
+   "uk": "Сніданок включено?",
+   "example": "Is breakfast included in the price?",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 225,
+   "en": "It doesn't fit.",
+   "uk": "Не підходить за розміром.",
+   "example": "I like this shirt, but it doesn't fit.",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 226,
+   "en": "I'm in a good mood.",
+   "uk": "Я в гарному настрої.",
+   "example": "It's sunny, and I'm in a good mood.",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 227,
+   "en": "Log in",
+   "uk": "Увійти (в акаунт)",
+   "example": "I can't log in to my account.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 228,
+   "en": "Hold on a second.",
+   "uk": "Зачекай секунду.",
+   "example": "Hold on a second, someone is at the door.",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 229,
+   "en": "Group project",
+   "uk": "Груповий проєкт",
+   "example": "We have a group project about climate change.",
+   "topic": "study",
+   "level": 2
+  },
+  {
+   "id": 230,
+   "en": "Could you take a photo of us?",
+   "uk": "Можете нас сфотографувати?",
+   "example": "Excuse me, could you take a photo of us?",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 231,
+   "en": "Do you have it in black?",
+   "uk": "У вас є таке в чорному?",
+   "example": "I like this T-shirt. Do you have it in black?",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 232,
+   "en": "I'm nervous.",
+   "uk": "Я нервую.",
+   "example": "I'm nervous before the interview.",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 233,
+   "en": "Feedback",
+   "uk": "Відгук / зворотний зв'язок",
+   "example": "We need more feedback from users.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 234,
+   "en": "Are you free tonight?",
+   "uk": "Ти вільний сьогодні ввечері?",
+   "example": "Are you free tonight? Let's watch a movie.",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 235,
+   "en": "I'm stuck on this task.",
+   "uk": "Я застряг на цьому завданні.",
+   "example": "I'm stuck on this task. Can you help?",
+   "topic": "study",
+   "level": 2
+  },
+  {
+   "id": 236,
+   "en": "What do you recommend to see?",
+   "uk": "Що порадите подивитися?",
+   "example": "It's my first day here. What do you recommend to see?",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 237,
+   "en": "Do you have it in a smaller size?",
+   "uk": "У вас є менший розмір?",
+   "example": "These shoes are too big. Do you have them in a smaller size?",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 238,
+   "en": "Don't worry.",
+   "uk": "Не хвилюйся.",
+   "example": "Don't worry, everything will be fine.",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 239,
+   "en": "Feature",
+   "uk": "Функція",
+   "example": "Users asked for a dark mode feature.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 240,
+   "en": "What are you up to?",
+   "uk": "Що робиш? / Які плани?",
+   "example": "What are you up to this weekend?",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 241,
+   "en": "Practice makes perfect.",
+   "uk": "Повторення — мати навчання.",
+   "example": "Keep writing every day. Practice makes perfect!",
+   "topic": "study",
+   "level": 2
+  },
+  {
+   "id": 242,
+   "en": "I lost my luggage.",
+   "uk": "Я загубив багаж.",
+   "example": "I lost my luggage. Who can help me?",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 243,
+   "en": "Can we split the bill?",
+   "uk": "Можемо розділити рахунок?",
+   "example": "Can we split the bill, please?",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 244,
+   "en": "It's amazing!",
+   "uk": "Це неймовірно!",
+   "example": "Have you seen the view? It's amazing!",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 245,
+   "en": "Bug",
+   "uk": "Помилка (в програмі), баг",
+   "example": "We found a bug on the payment page.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 246,
+   "en": "I'm running late.",
+   "uk": "Я запізнююся.",
+   "example": "Sorry, I'm running late. Start without me.",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 247,
+   "en": "My English is getting better.",
+   "uk": "Моя англійська стає кращою.",
+   "example": "My English is getting better every week.",
+   "topic": "study",
+   "level": 2
+  },
+  {
+   "id": 248,
+   "en": "Where can I exchange money?",
+   "uk": "Де можна обміняти гроші?",
+   "example": "Where can I exchange money near here?",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 249,
+   "en": "I'll have the same.",
+   "uk": "Мені те саме.",
+   "example": "That pasta looks good. I'll have the same.",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 250,
+   "en": "I'm upset.",
+   "uk": "Я засмучений.",
+   "example": "I'm upset because I lost my phone.",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 251,
+   "en": "Growth",
+   "uk": "Зростання",
+   "example": "Our growth this month was twenty percent.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 252,
+   "en": "It's up to you.",
+   "uk": "Вирішуй сам. / Як скажеш.",
+   "example": "Pizza or sushi? It's up to you.",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 253,
+   "en": "I learned a new word today.",
+   "uk": "Сьогодні я вивчив нове слово.",
+   "example": "I learned a new word today: \"journey\".",
+   "topic": "study",
+   "level": 2
+  },
+  {
+   "id": 254,
+   "en": "The room is too noisy.",
+   "uk": "У номері надто галасливо.",
+   "example": "The room is too noisy. Can I change it?",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 255,
+   "en": "Could you heat it up?",
+   "uk": "Можете підігріти?",
+   "example": "This sandwich is cold. Could you heat it up?",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 256,
+   "en": "That's so funny!",
+   "uk": "Це так смішно!",
+   "example": "Look at this video. That's so funny!",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 257,
+   "en": "Revenue",
+   "uk": "Дохід / виручка",
+   "example": "Our revenue grew last quarter.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 258,
+   "en": "Sounds good.",
+   "uk": "Звучить добре. / Чудово.",
+   "example": "\"Let's meet at seven.\" \"Sounds good.\"",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 259,
+   "en": "What's the difference between...?",
+   "uk": "Яка різниця між...?",
+   "example": "What's the difference between \"say\" and \"tell\"?",
+   "topic": "study",
+   "level": 2
+  },
+  {
+   "id": 260,
+   "en": "Have a safe trip!",
+   "uk": "Щасливої дороги!",
+   "example": "Have a safe trip and call me when you land!",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 261,
+   "en": "Anything else?",
+   "uk": "Щось іще?",
+   "example": "\"One coffee, please.\" \"Anything else?\"",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 262,
+   "en": "I feel the same way.",
+   "uk": "Я відчуваю те саме.",
+   "example": "I feel the same way about this city.",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 263,
+   "en": "Startup",
+   "uk": "Стартап",
+   "example": "He works at a small startup in Kyiv.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 264,
+   "en": "Sounds like a plan.",
+   "uk": "Домовилися.",
+   "example": "Coffee after class? Sounds like a plan.",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 265,
+   "en": "I'll look it up.",
+   "uk": "Я подивлюся значення (у словнику).",
+   "example": "I don't know this word. I'll look it up.",
+   "topic": "study",
+   "level": 2
+  },
+  {
+   "id": 266,
+   "en": "I'm traveling alone.",
+   "uk": "Я подорожую сам.",
+   "example": "I'm traveling alone this time.",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 267,
+   "en": "That's all, thanks.",
+   "uk": "Це все, дякую.",
+   "example": "One coffee and a cookie. That's all, thanks.",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 268,
+   "en": "Calm down.",
+   "uk": "Заспокойся.",
+   "example": "Calm down, it's just a small mistake.",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 269,
+   "en": "Launch",
+   "uk": "Запуск (продукту)",
+   "example": "We launch the new app next week.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 270,
+   "en": "I'm not sure.",
+   "uk": "Я не впевнений.",
+   "example": "I'm not sure. Let me check.",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 271,
+   "en": "Can you check my sentence?",
+   "uk": "Можеш перевірити моє речення?",
+   "example": "Can you check my sentence? Is it correct?",
+   "topic": "study",
+   "level": 2
+  },
+  {
+   "id": 272,
+   "en": "Can I leave my bags here?",
+   "uk": "Можна залишити тут сумки?",
+   "example": "Can I leave my bags here until five?",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 273,
+   "en": "Where's the fitting room?",
+   "uk": "Де примірочна?",
+   "example": "Excuse me, where's the fitting room?",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 274,
+   "en": "It depends.",
+   "uk": "Залежить від обставин.",
+   "example": "\"Do you like coffee?\" \"It depends.\"",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 275,
+   "en": "Update",
+   "uk": "Оновлення",
+   "example": "The new update fixes many bugs.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 276,
+   "en": "Let me think.",
+   "uk": "Дай подумати.",
+   "example": "Hmm, let me think. Maybe Tuesday?",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 277,
+   "en": "Is this correct?",
+   "uk": "Це правильно?",
+   "example": "\"I goed home.\" Is this correct?",
+   "topic": "study",
+   "level": 2
+  },
+  {
+   "id": 278,
+   "en": "Where can I buy a SIM card?",
+   "uk": "Де купити SIM-картку?",
+   "example": "Where can I buy a SIM card at the airport?",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 279,
+   "en": "I'm full.",
+   "uk": "Я наївся.",
+   "example": "No dessert for me, thanks. I'm full.",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 280,
+   "en": "No way!",
+   "uk": "Та ну! / Не може бути!",
+   "example": "\"I met Taylor Swift.\" \"No way!\"",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 281,
+   "en": "Deadline",
+   "uk": "Кінцевий термін, дедлайн",
+   "example": "The deadline is next Monday.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 282,
+   "en": "What do you mean?",
+   "uk": "Що ти маєш на увазі?",
+   "example": "What do you mean? I don't get it.",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 283,
+   "en": "I'm good at math.",
+   "uk": "Мені добре дається математика.",
+   "example": "I'm good at math but bad at history.",
+   "topic": "study",
+   "level": 2
+  },
+  {
+   "id": 284,
+   "en": "Is it safe to walk here at night?",
+   "uk": "Тут безпечно гуляти вночі?",
+   "example": "Is it safe to walk here at night?",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 285,
+   "en": "Can I pay with my phone?",
+   "uk": "Можна оплатити телефоном?",
+   "example": "Can I pay with my phone here?",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 286,
+   "en": "I'm afraid not.",
+   "uk": "Боюся, що ні.",
+   "example": "\"Is there any cake left?\" \"I'm afraid not.\"",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 287,
+   "en": "I'm in charge of marketing.",
+   "uk": "Я відповідаю за маркетинг.",
+   "example": "I'm in charge of marketing in our startup.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 288,
+   "en": "How was your day?",
+   "uk": "Як пройшов твій день?",
+   "example": "Hi! How was your day?",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 289,
+   "en": "I'm bad at spelling.",
+   "uk": "У мене погано з правописом.",
+   "example": "I'm bad at spelling in English.",
+   "topic": "study",
+   "level": 2
+  },
+  {
+   "id": 290,
+   "en": "The next stop is...",
+   "uk": "Наступна зупинка...",
+   "example": "The next stop is Central Station.",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 291,
+   "en": "Do you deliver?",
+   "uk": "У вас є доставка?",
+   "example": "Do you deliver to this address?",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 292,
+   "en": "I'm curious.",
+   "uk": "Мені цікаво.",
+   "example": "I'm curious. What's in the box?",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 293,
+   "en": "Let's keep it short.",
+   "uk": "Давай коротко.",
+   "example": "We don't have much time. Let's keep it short.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 294,
+   "en": "I overslept.",
+   "uk": "Я проспав.",
+   "example": "I overslept and missed the bus.",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 295,
+   "en": "The exam was easy.",
+   "uk": "Іспит був легкий.",
+   "example": "The exam was easy. I finished early.",
+   "topic": "study",
+   "level": 2
+  },
+  {
+   "id": 296,
+   "en": "Boarding pass",
+   "uk": "Посадковий талон",
+   "example": "Please show your boarding pass.",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 297,
+   "en": "Could I have some more bread?",
+   "uk": "Можна ще хліба?",
+   "example": "Could I have some more bread, please?",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 298,
+   "en": "Good for you!",
+   "uk": "Молодець! / Радий за тебе!",
+   "example": "You started running? Good for you!",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 299,
+   "en": "Sorry for the delay.",
+   "uk": "Вибачте за затримку.",
+   "example": "Sorry for the delay in my reply.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 300,
+   "en": "Make yourself at home.",
+   "uk": "Почувайся як удома.",
+   "example": "Come in, make yourself at home.",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 301,
+   "en": "Office hours",
+   "uk": "Години консультацій викладача",
+   "example": "I'll ask the professor during office hours.",
+   "topic": "study",
+   "level": 2
+  },
+  {
+   "id": 302,
+   "en": "Do I need a visa?",
+   "uk": "Мені потрібна віза?",
+   "example": "Do I need a visa to visit Canada?",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 303,
+   "en": "No sugar, please.",
+   "uk": "Без цукру, будь ласка.",
+   "example": "A black coffee, no sugar, please.",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 304,
+   "en": "What a pity!",
+   "uk": "Як шкода!",
+   "example": "You missed the concert? What a pity!",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 305,
+   "en": "Could you send me the file?",
+   "uk": "Можеш надіслати мені файл?",
+   "example": "Could you send me the file by email?",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 306,
+   "en": "Help yourself.",
+   "uk": "Пригощайся.",
+   "example": "There's cake on the table. Help yourself.",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 307,
+   "en": "Could you write it on the board?",
+   "uk": "Можете написати це на дошці?",
+   "example": "Could you write that word on the board?",
+   "topic": "study",
+   "level": 2
+  },
+  {
+   "id": 308,
+   "en": "Carry-on bag",
+   "uk": "Ручна поклажа",
+   "example": "I only have a carry-on bag.",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 309,
+   "en": "Do you have oat milk?",
+   "uk": "У вас є вівсяне молоко?",
+   "example": "Do you have oat milk for my latte?",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 310,
+   "en": "I'm lonely.",
+   "uk": "Мені самотньо.",
+   "example": "I moved to a new city and I'm lonely.",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 311,
+   "en": "Pricing plan",
+   "uk": "Тарифний план",
+   "example": "The Pro pricing plan costs twenty dollars a month.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 312,
+   "en": "Bless you!",
+   "uk": "Будь здоровий! (коли чхають)",
+   "example": "\"Achoo!\" \"Bless you!\"",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 313,
+   "en": "I signed up for a course.",
+   "uk": "Я записався на курс.",
+   "example": "I signed up for an English course.",
+   "topic": "study",
+   "level": 2
+  },
+  {
+   "id": 314,
+   "en": "Can I pay for the ticket on the bus?",
+   "uk": "Можна оплатити проїзд в автобусі?",
+   "example": "Can I pay for the ticket on the bus?",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 315,
+   "en": "It's a bit too salty.",
+   "uk": "Трохи пересолено.",
+   "example": "The soup is good, but it's a bit too salty.",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 316,
+   "en": "That's not fair!",
+   "uk": "Це несправедливо!",
+   "example": "He got a bonus and I didn't? That's not fair!",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 317,
+   "en": "Dashboard",
+   "uk": "Панель керування, дашборд",
+   "example": "You can see all your stats on the dashboard.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 318,
+   "en": "Same to you.",
+   "uk": "І тобі того ж.",
+   "example": "\"Happy New Year!\" \"Same to you!\"",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 319,
+   "en": "Let's explore the city.",
+   "uk": "Давай дослідимо місто.",
+   "example": "We have one free day. Let's explore the city.",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 320,
+   "en": "Tip",
+   "uk": "Чайові",
+   "example": "In the US, a fifteen percent tip is normal.",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 321,
+   "en": "I'm glad to hear that.",
+   "uk": "Радий це чути.",
+   "example": "You feel better? I'm glad to hear that.",
+   "topic": "emotions",
+   "level": 2
+  },
+  {
+   "id": 322,
+   "en": "Investor",
+   "uk": "Інвестор",
+   "example": "We are meeting an investor on Friday.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 323,
+   "en": "Catch you later.",
+   "uk": "Ще побачимось. / Бувай.",
+   "example": "I have to run. Catch you later!",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 324,
+   "en": "What is the Wi-Fi password?",
+   "uk": "Який пароль від Wi-Fi?",
+   "example": "Excuse me, what is the Wi-Fi password?",
+   "topic": "travel",
+   "level": 2
+  },
+  {
+   "id": 325,
+   "en": "The food is cold.",
+   "uk": "Їжа холодна.",
+   "example": "Excuse me, the food is cold.",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 326,
+   "en": "Can we talk later?",
+   "uk": "Можемо поговорити пізніше?",
+   "example": "I'm in a meeting. Can we talk later?",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 327,
+   "en": "It's been a long day.",
+   "uk": "Це був довгий день.",
+   "example": "It's been a long day. I just want to relax.",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 328,
+   "en": "I'd like to book a table.",
+   "uk": "Я хотів би забронювати столик.",
+   "example": "I'd like to book a table for four at seven.",
+   "topic": "shopping",
+   "level": 2
+  },
+  {
+   "id": 329,
+   "en": "Job interview",
+   "uk": "Співбесіда",
+   "example": "I have a job interview tomorrow.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 330,
+   "en": "What's the weather like?",
+   "uk": "Яка там погода?",
+   "example": "What's the weather like in Kyiv today?",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 331,
+   "en": "I'm looking for a job.",
+   "uk": "Я шукаю роботу.",
+   "example": "I'm looking for a job in marketing.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 332,
+   "en": "I'm sorry, I can't.",
+   "uk": "Вибач, не можу.",
+   "example": "I'm sorry, I can't come tomorrow.",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 333,
+   "en": "Day off",
+   "uk": "Вихідний",
+   "example": "Tomorrow is my day off.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 334,
+   "en": "I'll call you back.",
+   "uk": "Я тобі передзвоню.",
+   "example": "I'm driving now. I'll call you back.",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 335,
+   "en": "Customer support",
+   "uk": "Служба підтримки",
+   "example": "Contact customer support if you have a problem.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 336,
+   "en": "Who's calling?",
+   "uk": "Хто телефонує?",
+   "example": "Hello? Who's calling?",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 337,
+   "en": "Cancel the subscription",
+   "uk": "Скасувати підписку",
+   "example": "I want to cancel the subscription.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 338,
+   "en": "I'm going to bed.",
+   "uk": "Я йду спати.",
+   "example": "It's late. I'm going to bed.",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 339,
+   "en": "Monthly plan",
+   "uk": "Місячний тариф",
+   "example": "The monthly plan is a good way to start.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 340,
+   "en": "I'm off today.",
+   "uk": "У мене сьогодні вихідний.",
+   "example": "I'm off today, so I can help you.",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 341,
+   "en": "Annual plan",
+   "uk": "Річний тариф",
+   "example": "The annual plan saves you twenty percent.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 342,
+   "en": "What's for dinner?",
+   "uk": "Що на вечерю?",
+   "example": "I'm hungry. What's for dinner?",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 343,
+   "en": "Market",
+   "uk": "Ринок",
+   "example": "The market for AI tools is growing fast.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 344,
+   "en": "What a nice day!",
+   "uk": "Який гарний день!",
+   "example": "What a nice day! Let's go for a walk.",
+   "topic": "daily",
+   "level": 2
+  },
+  {
+   "id": 345,
+   "en": "Competitor",
+   "uk": "Конкурент",
+   "example": "Our main competitor has a lower price.",
+   "topic": "work",
+   "level": 2
+  },
+  {
+   "id": 346,
+   "en": "I'm looking forward to it.",
+   "uk": "Чекаю з нетерпінням.",
+   "example": "A trip to the sea? I'm looking forward to it.",
+   "topic": "daily",
+   "level": 3
+  },
+  {
+   "id": 347,
+   "en": "I'm cramming for finals.",
+   "uk": "Я зубрю перед сесією.",
+   "example": "Sorry, no party. I'm cramming for finals.",
+   "topic": "study",
+   "level": 3
+  },
+  {
+   "id": 348,
+   "en": "I'd like to book a room for two nights.",
+   "uk": "Я хотів би забронювати номер на дві ночі.",
+   "example": "Hello, I'd like to book a room for two nights.",
+   "topic": "travel",
+   "level": 3
+  },
+  {
+   "id": 349,
+   "en": "It's a good deal.",
+   "uk": "Це вигідна покупка.",
+   "example": "Two for the price of one? It's a good deal.",
+   "topic": "shopping",
+   "level": 3
+  },
+  {
+   "id": 350,
+   "en": "I'm fed up with this.",
+   "uk": "Мені це набридло.",
+   "example": "I'm fed up with this rain!",
+   "topic": "emotions",
+   "level": 3
+  },
+  {
+   "id": 351,
+   "en": "Let's touch base next week.",
+   "uk": "Зв'яжімося наступного тижня.",
+   "example": "Let's touch base next week about the budget.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 352,
+   "en": "Let's keep in touch.",
+   "uk": "Будьмо на зв'язку.",
+   "example": "It was great to meet you. Let's keep in touch.",
+   "topic": "daily",
+   "level": 3
+  },
+  {
+   "id": 353,
+   "en": "I'm falling behind.",
+   "uk": "Я відстаю.",
+   "example": "I missed two weeks and now I'm falling behind.",
+   "topic": "study",
+   "level": 3
+  },
+  {
+   "id": 354,
+   "en": "I have a connecting flight.",
+   "uk": "У мене пересадка на інший рейс.",
+   "example": "Please hurry, I have a connecting flight.",
+   "topic": "travel",
+   "level": 3
+  },
+  {
+   "id": 355,
+   "en": "It's a rip-off!",
+   "uk": "Це здирництво!",
+   "example": "Ten dollars for water? It's a rip-off!",
+   "topic": "shopping",
+   "level": 3
+  },
+  {
+   "id": 356,
+   "en": "It drives me crazy.",
+   "uk": "Це зводить мене з розуму.",
+   "example": "The noise from the street drives me crazy.",
+   "topic": "emotions",
+   "level": 3
+  },
+  {
+   "id": 357,
+   "en": "Let's get down to business.",
+   "uk": "Перейдімо до справи.",
+   "example": "OK, everyone. Let's get down to business.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 358,
+   "en": "I'll let you know.",
+   "uk": "Я дам тобі знати.",
+   "example": "I'm not sure yet. I'll let you know tomorrow.",
+   "topic": "daily",
+   "level": 3
+  },
+  {
+   "id": 359,
+   "en": "I need to catch up.",
+   "uk": "Мені треба надолужити.",
+   "example": "I was sick, so I need to catch up.",
+   "topic": "study",
+   "level": 3
+  },
+  {
+   "id": 360,
+   "en": "I'm jet-lagged.",
+   "uk": "У мене джетлаг.",
+   "example": "I'm so jet-lagged, I woke up at four a.m.",
+   "topic": "travel",
+   "level": 3
+  },
+  {
+   "id": 361,
+   "en": "I'm on a tight budget.",
+   "uk": "У мене обмежений бюджет.",
+   "example": "I'm on a tight budget this month.",
+   "topic": "shopping",
+   "level": 3
+  },
+  {
+   "id": 362,
+   "en": "I can't stand it.",
+   "uk": "Терпіти цього не можу.",
+   "example": "Loud music in the morning? I can't stand it.",
+   "topic": "emotions",
+   "level": 3
+  },
+  {
+   "id": 363,
+   "en": "We're on the same page.",
+   "uk": "Ми однаково все розуміємо.",
+   "example": "Great, so we're on the same page.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 364,
+   "en": "I didn't catch that.",
+   "uk": "Я не розчув.",
+   "example": "Sorry, I didn't catch that. Say it again?",
+   "topic": "daily",
+   "level": 3
+  },
+  {
+   "id": 365,
+   "en": "Could you give me some feedback?",
+   "uk": "Можете дати мені відгук?",
+   "example": "Could you give me some feedback on my essay?",
+   "topic": "study",
+   "level": 3
+  },
+  {
+   "id": 366,
+   "en": "Is this seat taken?",
+   "uk": "Це місце зайняте?",
+   "example": "Excuse me, is this seat taken?",
+   "topic": "travel",
+   "level": 3
+  },
+  {
+   "id": 367,
+   "en": "Can I get a refund?",
+   "uk": "Можна повернути гроші?",
+   "example": "It's broken. Can I get a refund?",
+   "topic": "shopping",
+   "level": 3
+  },
+  {
+   "id": 368,
+   "en": "I'm over the moon!",
+   "uk": "Я на сьомому небі від щастя!",
+   "example": "I got the job! I'm over the moon!",
+   "topic": "emotions",
+   "level": 3
+  },
+  {
+   "id": 369,
+   "en": "I'll keep you posted.",
+   "uk": "Я триматиму тебе в курсі.",
+   "example": "I'll keep you posted on the progress.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 370,
+   "en": "That makes sense.",
+   "uk": "Логічно. / Тепер зрозуміло.",
+   "example": "Oh, that makes sense now. Thanks!",
+   "topic": "daily",
+   "level": 3
+  },
+  {
+   "id": 371,
+   "en": "I'm applying for a scholarship.",
+   "uk": "Я подаюся на стипендію.",
+   "example": "I'm applying for a scholarship abroad.",
+   "topic": "study",
+   "level": 3
+  },
+  {
+   "id": 372,
+   "en": "We got stuck in traffic.",
+   "uk": "Ми застрягли в заторі.",
+   "example": "Sorry, we got stuck in traffic.",
+   "topic": "travel",
+   "level": 3
+  },
+  {
+   "id": 373,
+   "en": "It's out of stock.",
+   "uk": "Цього немає в наявності.",
+   "example": "Sorry, this model is out of stock.",
+   "topic": "shopping",
+   "level": 3
+  },
+  {
+   "id": 374,
+   "en": "I have mixed feelings.",
+   "uk": "У мене змішані почуття.",
+   "example": "I have mixed feelings about moving abroad.",
+   "topic": "emotions",
+   "level": 3
+  },
+  {
+   "id": 375,
+   "en": "Let's think outside the box.",
+   "uk": "Мислімо нестандартно.",
+   "example": "Nothing works. Let's think outside the box.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 376,
+   "en": "It slipped my mind.",
+   "uk": "Це вилетіло мені з голови.",
+   "example": "Sorry, I forgot to call. It slipped my mind.",
+   "topic": "daily",
+   "level": 3
+  },
+  {
+   "id": 377,
+   "en": "It's due tomorrow.",
+   "uk": "Це треба здати завтра.",
+   "example": "Don't forget the report. It's due tomorrow.",
+   "topic": "study",
+   "level": 3
+  },
+  {
+   "id": 378,
+   "en": "It's off the beaten track.",
+   "uk": "Це далеко від туристичних маршрутів.",
+   "example": "This village is off the beaten track, but it's beautiful.",
+   "topic": "travel",
+   "level": 3
+  },
+  {
+   "id": 379,
+   "en": "I'd like my steak medium, please.",
+   "uk": "Мені стейк середньої просмаженості, будь ласка.",
+   "example": "I'd like my steak medium, please, with fries.",
+   "topic": "shopping",
+   "level": 3
+  },
+  {
+   "id": 380,
+   "en": "To be honest...",
+   "uk": "Чесно кажучи...",
+   "example": "To be honest, I didn't like the movie.",
+   "topic": "emotions",
+   "level": 3
+  },
+  {
+   "id": 381,
+   "en": "It's a win-win.",
+   "uk": "Це вигідно обом сторонам.",
+   "example": "We get users, they get a discount. It's a win-win.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 382,
+   "en": "I'm not in the mood.",
+   "uk": "Я не в настрої.",
+   "example": "I'm not in the mood for a party tonight.",
+   "topic": "daily",
+   "level": 3
+  },
+  {
+   "id": 383,
+   "en": "I pulled an all-nighter.",
+   "uk": "Я не спав цілу ніч (над навчанням).",
+   "example": "I pulled an all-nighter before the exam.",
+   "topic": "study",
+   "level": 3
+  },
+  {
+   "id": 384,
+   "en": "I'm traveling on a budget.",
+   "uk": "Я подорожую з обмеженим бюджетом.",
+   "example": "I'm traveling on a budget, so I stay in hostels.",
+   "topic": "travel",
+   "level": 3
+  },
+  {
+   "id": 385,
+   "en": "Could we get the check?",
+   "uk": "Можна рахунок? (амер.)",
+   "example": "We're done. Could we get the check?",
+   "topic": "shopping",
+   "level": 3
+  },
+  {
+   "id": 386,
+   "en": "As far as I know...",
+   "uk": "Наскільки я знаю...",
+   "example": "As far as I know, the shop is closed on Sunday.",
+   "topic": "emotions",
+   "level": 3
+  },
+  {
+   "id": 387,
+   "en": "Onboarding",
+   "uk": "Онбординг (знайомство нового користувача з продуктом)",
+   "example": "Good onboarding helps users understand the app.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 388,
+   "en": "Let's call it a day.",
+   "uk": "На сьогодні досить.",
+   "example": "It's nine o'clock. Let's call it a day.",
+   "topic": "daily",
+   "level": 3
+  },
+  {
+   "id": 389,
+   "en": "I'm on the right track.",
+   "uk": "Я на правильному шляху.",
+   "example": "My tutor says I'm on the right track.",
+   "topic": "study",
+   "level": 3
+  },
+  {
+   "id": 390,
+   "en": "Let's hit the road.",
+   "uk": "Рушаймо в дорогу.",
+   "example": "Everything is packed. Let's hit the road!",
+   "topic": "travel",
+   "level": 3
+  },
+  {
+   "id": 391,
+   "en": "It's my treat.",
+   "uk": "Я пригощаю.",
+   "example": "Put your wallet away. It's my treat.",
+   "topic": "shopping",
+   "level": 3
+  },
+  {
+   "id": 392,
+   "en": "I see your point, but...",
+   "uk": "Я розумію твою думку, але...",
+   "example": "I see your point, but I still think it's risky.",
+   "topic": "emotions",
+   "level": 3
+  },
+  {
+   "id": 393,
+   "en": "Customer retention",
+   "uk": "Утримання клієнтів",
+   "example": "Customer retention is more important than new sales.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 394,
+   "en": "I'm down for it.",
+   "uk": "Я за! / Я в ділі.",
+   "example": "Hiking on Saturday? I'm down for it.",
+   "topic": "daily",
+   "level": 3
+  },
+  {
+   "id": 395,
+   "en": "I want to brush up on my grammar.",
+   "uk": "Хочу підтягнути граматику.",
+   "example": "Before the trip, I want to brush up on my grammar.",
+   "topic": "study",
+   "level": 3
+  },
+  {
+   "id": 396,
+   "en": "I'd like to rent a car.",
+   "uk": "Я хотів би орендувати авто.",
+   "example": "I'd like to rent a car for three days.",
+   "topic": "travel",
+   "level": 3
+  },
+  {
+   "id": 397,
+   "en": "Let's grab a bite.",
+   "uk": "Давай перекусимо.",
+   "example": "I'm starving. Let's grab a bite.",
+   "topic": "shopping",
+   "level": 3
+  },
+  {
+   "id": 398,
+   "en": "I couldn't care less.",
+   "uk": "Мені абсолютно байдуже.",
+   "example": "Who won the game? I couldn't care less.",
+   "topic": "emotions",
+   "level": 3
+  },
+  {
+   "id": 399,
+   "en": "Churn rate",
+   "uk": "Рівень відтоку клієнтів",
+   "example": "Our churn rate dropped to three percent.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 400,
+   "en": "No worries.",
+   "uk": "Не переймайся. / Все гаразд.",
+   "example": "\"Sorry for the delay.\" \"No worries!\"",
+   "topic": "daily",
+   "level": 3
+  },
+  {
+   "id": 401,
+   "en": "It's easier said than done.",
+   "uk": "Легше сказати, ніж зробити.",
+   "example": "\"Just speak more.\" It's easier said than done!",
+   "topic": "study",
+   "level": 3
+  },
+  {
+   "id": 402,
+   "en": "The trip was worth it.",
+   "uk": "Подорож була того варта.",
+   "example": "It was a long flight, but the trip was worth it.",
+   "topic": "travel",
+   "level": 3
+  },
+  {
+   "id": 403,
+   "en": "Can I pay in installments?",
+   "uk": "Можна оплатити частинами?",
+   "example": "Can I pay in installments for this laptop?",
+   "topic": "shopping",
+   "level": 3
+  },
+  {
+   "id": 404,
+   "en": "It's not my cup of tea.",
+   "uk": "Це не моє. / Мені таке не до душі.",
+   "example": "Jazz is not my cup of tea.",
+   "topic": "emotions",
+   "level": 3
+  },
+  {
+   "id": 405,
+   "en": "Monthly recurring revenue (MRR)",
+   "uk": "Щомісячний регулярний дохід",
+   "example": "Our MRR is now fifty thousand dollars.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 406,
+   "en": "Fair enough.",
+   "uk": "Справедливо. / Резонно.",
+   "example": "You're tired? Fair enough, we can go tomorrow.",
+   "topic": "daily",
+   "level": 3
+  },
+  {
+   "id": 407,
+   "en": "I'm fluent in Ukrainian.",
+   "uk": "Я вільно володію українською.",
+   "example": "I'm fluent in Ukrainian and I'm learning English.",
+   "topic": "study",
+   "level": 3
+  },
+  {
+   "id": 408,
+   "en": "I've always wanted to go there.",
+   "uk": "Я завжди хотів туди поїхати.",
+   "example": "Japan? I've always wanted to go there!",
+   "topic": "travel",
+   "level": 3
+  },
+  {
+   "id": 409,
+   "en": "I'm just browsing.",
+   "uk": "Я просто переглядаю.",
+   "example": "Thanks, I'm just browsing for now.",
+   "topic": "shopping",
+   "level": 3
+  },
+  {
+   "id": 410,
+   "en": "I'm relieved.",
+   "uk": "У мене відлягло від серця.",
+   "example": "The test was easy. I'm so relieved.",
+   "topic": "emotions",
+   "level": 3
+  },
+  {
+   "id": 411,
+   "en": "Product-market fit",
+   "uk": "Відповідність продукту ринку",
+   "example": "We are still looking for product-market fit.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 412,
+   "en": "That's a good point.",
+   "uk": "Слушна думка.",
+   "example": "That's a good point. I didn't think about it.",
+   "topic": "daily",
+   "level": 3
+  },
+  {
+   "id": 413,
+   "en": "Can you break it down for me?",
+   "uk": "Можеш пояснити по кроках?",
+   "example": "This formula is hard. Can you break it down for me?",
+   "topic": "study",
+   "level": 3
+  },
+  {
+   "id": 414,
+   "en": "Could you recommend a place to eat?",
+   "uk": "Можете порадити, де поїсти?",
+   "example": "Could you recommend a place to eat nearby?",
+   "topic": "travel",
+   "level": 3
+  },
+  {
+   "id": 415,
+   "en": "Is service included?",
+   "uk": "Обслуговування включено?",
+   "example": "Is service included in the bill?",
+   "topic": "shopping",
+   "level": 3
+  },
+  {
+   "id": 416,
+   "en": "That's a relief!",
+   "uk": "Яке полегшення!",
+   "example": "You found your keys? That's a relief!",
+   "topic": "emotions",
+   "level": 3
+  },
+  {
+   "id": 417,
+   "en": "To scale",
+   "uk": "Масштабувати(ся)",
+   "example": "We need more servers to scale.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 418,
+   "en": "I'm into music.",
+   "uk": "Я захоплююся музикою.",
+   "example": "I'm really into music and old movies.",
+   "topic": "daily",
+   "level": 3
+  },
+  {
+   "id": 419,
+   "en": "I'll figure it out.",
+   "uk": "Я розберуся.",
+   "example": "Don't worry, I'll figure it out.",
+   "topic": "study",
+   "level": 3
+  },
+  {
+   "id": 420,
+   "en": "I'm afraid I've lost my wallet.",
+   "uk": "Боюся, я загубив гаманець.",
+   "example": "I'm afraid I've lost my wallet. What should I do?",
+   "topic": "travel",
+   "level": 3
+  },
+  {
+   "id": 421,
+   "en": "It's worth the money.",
+   "uk": "Воно варте своїх грошей.",
+   "example": "It's expensive, but it's worth the money.",
+   "topic": "shopping",
+   "level": 3
+  },
+  {
+   "id": 422,
+   "en": "I'm sick of waiting.",
+   "uk": "Мені набридло чекати.",
+   "example": "I'm sick of waiting for the bus.",
+   "topic": "emotions",
+   "level": 3
+  },
+  {
+   "id": 423,
+   "en": "Pain point",
+   "uk": "«Больова точка» клієнта",
+   "example": "Slow delivery is a big pain point for our customers.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 424,
+   "en": "It's not a big deal.",
+   "uk": "Нічого страшного. / Це дрібниці.",
+   "example": "You forgot? It's not a big deal.",
+   "topic": "daily",
+   "level": 3
+  },
+  {
+   "id": 425,
+   "en": "I learn something new every day.",
+   "uk": "Я щодня дізнаюся щось нове.",
+   "example": "I love this job. I learn something new every day.",
+   "topic": "study",
+   "level": 3
+  },
+  {
+   "id": 426,
+   "en": "Is there a cheaper option?",
+   "uk": "Є дешевший варіант?",
+   "example": "This hotel is expensive. Is there a cheaper option?",
+   "topic": "travel",
+   "level": 3
+  },
+  {
+   "id": 427,
+   "en": "Can you wrap it as a gift?",
+   "uk": "Можете запакувати як подарунок?",
+   "example": "It's for my mom. Can you wrap it as a gift?",
+   "topic": "shopping",
+   "level": 3
+  },
+  {
+   "id": 428,
+   "en": "I'm a bit down today.",
+   "uk": "Я сьогодні трохи пригнічений.",
+   "example": "I'm a bit down today. Maybe it's the weather.",
+   "topic": "emotions",
+   "level": 3
+  },
+  {
+   "id": 429,
+   "en": "Value proposition",
+   "uk": "Ціннісна пропозиція",
+   "example": "What's our value proposition for small businesses?",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 430,
+   "en": "What's the plan for today?",
+   "uk": "Який план на сьогодні?",
+   "example": "Good morning! What's the plan for today?",
+   "topic": "daily",
+   "level": 3
+  },
+  {
+   "id": 431,
+   "en": "Let me rephrase that.",
+   "uk": "Дай перефразую.",
+   "example": "That sounded wrong. Let me rephrase that.",
+   "topic": "study",
+   "level": 3
+  },
+  {
+   "id": 432,
+   "en": "Travel light",
+   "uk": "Подорожувати налегке",
+   "example": "I always travel light, just one backpack.",
+   "topic": "travel",
+   "level": 3
+  },
+  {
+   "id": 433,
+   "en": "I'd like to place an order.",
+   "uk": "Я хотів би зробити замовлення.",
+   "example": "Hello, I'd like to place an order for delivery.",
+   "topic": "shopping",
+   "level": 3
+  },
+  {
+   "id": 434,
+   "en": "I'm thrilled.",
+   "uk": "Я у захваті.",
+   "example": "I'm thrilled with the results.",
+   "topic": "emotions",
+   "level": 3
+  },
+  {
+   "id": 435,
+   "en": "Early adopters",
+   "uk": "Перші користувачі",
+   "example": "Early adopters gave us great feedback.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 436,
+   "en": "I'll pick you up at eight.",
+   "uk": "Я заберу тебе о восьмій.",
+   "example": "I'll pick you up at eight, okay?",
+   "topic": "daily",
+   "level": 3
+  },
+  {
+   "id": 437,
+   "en": "I'm making progress.",
+   "uk": "Я роблю успіхи.",
+   "example": "It's slow, but I'm making progress.",
+   "topic": "study",
+   "level": 3
+  },
+  {
+   "id": 438,
+   "en": "Where's the nearest pharmacy?",
+   "uk": "Де найближча аптека?",
+   "example": "I have a headache. Where's the nearest pharmacy?",
+   "topic": "travel",
+   "level": 3
+  },
+  {
+   "id": 439,
+   "en": "Is there a vegetarian option?",
+   "uk": "Є вегетаріанський варіант?",
+   "example": "Is there a vegetarian option on the menu?",
+   "topic": "shopping",
+   "level": 3
+  },
+  {
+   "id": 440,
+   "en": "It's hard to say.",
+   "uk": "Важко сказати.",
+   "example": "Who will win? It's hard to say.",
+   "topic": "emotions",
+   "level": 3
+  },
+  {
+   "id": 441,
+   "en": "To pivot",
+   "uk": "Різко змінити напрям бізнесу",
+   "example": "The startup decided to pivot to B2B.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 442,
+   "en": "I'm getting used to it.",
+   "uk": "Я звикаю до цього.",
+   "example": "Waking up early is hard, but I'm getting used to it.",
+   "topic": "daily",
+   "level": 3
+  },
+  {
+   "id": 443,
+   "en": "Mistakes are part of learning.",
+   "uk": "Помилки — частина навчання.",
+   "example": "Don't be afraid. Mistakes are part of learning.",
+   "topic": "study",
+   "level": 3
+  },
+  {
+   "id": 444,
+   "en": "I'd like to extend my stay.",
+   "uk": "Я хотів би продовжити проживання.",
+   "example": "I love this place. I'd like to extend my stay.",
+   "topic": "travel",
+   "level": 3
+  },
+  {
+   "id": 445,
+   "en": "Buy one, get one free",
+   "uk": "Купи один — другий безкоштовно",
+   "example": "The shop has a \"buy one, get one free\" offer.",
+   "topic": "shopping",
+   "level": 3
+  },
+  {
+   "id": 446,
+   "en": "I'm embarrassed.",
+   "uk": "Мені ніяково. / Мені соромно.",
+   "example": "I called her by the wrong name. I'm so embarrassed.",
+   "topic": "emotions",
+   "level": 3
+  },
+  {
+   "id": 447,
+   "en": "Freemium",
+   "uk": "Фриміум (базово безкоштовно, розширено — платно)",
+   "example": "Our app uses a freemium model.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 448,
+   "en": "It's on the tip of my tongue.",
+   "uk": "Крутиться на язиці.",
+   "example": "What's his name? It's on the tip of my tongue!",
+   "topic": "daily",
+   "level": 3
+  },
+  {
+   "id": 449,
+   "en": "My mind went blank.",
+   "uk": "У мене все вилетіло з голови.",
+   "example": "In the exam, my mind went blank.",
+   "topic": "study",
+   "level": 3
+  },
+  {
+   "id": 450,
+   "en": "Sightseeing",
+   "uk": "Огляд визначних місць",
+   "example": "We spent the whole day sightseeing.",
+   "topic": "travel",
+   "level": 3
+  },
+  {
+   "id": 451,
+   "en": "I'm window-shopping.",
+   "uk": "Я просто роздивляюся вітрини.",
+   "example": "I'm not buying anything, just window-shopping.",
+   "topic": "shopping",
+   "level": 3
+  },
+  {
+   "id": 452,
+   "en": "I'm grateful for...",
+   "uk": "Я вдячний за...",
+   "example": "I'm grateful for your support.",
+   "topic": "emotions",
+   "level": 3
+  },
+  {
+   "id": 453,
+   "en": "Upsell",
+   "uk": "Допродаж (дорожчого тарифу)",
+   "example": "We try to upsell users from Basic to Pro.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 454,
+   "en": "Can I ask you a favor?",
+   "uk": "Можна тебе про дещо попросити?",
+   "example": "Can I ask you a favor? Can you feed my cat?",
+   "topic": "daily",
+   "level": 3
+  },
+  {
+   "id": 455,
+   "en": "I graduated last year.",
+   "uk": "Я закінчив навчання минулого року.",
+   "example": "I graduated last year and now I work in IT.",
+   "topic": "study",
+   "level": 3
+  },
+  {
+   "id": 456,
+   "en": "I got ripped off.",
+   "uk": "Мене обдурили (на гроші).",
+   "example": "Fifty euros for a short taxi ride? I got ripped off.",
+   "topic": "travel",
+   "level": 3
+  },
+  {
+   "id": 457,
+   "en": "Takeaway",
+   "uk": "Їжа на виніс",
+   "example": "Let's get a takeaway tonight.",
+   "topic": "shopping",
+   "level": 3
+  },
+  {
+   "id": 458,
+   "en": "It means a lot to me.",
+   "uk": "Це багато для мене означає.",
+   "example": "Thank you for coming. It means a lot to me.",
+   "topic": "emotions",
+   "level": 3
+  },
+  {
+   "id": 459,
+   "en": "Conversion rate",
+   "uk": "Коефіцієнт конверсії",
+   "example": "Our conversion rate from trial to paid is eight percent.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 460,
+   "en": "I owe you one.",
+   "uk": "Я твій боржник.",
+   "example": "Thanks for the help, I owe you one!",
+   "topic": "daily",
+   "level": 3
+  },
+  {
+   "id": 461,
+   "en": "I'm taking an online course.",
+   "uk": "Я проходжу онлайн-курс.",
+   "example": "I'm taking an online course in marketing.",
+   "topic": "study",
+   "level": 3
+  },
+  {
+   "id": 462,
+   "en": "Could you point me in the right direction?",
+   "uk": "Підкажете, куди мені йти?",
+   "example": "I'm looking for the old town. Could you point me in the right direction?",
+   "topic": "travel",
+   "level": 3
+  },
+  {
+   "id": 463,
+   "en": "The customer is always right.",
+   "uk": "Клієнт завжди правий.",
+   "example": "Okay, okay. The customer is always right.",
+   "topic": "shopping",
+   "level": 3
+  },
+  {
+   "id": 464,
+   "en": "I'm having second thoughts.",
+   "uk": "У мене з'явилися сумніви.",
+   "example": "I'm having second thoughts about the trip.",
+   "topic": "emotions",
+   "level": 3
+  },
+  {
+   "id": 465,
+   "en": "Funding round",
+   "uk": "Раунд інвестицій",
+   "example": "The startup raised two million in its first funding round.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 466,
+   "en": "Speak of the devil!",
+   "uk": "Про вовка промовка!",
+   "example": "Speak of the devil! We were just talking about you.",
+   "topic": "daily",
+   "level": 3
+  },
+  {
+   "id": 467,
+   "en": "It's a piece of cake.",
+   "uk": "Простіше простого.",
+   "example": "This test? It's a piece of cake.",
+   "topic": "study",
+   "level": 3
+  },
+  {
+   "id": 468,
+   "en": "Off-season",
+   "uk": "Не сезон",
+   "example": "Hotels are cheaper in the off-season.",
+   "topic": "travel",
+   "level": 3
+  },
+  {
+   "id": 469,
+   "en": "It breaks my heart.",
+   "uk": "У мене серце розривається.",
+   "example": "It breaks my heart to see him so sad.",
+   "topic": "emotions",
+   "level": 3
+  },
+  {
+   "id": 470,
+   "en": "Roadmap",
+   "uk": "Дорожня карта (план розвитку продукту)",
+   "example": "This feature is on our roadmap for next year.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 471,
+   "en": "I'm running out of battery.",
+   "uk": "У мене сідає батарея.",
+   "example": "I'm running out of battery. I'll call you later.",
+   "topic": "daily",
+   "level": 3
+  },
+  {
+   "id": 472,
+   "en": "I need to memorize these words.",
+   "uk": "Мені треба запам'ятати ці слова.",
+   "example": "I need to memorize these words by Friday.",
+   "topic": "study",
+   "level": 3
+  },
+  {
+   "id": 473,
+   "en": "I'm a bit homesick.",
+   "uk": "Я трохи сумую за домом.",
+   "example": "It's a great trip, but I'm a bit homesick.",
+   "topic": "travel",
+   "level": 3
+  },
+  {
+   "id": 474,
+   "en": "Keep your chin up!",
+   "uk": "Не вішай носа!",
+   "example": "Keep your chin up! Tomorrow will be better.",
+   "topic": "emotions",
+   "level": 3
+  },
+  {
+   "id": 475,
+   "en": "Stakeholders",
+   "uk": "Зацікавлені сторони",
+   "example": "We need to update all stakeholders.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 476,
+   "en": "Let's play it by ear.",
+   "uk": "Подивимося за обставинами.",
+   "example": "I don't know the plan yet. Let's play it by ear.",
+   "topic": "daily",
+   "level": 3
+  },
+  {
+   "id": 477,
+   "en": "I keep mixing them up.",
+   "uk": "Я постійно їх плутаю.",
+   "example": "\"Affect\" and \"effect\"? I keep mixing them up.",
+   "topic": "study",
+   "level": 3
+  },
+  {
+   "id": 478,
+   "en": "Don't take it personally.",
+   "uk": "Не сприймай це особисто.",
+   "example": "Don't take it personally. He's like that with everyone.",
+   "topic": "emotions",
+   "level": 3
+  },
+  {
+   "id": 479,
+   "en": "To meet a deadline",
+   "uk": "Встигнути до дедлайну",
+   "example": "We worked late to meet the deadline.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 480,
+   "en": "Better late than never.",
+   "uk": "Краще пізно, ніж ніколи.",
+   "example": "You finally came! Better late than never.",
+   "topic": "daily",
+   "level": 3
+  },
+  {
+   "id": 481,
+   "en": "Learn by heart",
+   "uk": "Вивчити напам'ять",
+   "example": "We had to learn the poem by heart.",
+   "topic": "study",
+   "level": 3
+  },
+  {
+   "id": 482,
+   "en": "I'm hopeful.",
+   "uk": "Я налаштований оптимістично.",
+   "example": "I'm hopeful about the future.",
+   "topic": "emotions",
+   "level": 3
+  },
+  {
+   "id": 483,
+   "en": "We're running out of time.",
+   "uk": "У нас закінчується час.",
+   "example": "We're running out of time. Let's decide.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 484,
+   "en": "Time flies!",
+   "uk": "Час летить!",
+   "example": "It's October already? Time flies!",
+   "topic": "daily",
+   "level": 3
+  },
+  {
+   "id": 485,
+   "en": "I'm a slow learner, but I don't give up.",
+   "uk": "Я вчуся повільно, але не здаюся.",
+   "example": "English is hard for me. I'm a slow learner, but I don't give up.",
+   "topic": "study",
+   "level": 3
+  },
+  {
+   "id": 486,
+   "en": "Let me get this straight...",
+   "uk": "Дай я правильно зрозумію...",
+   "example": "Let me get this straight: you quit your job?",
+   "topic": "emotions",
+   "level": 3
+  },
+  {
+   "id": 487,
+   "en": "To follow up",
+   "uk": "Нагадати / повернутися до питання",
+   "example": "I'll follow up with the client tomorrow.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 488,
+   "en": "I can't make it today.",
+   "uk": "Сьогодні не зможу прийти.",
+   "example": "Sorry, I can't make it today. Maybe tomorrow?",
+   "topic": "daily",
+   "level": 3
+  },
+  {
+   "id": 489,
+   "en": "Study abroad",
+   "uk": "Навчатися за кордоном",
+   "example": "I want to study abroad next year.",
+   "topic": "study",
+   "level": 3
+  },
+  {
+   "id": 490,
+   "en": "It's the last straw.",
+   "uk": "Це остання крапля.",
+   "example": "He was late again. It's the last straw!",
+   "topic": "emotions",
+   "level": 3
+  },
+  {
+   "id": 491,
+   "en": "Let's take it offline.",
+   "uk": "Обговорімо це окремо.",
+   "example": "This is a long topic. Let's take it offline.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 492,
+   "en": "That's what I meant.",
+   "uk": "Я це й мав на увазі.",
+   "example": "Yes, exactly! That's what I meant.",
+   "topic": "daily",
+   "level": 3
+  },
+  {
+   "id": 493,
+   "en": "I'm self-taught.",
+   "uk": "Я самоук.",
+   "example": "I never went to coding school. I'm self-taught.",
+   "topic": "study",
+   "level": 3
+  },
+  {
+   "id": 494,
+   "en": "Can you walk me through it?",
+   "uk": "Можеш пояснити мені крок за кроком?",
+   "example": "The new process looks hard. Can you walk me through it?",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 495,
+   "en": "What's the bottom line?",
+   "uk": "Який підсумок? / Що в сухому залишку?",
+   "example": "Skip the details. What's the bottom line?",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 496,
+   "en": "Back to square one.",
+   "uk": "Повертаємося на початок.",
+   "example": "The client said no. Back to square one.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 497,
+   "en": "Let's circle back to this.",
+   "uk": "Повернімося до цього пізніше.",
+   "example": "We don't have time now. Let's circle back to this on Monday.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 498,
+   "en": "User acquisition",
+   "uk": "Залучення користувачів",
+   "example": "User acquisition costs are too high.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 499,
+   "en": "B2B / B2C",
+   "uk": "Бізнес для бізнесу / бізнес для споживачів",
+   "example": "We sell B2B software to small companies.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 500,
+   "en": "Bootstrapped",
+   "uk": "Без зовнішніх інвестицій (на власні кошти)",
+   "example": "Our startup is bootstrapped.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 501,
+   "en": "Burn rate",
+   "uk": "Швидкість витрачання грошей",
+   "example": "Our burn rate is thirty thousand dollars a month.",
+   "topic": "work",
+   "level": 3
+  },
+  {
+   "id": 502,
+   "en": "Minimum viable product (MVP)",
+   "uk": "Мінімально життєздатний продукт",
+   "example": "We built an MVP in two months.",
+   "topic": "work",
+   "level": 3
+  }
+ ]
+}

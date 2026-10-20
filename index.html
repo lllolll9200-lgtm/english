@@ -150,7 +150,25 @@ input:focus,textarea:focus{outline:none;border-color:var(--primary);box-shadow:0
 .celebrate b{display:block;font-size:1.1rem;margin:4px 0 2px}
 .celebrate.anim{animation:rise .55s cubic-bezier(.2,.8,.2,1)}
 @keyframes rise{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
+.celebrate{margin-bottom:14px}
 .burst{position:absolute;left:50%;top:40%;pointer-events:none}
+
+.card-head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:2px}
+.card-head h2{margin:0}
+.seg{display:flex;gap:2px;background:var(--surface-2);padding:3px;border-radius:11px}
+.seg button{border:0;background:none;min-width:34px;height:30px;border-radius:8px;font-weight:700;font-size:.85rem;color:var(--muted);cursor:pointer}
+.seg button.on{background:var(--surface);color:var(--text);box-shadow:var(--shadow)}
+.phrase{padding:14px 0 2px;border-top:1px solid var(--line);animation:fade .3s ease}
+.phrase:first-child{border-top:0}
+.phrase-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.lvl{color:var(--primary);font-size:.72rem;letter-spacing:2px}
+.phrase-en{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:1.2rem;font-weight:750;line-height:1.3}
+.speak.sm{width:40px;height:40px;border-radius:11px}
+.speak.sm svg{width:20px;height:20px}
+.phrase-uk{margin:2px 0 6px}
+.phrase-ex{display:block;width:100%;text-align:left;border:0;background:none;padding:0;margin-bottom:10px;font-size:.9rem;color:var(--muted);font-style:italic;cursor:pointer}
+.phrase-ex::before{content:"🔊 ";font-style:normal;font-size:.8rem}
+.mini-btn:disabled{opacity:.65;cursor:default}
 .burst span{position:absolute;font-size:1.2rem;animation:fly 1s ease-out forwards}
 @keyframes fly{from{transform:translate(0,0) scale(.4);opacity:1}to{transform:translate(var(--x),var(--y)) scale(1);opacity:0}}
 
@@ -337,6 +355,17 @@ details.card[open] summary{margin-bottom:12px}
 
     <div id="taskList"></div>
     <div id="celebrate" class="celebrate" hidden></div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2>💡 Фрази дня</h2>
+        <div class="seg" id="perDay" role="group" aria-label="Скільки фраз на день">
+          <button type="button" data-n="1">1</button><button type="button" data-n="3">3</button><button type="button" data-n="5">5</button>
+        </div>
+      </div>
+      <div class="muted small" id="phraseMeta"></div>
+      <div id="phraseBox"></div>
+    </div>
   </section>
 
   <!-- ===== Слова ===== -->
@@ -526,7 +555,7 @@ const CHEERS = [
 ];
 
 /* ================= Дані ================= */
-const defaults = () => ({ version: 1, days: {}, words: [], journal: [], settings: {} });
+const defaults = () => ({ version: 1, days: {}, words: [], journal: [], settings: {}, phr: { next: 0, perDay: 3, plan: {} } });
 let S;
 function load() {
   try { S = Object.assign(defaults(), JSON.parse(localStorage.getItem(KEY)) || {}); }
@@ -647,6 +676,7 @@ function renderToday() {
       ${t.optional ? '<span class="tag">необов\'язково</span>' : ''}
     </button>`).join('');
   renderTodayMeta(false);
+  renderPhrases();
 }
 function renderTodayMeta(animate) {
   const k = todayKey();
@@ -705,6 +735,69 @@ $('#taskList').addEventListener('click', e => {
   }
   if (id === 'ai') b.querySelector('.task-meta').textContent = taskMeta(TASKS[3]);
   renderTodayMeta(allDone(k) && !wasAll);
+});
+
+/* ================= Фрази дня ================= */
+let PH = null; // null — ще вантажиться, false — недоступно, інакше { topics, phrases }
+async function loadPhrases() {
+  try {
+    const r = await fetch('phrases.json');
+    if (!r.ok) throw new Error(r.status);
+    PH = await r.json();
+  } catch (e) { PH = false; }
+  renderPhrases();
+}
+function todayPhrases() {
+  const k = todayKey(), P = S.phr, n = PH.phrases.length;
+  if (!P.plan[k]) {
+    // беремо наступні фрази по черзі; коли база закінчиться — починаємо спочатку
+    P.plan[k] = Array.from({ length: P.perDay }, (_, i) => PH.phrases[(P.next + i) % n].id);
+    P.next = (P.next + P.perDay) % n;
+    save();
+  }
+  return P.plan[k].map(id => PH.phrases.find(p => p.id === id)).filter(Boolean);
+}
+function renderPhrases() {
+  document.querySelectorAll('#perDay button').forEach(b => b.classList.toggle('on', +b.dataset.n === S.phr.perDay));
+  const box = $('#phraseBox'), meta = $('#phraseMeta');
+  if (PH === null) { meta.textContent = 'Завантаження фраз…'; box.innerHTML = ''; return; }
+  if (!PH) { meta.textContent = 'Фрази доступні в онлайн-версії сайту (не з файлу на комп\'ютері).'; box.innerHTML = ''; return; }
+  const list = todayPhrases();
+  meta.textContent = `Фраза ${list[0].id}${list.length > 1 ? '–' + list[list.length - 1].id : ''} з ${PH.phrases.length}`;
+  box.innerHTML = list.map(p => {
+    const inWords = S.words.some(w => w.en.toLowerCase() === p.en.toLowerCase());
+    return `
+    <div class="phrase">
+      <div class="phrase-top"><span class="tag">${esc(PH.topics[p.topic] || p.topic)}</span><span class="lvl" title="Рівень ${p.level}">${'●'.repeat(p.level)}${'○'.repeat(3 - p.level)}</span></div>
+      <div class="phrase-en"><span>${esc(p.en)}</span><button class="speak sm" type="button" data-speak="${esc(p.en)}" aria-label="Озвучити">${ICON.speaker}</button></div>
+      <div class="phrase-uk">${esc(p.uk)}</div>
+      <button class="phrase-ex" type="button" data-speak="${esc(p.example)}">${esc(p.example)}</button>
+      <button class="mini-btn" type="button" data-addphrase="${p.id}"${inWords ? ' disabled' : ''}>${inWords ? '✓ У моїх словах' : '＋ Додати в мої слова'}</button>
+    </div>`;
+  }).join('');
+}
+$('#phraseBox').addEventListener('click', e => {
+  const b = e.target.closest('[data-addphrase]');
+  if (!b || !PH) return;
+  const p = PH.phrases.find(x => x.id === +b.dataset.addphrase);
+  if (!p || S.words.some(w => w.en.toLowerCase() === p.en.toLowerCase())) return;
+  S.words.unshift({ id: uid(), en: p.en, uk: p.uk, ex: p.example, added: todayKey(), level: 0 });
+  save();
+  renderPhrases();
+  toast('Додано в «Мої слова» ✓');
+});
+$('#perDay').addEventListener('click', e => {
+  const b = e.target.closest('button[data-n]');
+  if (!b || +b.dataset.n === S.phr.perDay) return;
+  const P = S.phr, k = todayKey();
+  if (PH && P.plan[k]) {
+    // перебудовуємо сьогоднішній план з тієї ж позиції
+    P.next = (P.next - P.plan[k].length + PH.phrases.length) % PH.phrases.length;
+    delete P.plan[k];
+  }
+  P.perDay = +b.dataset.n;
+  save();
+  renderPhrases();
 });
 
 /* ================= Слова ================= */
@@ -1089,6 +1182,7 @@ applyThemeUI();
 if (S.words.length > 3) $('#addWordBox').open = false;
 resetJournalForm();
 go(location.hash.slice(1) || 'today');
+loadPhrases();
 })();
 </script>
 </body>
