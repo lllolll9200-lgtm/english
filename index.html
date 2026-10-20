@@ -468,6 +468,8 @@ details.card[open] summary{margin-bottom:12px}
       <h2>Застосунок на телефоні</h2>
       <button class="btn btn-primary btn-block" id="installBtn" type="button">📲 Встановити на головний екран</button>
     </div>
+
+    <p class="muted small" style="text-align:center">Версія 3 · з фразами дня</p>
   </section>
 </main>
 
@@ -1156,7 +1158,21 @@ $('#installBtn').addEventListener('click', async () => {
 });
 window.addEventListener('appinstalled', () => { $('#installCard').hidden = true; toast('Застосунок встановлено 🎉'); });
 if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
-  window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }).then(reg => {
+      // застосунок на телефоні часто не перезапускається — перевіряємо оновлення при кожному поверненні
+      document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') reg.update().catch(() => {}); });
+    }).catch(() => {});
+  });
+  // нова версія встановилася — один раз перезавантажуємо сторінку, щоб її показати
+  if (navigator.serviceWorker.controller) {
+    let reloaded = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (reloaded) return;
+      reloaded = true;
+      location.reload();
+    });
+  }
 }
 if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
 

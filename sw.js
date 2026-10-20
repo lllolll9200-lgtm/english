@@ -1,6 +1,6 @@
 // Service worker: зберігає файли застосунку, щоб він працював без інтернету.
 // Після змін у index.html збільш номер версії — і телефон підтягне оновлення.
-const CACHE = 'eng-tracker-v2';
+const CACHE = 'eng-tracker-v3';
 const ASSETS = [
   './',
   './index.html',
@@ -30,7 +30,8 @@ self.addEventListener('fetch', e => {
   // Сторінку беремо з мережі (щоб бачити оновлення), а без інтернету — з кешу
   if (req.mode === 'navigate') {
     e.respondWith(
-      fetch(req)
+      // no-cache: не беремо застарілу сторінку з HTTP-кешу браузера
+      fetch(req.url, { cache: 'no-cache', credentials: 'same-origin' })
         .then(res => { const copy = res.clone(); caches.open(CACHE).then(c => c.put('./index.html', copy)); return res; })
         .catch(() => caches.match('./index.html'))
     );
